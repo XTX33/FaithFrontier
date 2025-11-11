@@ -1,0 +1,35 @@
+title: "Faith Frontier"
+description: "Case records, filings, and covenant-based legal commentary by Devon Tyler Barber."
+url: "https://faithfrontier.org"
+baseurl: ""
+
+markdown: kramdown
+
+collections:
+  cases:
+    output: true
+    permalink: /cases/:slug/
+  essays:
+    output: true
+    permalink: /essays/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "cases"
+    values:
+      layout: case
+      body_class: page-case
+  - scope:
+      path: ""
+      type: "essays"
+    values:
+      layout: listing
+      body_class: page-essays
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor

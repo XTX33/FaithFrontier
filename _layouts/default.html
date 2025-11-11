@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="{{ page.body_class | default: '' }}">
+    {% include header.html %}
+
+    <main id="main" class="site-main" aria-label="Main content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
