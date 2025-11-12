@@ -1,3 +1,19 @@
+# Site settings
+title: FaithFrontier
+description: >-
+  A site for faith-based content and reflections
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# GitHub Pages settings
+# Uncomment and set your custom domain when ready
+# url: "https://your-custom-domain.com"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+# Collections
 title: Faith Frontier Ecclesiastical Trust
 description: "Case records, filings, and covenant-based legal commentary by Devon Tyler Barber."
 url: https://faithfrontier.org
@@ -16,6 +32,44 @@ collections:
     permalink: /cases/:name/
   essays:
     output: true
+    permalink: /essays/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "cases"
+    values:
+      layout: "case"
+  - scope:
+      path: ""
+      type: "essays"
+    values:
+      layout: "essay"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub repository metadata (optional)
+repository: XTX33/FaithFrontier
     permalink: /faith/:name/
   docs:
     output: true
