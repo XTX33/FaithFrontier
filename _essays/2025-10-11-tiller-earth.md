@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Tiller.Earth Legacy Writings"
-permalink: /posts/tiller-earth/
+permalink: /essays/tiller-earth/
 ---
 
 <section class="section-intro">

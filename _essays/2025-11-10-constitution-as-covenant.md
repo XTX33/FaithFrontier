@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: essay
 title: "Constitution as Covenant"
 date: 2025-11-10
-permalink: /faith/constitution-covenant/
+permalink: /essays/constitution-covenant/
 categories: [faith, law]
 tags:
   - constitution

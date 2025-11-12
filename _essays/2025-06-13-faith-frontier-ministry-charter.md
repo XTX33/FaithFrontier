@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: essay
 title: "Faith Frontier Ministry – Organization Charter"
 date: 2025-06-13
-permalink: /posts/ministry-charter/
+permalink: /essays/ministry-charter/
 description: "Unincorporated church and ministry declaration, bylaws, and worship schedule for Faith Frontier Ministry under IRC §508(c)(1)(A) and §501(c)(3)."
 categories: [faith, governance, ministry]
 tags:

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Common Law Revelations: Connecting the Dots"
-permalink: /revelations/
+permalink: /essays/revelations/
 description: "How Faith Frontier cases reveal timeless principles of conscience, commerce, and common law stewardship"
 body_class: page-revelations
 

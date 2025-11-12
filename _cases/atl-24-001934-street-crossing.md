@@ -97,7 +97,7 @@ Files located at: `/cases/atl-24-001934/pcr/`
 
 | Date | Description | File |
 |------|--------------|------|
-| 2024-09-25 | Chief Clambrone Letter re Incident and Record Clarification | [09-25-2024-chief-clambrone-letter.pdf](/cases/atl-24-001934/pcr/09-25-2024-cheif-clambrone-letter.pdf) |
+| 2024-09-25 | Chief Clambrone Letter re Incident and Record Clarification | [09-25-2024-chief-clambrone-letter.pdf](/cases/atl-24-001934/pcr/09-25-2024-chief-clambrone-letter.pdf) |
 | 2024-09-25 | Demurrer and Plea in Abatement with Certificate (EF-3721525) | [Demurer-and-Plea-in-Abatement-with-Certificate_EF-3721525.pdf](/cases/atl-24-001934/pcr/Demurer-and-Plea-in-Abatement-with-Certificate_EF-3721525.pdf) |
 
 ---

@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: essay
 title: "Ecclesiastical Deed Poll & Divine Notice"
 date: 2024-05-01
-permalink: /posts/ecclesiastical-deed-poll/
+permalink: /essays/ecclesiastical-deed-poll/
 description: "A theological declaration and moral protest written in faith — preserved for transparency, reflection, and education, not as legal advice or operative law."
 categories: [faith, declarations, ecclesiastical]
 tags:

@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: essay
 title: "1599 Geneva Bible Scroll"
 description: "Prophecy, Gospel, and Christ’s Kingship — 26 landmark verses from the 1599 Geneva Bible presented in scroll format."
 date: 2025-11-10
+permalink: /essays/geneva-bible-scroll/
 categories: [archives, scripture]
 tags: [Geneva Bible, prophecy, gospel, faith history]
 image: /assets/images/geneva-scroll-cover.jpg
