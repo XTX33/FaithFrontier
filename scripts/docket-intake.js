@@ -14,8 +14,51 @@ const writeYml = (p, obj) => fs.writeFileSync(p, yaml.dump(obj, { lineWidth: 100
 const kebab = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 const ensureDir = p => fs.mkdirSync(p, { recursive: true });
 
-const casesMap = readYml(MAP_FILE) || {};
 const caseFiles = fs.existsSync('_cases') ? fs.readdirSync('_cases').filter(f=>f.endsWith('.md')) : [];
+
+// Bootstrap cases-map.yml from case front matter if missing/empty
+let casesMap = readYml(MAP_FILE) || {};
+const bootstrapMapFromCases = () => {
+  const map = {};
+  for (const f of caseFiles) {
+    const txt = fs.readFileSync(path.join('_cases', f), 'utf8');
+    const fm = (txt.match(/^---\n([\s\S]*?)\n---/)||[])[1]||'';
+    const slug = (fm.match(/permalink:\s*\/cases\/([a-z0-9-]+)\//i)||[])[1] || f.replace(/\.md$/,'');
+    // collect tokens from dockets[] and primary_docket
+    const arr = [];
+    
+    // Handle inline array format: dockets: ["A-123", "B-456"]
+    const mArr = fm.match(/dockets:\s*\[([^\]]+)\]/);
+    if (mArr) {
+      mArr[1].split(',').forEach(x => arr.push(x.replace(/["'\s]/g,'')));
+    }
+    
+    // Handle YAML list format: dockets:\n  - "A-123"\n  - "B-456"
+    const docketsSection = fm.match(/dockets:\s*\n((?:\s+-\s+[^\n]+\n?)+)/);
+    if (docketsSection) {
+      const mLine = [...docketsSection[1].matchAll(/^\s*-\s*["']?([A-Za-z0-9:\-]+)["']?\s*$/gm)];
+      mLine.forEach(x => arr.push((x[1]||'').trim()));
+    }
+    
+    // Handle single docket field
+    const mSingle = fm.match(/^docket:\s*["']?([A-Za-z0-9:\-]+)["']?\s*$/m);
+    if (mSingle) arr.push(mSingle[1]);
+    
+    // Handle primary_docket field
+    const mPrimary = fm.match(/primary_docket:\s*["']?([A-Za-z0-9:\-]+)["']?/);
+    if (mPrimary) arr.push(mPrimary[1]);
+
+    arr.filter(Boolean).forEach(tok => { if (!map[tok]) map[tok] = slug; });
+  }
+  return map;
+};
+
+if (Object.keys(casesMap).length === 0) {
+  casesMap = bootstrapMapFromCases();
+  ensureDir(path.dirname(MAP_FILE));
+  writeYml(MAP_FILE, casesMap);
+  console.log('Bootstrapped _data/cases-map.yml from case front matter.');
+}
 
 // Build reverse index: token->slug from case front matter + map file
 const slugFromDocket = token => {
