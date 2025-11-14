@@ -44,7 +44,7 @@ tags:
   - Due Process
   - Atlantic County
 
-assets_path: "/cases/atl-22-002292/pcr/"
+assets_dir: "/cases/atl-22-002292/pcr/"
 
 filings:
 # --- ATL-22-002292 filings ---

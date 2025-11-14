@@ -13,7 +13,7 @@ next_event:
   date: "YYYY-MM-DD"               # Leave blank if not yet scheduled
 judge: "Hon. [Name], J.S.C."
 track: ""                          # Optional – add case management track or internal tag
-assets_path: "/assets/cases/example-case-2025/"   # Folder where filings (PDFs) will live
+assets_dir: "/assets/cases/example-case-2025/"   # Folder where filings (PDFs) will live
 summary: >
   A short 2–3 sentence narrative describing the nature of the case:
   who filed, why, what’s at issue, and current posture. 
