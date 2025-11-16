@@ -12,7 +12,7 @@ court: "Superior Court of New Jersey — Law Division, Criminal Part"
 venue: "Atlantic County"
 case_type: "Post-Conviction Relief (N.J. Ct. R. 3:22)"
 role: "Petitioner / Defendant-Movant"
-status: "Active — unified PCR across consolidated 2022 matters"
+status: "active"
 filed_date: 2025-05-04
 judge: "Hon. (TBD)"
 track: "R. 3:22 Post-Conviction"

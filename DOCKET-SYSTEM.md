@@ -61,12 +61,22 @@ case_type: "Case Type"
 role: "Your Role"
 dockets: ["DOCKET-1", "DOCKET-2"]
 primary_docket: "DOCKET-1"
-status: "Active"
+status: "active"  # Options: active, pending, closed
 filed_date: YYYY-MM-DD
 judge: "Judge Name"
 tags: ["tag1", "tag2"]
 ---
 ```
+
+### Status Field Values
+
+The `status` field should use one of three standardized values:
+
+- **`active`** — Case is actively proceeding with regular filings, hearings, or discovery
+- **`pending`** — Case has a specific pending action (e.g., awaiting a decision, motion under consideration, appeal pending)
+- **`closed`** — Case has been concluded, dismissed, or otherwise terminated
+
+These standardized values enable consistent filtering and searching across all cases in the index.
 
 ## Docket Entry Schema
 
@@ -105,6 +115,48 @@ Docket entries in `_data/docket/<slug>.yml`:
 2. Edit `_data/docket/<slug>.yml` to add entry
 3. Commit and push
 
+#### Best Practice: Maintaining Chronological Order
+
+When manually adding docket entries to `_data/docket/<slug>.yml`, follow these guidelines to maintain chronological order:
+
+1. **Date Format**: Use `YYYY-MM-DD` format for all dates (e.g., `2025-11-16`)
+2. **Entry Ordering**: Add new entries in chronological order, with the oldest entries at the top and newest at the bottom
+3. **ID Convention**: Use the format `YYYY-MM-DD-brief-description` for entry IDs
+4. **Consistent Structure**: Each entry should include:
+   ```yaml
+   - id: 2025-11-16-motion-for-relief
+     date: 2025-11-16
+     type: Motion|Filing|Order|Notice|Brief|Exhibit|Other
+     title: Human-readable title describing the document
+     file: /assets/cases/<slug>/docket/2025-11-16_Type_Description.pdf
+     notes: (Optional) Additional context or notes
+   ```
+
+**Example**: Adding multiple filings in chronological order to a case docket:
+
+```yaml
+# _data/docket/example-case.yml
+- id: 2025-10-01-complaint
+  date: 2025-10-01
+  type: Filing
+  title: Initial Complaint
+  file: /assets/cases/example-case/docket/2025-10-01_Filing_Complaint.pdf
+
+- id: 2025-10-15-answer
+  date: 2025-10-15
+  type: Filing
+  title: Defendant's Answer
+  file: /assets/cases/example-case/docket/2025-10-15_Filing_Answer.pdf
+
+- id: 2025-11-01-motion
+  date: 2025-11-01
+  type: Motion
+  title: Motion for Summary Judgment
+  file: /assets/cases/example-case/docket/2025-11-01_Motion_Summary-Judgment.pdf
+```
+
+By maintaining this chronological structure, the docket entries will display in the correct temporal sequence on the case page, making it easier for readers to follow the progression of the case.
+
 ## Workflows
 
 ### `.github/workflows/validate.yml`
@@ -135,7 +187,7 @@ This helps the intake automation route PDFs to the correct case folder.
 The case index at `/cases/` includes:
 
 - Text search across title, docket numbers, and tags
-- Filter by status (Active, Closed, Stayed)
+- Filter by status (Active, Pending, Closed)
 - Client-side filtering via `/cases.json`
 
 ## Naming Conventions

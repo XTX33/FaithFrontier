@@ -6,7 +6,7 @@ permalink: /cases/example-case-2025/
 docket: "TBD"                      # Official docket number once assigned
 court: "Superior Court of New Jersey, [Division / County]" 
 case_type: "Civil / Criminal / Administrative / Appellate"
-status: "In Preparation"           # e.g., Active – Pending Hearing, Closed – Dismissed, etc.
+status: "active"                   # Options: active, pending, closed
 filed_date: "YYYY-MM-DD"                # Date of filing
 next_event:
   label: "Hearing / Conference / Motion Date"

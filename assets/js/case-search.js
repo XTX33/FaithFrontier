@@ -7,10 +7,10 @@
       <a href="${c.url}"><strong>${c.short_title||c.title}</strong></a>
       <div class="meta">Docket: ${(Array.isArray(c.docket)?c.docket.join(', '):c.docket)||''} · Status: ${c.status} · Filed: ${c.filed_date}</div>
     </li>`).join('');
-  const filter=()=>{const term=(q.value||'').toLowerCase(), st=status.value;
+  const filter=()=>{const term=(q.value||'').toLowerCase(), st=status.value.toLowerCase();
     render(items.filter(c=>{
       const hay=(c.title+' '+(c.short_title||'')+' '+(Array.isArray(c.docket)?c.docket.join(' '):c.docket)+' '+(c.tags||[]).join(' ')).toLowerCase();
-      return (!term||hay.includes(term)) && (!st||c.status===st);
+      return (!term||hay.includes(term)) && (!st||c.status.toLowerCase()===st);
     }));};
   q.addEventListener('input',filter); status.addEventListener('change',filter); render(items);
 })();
