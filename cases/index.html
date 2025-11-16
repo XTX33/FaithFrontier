@@ -5,17 +5,17 @@ permalink: /cases/
 description: "Documentation of lived experience navigating institutions — a public archive of the intersection between law, conscience, and personal truth."
 ---
 
-<section class="cases-index" style="max-width: 60rem; margin: 0 auto;">
+<section class="cases-index">
   <h1>Case Records</h1>
-  <p class="lead" style="font-size: 1.1rem; line-height: 1.7; color: var(--ff-muted); margin-bottom: 2rem;">
+  <p class="lead">
     Documentation of lived experience navigating institutions — a public archive of the 
     intersection between law, conscience, and personal truth. These records bear witness 
     to the tension between human identity and systems of power.
   </p>
 
-  <form id="case-filter" aria-label="Filter" style="margin-bottom: 2rem;">
-    <input type="search" id="q" placeholder="Search title, docket, tag…" style="padding: 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(148, 163, 184, 0.5); background: rgba(15, 23, 42, 0.5); color: var(--ff-ink); width: 100%; max-width: 400px;" />
-    <select id="status" style="padding: 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(148, 163, 184, 0.5); background: rgba(15, 23, 42, 0.5); color: var(--ff-ink); margin-left: 1rem;">
+  <form id="case-filter" aria-label="Filter">
+    <input type="search" id="q" placeholder="Search title, docket, tag…" />
+    <select id="status">
       <option value="">All Statuses</option>
       <option>Active</option>
       <option>Pending</option>
@@ -23,12 +23,12 @@ description: "Documentation of lived experience navigating institutions — a pu
     </select>
   </form>
 
-  <ul id="case-list" style="list-style: none; padding: 0; margin: 0;">
+  <ul id="case-list">
     {% assign items = site.cases | sort: "filed_date" | reverse %}
     {% for c in items %}
-      <li class="case-item" style="padding: 1.25rem; margin-bottom: 1rem; background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid rgba(148, 163, 184, 0.3);">
-        <a href="{{ c.url | relative_url }}" style="font-weight: 600; font-size: 1.1rem; color: var(--ff-primary);"><strong>{{ c.short_title | default: c.title }}</strong></a>
-        <div class="meta" style="margin-top: 0.5rem; color: var(--ff-muted); font-size: 0.9rem;">
+      <li class="case-item">
+        <a href="{{ c.url | relative_url }}"><strong>{{ c.short_title | default: c.title }}</strong></a>
+        <div class="meta">
           {{ c.court }} · Docket: {{ c.primary_docket | default: c.docket | default: c.dockets | join: ", " }} · Status: {{ c.status }} · Filed: {{ c.filed_date | date: "%Y-%m-%d" }}
         </div>
       </li>

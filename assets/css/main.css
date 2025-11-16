@@ -630,6 +630,148 @@
   }
 }
 
+/* Case List Index Styling */
+
+.cases-index {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.cases-index h1 {
+  margin-bottom: 1rem;
+}
+
+.cases-index .lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ff-muted);
+  margin-bottom: 2rem;
+}
+
+/* Case Filter Form */
+
+#case-filter {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#case-filter input[type="search"],
+#case-filter select {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--ff-ink);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+#case-filter input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+#case-filter input[type="search"]:focus,
+#case-filter select:focus {
+  outline: none;
+  border-color: var(--ff-emerald);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+#case-filter select {
+  min-width: 150px;
+}
+
+/* Case List */
+
+#case-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-item {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.5rem;
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-left: 3px solid rgba(148, 163, 184, 0.4);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Alternating shadow pattern */
+.case-item:nth-child(odd) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: rgba(15, 23, 42, 0.4);
+  border-left-color: var(--ff-emerald);
+}
+
+.case-item:nth-child(even) {
+  box-shadow: none;
+  background: rgba(15, 23, 42, 0.25);
+  border-left-color: var(--ff-secondary);
+}
+
+.case-item:hover {
+  border-color: rgba(148, 163, 184, 0.5);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-item:hover:nth-child(even) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.case-item a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ff-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.case-item a:hover {
+  color: var(--ff-accent);
+  text-decoration: underline;
+}
+
+.case-item .meta {
+  margin-top: 0.5rem;
+  color: var(--ff-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #case-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #case-filter input[type="search"],
+  #case-filter select {
+    max-width: 100%;
+  }
+  
+  .case-item {
+    padding: 1rem 1.25rem;
+  }
+}
+
 /* Import case analysis styles */
 @import url('case-analysis.css');
 

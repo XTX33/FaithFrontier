@@ -5,7 +5,7 @@
   const render=rows=>list.innerHTML=rows.map(c=>`
     <li class="case-item">
       <a href="${c.url}"><strong>${c.short_title||c.title}</strong></a>
-      <div class="meta">Docket: ${(Array.isArray(c.docket)?c.docket.join(', '):c.docket)||''} · Status: ${c.status} · Filed: ${c.filed_date}</div>
+      <div class="meta">${c.court||''} · Docket: ${(Array.isArray(c.docket)?c.docket.join(', '):c.docket)||''} · Status: ${c.status} · Filed: ${c.filed_date}</div>
     </li>`).join('');
   const filter=()=>{const term=(q.value||'').toLowerCase(), st=status.value.toLowerCase();
     render(items.filter(c=>{
