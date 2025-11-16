@@ -9,15 +9,15 @@ body_class: page-manifesto
 <section style="max-width: 60rem; margin: 0 auto;">
   
   <header style="text-align: center; margin-bottom: 3rem;">
-    <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">The Faith Frontier Manifesto</h1>
-    <p style="font-size: 1.2rem; color: var(--ff-secondary); font-style: italic;">
+    <h1 style="font-size: clamp(2.5rem, 5.5vw, 4rem); margin-bottom: 1rem; color: var(--ff-cream);">The Faith Frontier Manifesto</h1>
+    <p style="font-size: 1.25rem; color: var(--ff-vintage-gold); font-style: italic; font-family: 'Crimson Text', serif;">
       In the World, But Not of It
     </p>
   </header>
 
   <article style="line-height: 1.9; font-size: 1.05rem;">
     
-    <div style="padding: 2.5rem; background: rgba(15, 118, 110, 0.1); border-radius: 0.75rem; border-left: 4px solid var(--ff-primary); margin-bottom: 3rem;">
+    <div style="padding: 2.5rem; background: linear-gradient(135deg, rgba(15, 118, 110, 0.12) 0%, rgba(212, 165, 116, 0.08) 100%); border-radius: 12px; border-left: 4px solid var(--ff-vintage-gold); margin-bottom: 3rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
       <p style="font-size: 1.15rem; font-weight: 500; margin: 0;">
         Faith Frontier is the story of a man raised between two houses in a world breaking
         between two eras. It is a home for those who feel the weight of global systems yet

@@ -316,6 +316,13 @@ h3 {
   font-family: 'Crimson Text', serif;
 }
 
+.footer-about {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--ff-ink);
+  line-height: 1.8;
+}
+
 .footer-nav ul {
   list-style: none;
   padding: 0;
@@ -335,4 +342,21 @@ h3 {
 
 .footer-meta {
   font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.footer-logo-link {
+  text-decoration: none;
+  display: inline-block;
 }

@@ -104,8 +104,8 @@ body_class: page-about
 
 </section>
 
-<section class="section-content" style="max-width: 60rem; margin: 3rem auto; padding: 2.5rem; background: rgba(15, 118, 110, 0.1); border-radius: 0.75rem; border-left: 4px solid var(--ff-primary);">
-  <h2 style="margin-top: 0;">The Era We're Living In</h2>
+<section class="section-content" style="max-width: 60rem; margin: 3rem auto; padding: 2.5rem; background: linear-gradient(135deg, rgba(15, 118, 110, 0.12) 0%, rgba(212, 165, 116, 0.08) 100%); border-radius: 12px; border-left: 4px solid var(--ff-vintage-gold); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
+  <h2 style="margin-top: 0; color: var(--ff-cream);">The Era We're Living In</h2>
   <p>
     Devon's story is not just personal — it's a reflection of the times. We live in an era of:
   </p>
@@ -126,43 +126,43 @@ body_class: page-about
   <h2>What Devon Stands For</h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
     
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Truth Over Systems</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Truth Over Systems</h3>
       <p style="margin-bottom: 0;">
         Personal truth and lived experience matter more than institutional narratives.
       </p>
     </article>
 
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Identity Over Bureaucracy</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Identity Over Bureaucracy</h3>
       <p style="margin-bottom: 0;">
         Human identity cannot be reduced to data, categories, or institutional labels.
       </p>
     </article>
 
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Spirit Over Machinery</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Spirit Over Machinery</h3>
       <p style="margin-bottom: 0;">
         Spiritual searching and grounded faith transcend the mechanical processes of modern systems.
       </p>
     </article>
 
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Local Over Global</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Local Over Global</h3>
       <p style="margin-bottom: 0;">
         Community is rebuilt at human scale, not through distant, impersonal institutions.
       </p>
     </article>
 
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Clarity Over Fear</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Clarity Over Fear</h3>
       <p style="margin-bottom: 0;">
         Truth is named calmly and clearly, without fearmongering or dogmatic certainty.
       </p>
     </article>
 
-    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.4); border-radius: 0.5rem;">
-      <h3 style="margin-top: 0; color: var(--ff-primary);">Sovereignty Over Control</h3>
+    <article style="padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);">
+      <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Sovereignty Over Control</h3>
       <p style="margin-bottom: 0;">
         Personal and local sovereignty must be protected against centralized control.
       </p>
@@ -188,8 +188,8 @@ body_class: page-about
   </p>
 </section>
 
-<section style="max-width: 60rem; margin: 4rem auto; padding: 3rem 2rem; text-align: center; background: rgba(176, 137, 104, 0.1); border-radius: 1rem; border: 1px solid var(--ff-secondary);">
-  <h2 style="margin-top: 0;">Walk This Frontier With Us</h2>
+<section style="max-width: 60rem; margin: 4rem auto; padding: 3rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(176, 137, 104, 0.15) 0%, rgba(15, 118, 110, 0.1) 100%); border-radius: 12px; border: 2px solid var(--ff-secondary); box-shadow: 0 4px 20px rgba(176, 137, 104, 0.2);">
+  <h2 style="margin-top: 0; color: var(--ff-cream);">Walk This Frontier With Us</h2>
   <p style="font-size: 1.05rem; line-height: 1.7;">
     If Devon's story resonates with you — if you too feel caught between worlds, searching for
     meaning in a time of collapse, or rebuilding identity at human scale — you are welcome here.

@@ -55,8 +55,8 @@ description: "The story of a man raised between two houses in a world breaking b
     <section style="margin: 4rem auto; max-width: 72rem;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
         
-        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid rgba(148, 163, 184, 0.3);">
-          <h3 style="margin-top: 0; color: var(--ff-primary);">Identity & Truth</h3>
+        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+          <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Identity & Truth</h3>
           <p>
             Raised between two homes, shaped by structure and distance, Devon's story is one of
             seeking clarity in a world of confusion. Faith Frontier reclaims personal identity
@@ -64,8 +64,8 @@ description: "The story of a man raised between two houses in a world breaking b
           </p>
         </article>
 
-        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid rgba(148, 163, 184, 0.3);">
-          <h3 style="margin-top: 0; color: var(--ff-primary);">Spiritual Awakening</h3>
+        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+          <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Spiritual Awakening</h3>
           <p>
             Born from isolation and reflection during an era of fear and polarization,
             this work searches beneath traditions for deeper meaning — sincere, not rebellious;
@@ -73,8 +73,8 @@ description: "The story of a man raised between two houses in a world breaking b
           </p>
         </article>
 
-        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid rgba(148, 163, 184, 0.3);">
-          <h3 style="margin-top: 0; color: var(--ff-primary);">Local Community</h3>
+        <article style="padding: 2rem; background: rgba(15, 23, 42, 0.6); border-radius: 8px; border: 1px solid rgba(212, 165, 116, 0.3); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;">
+          <h3 style="margin-top: 0; color: var(--ff-vintage-gold);">Local Community</h3>
           <p>
             In an age of global overreach and eroding local bonds, Faith Frontier champions
             human-scale community, personal sovereignty, and the protection of grounded truth
@@ -91,9 +91,9 @@ description: "The story of a man raised between two houses in a world breaking b
       
       <div style="display: flex; flex-direction: column; gap: 1.5rem;">
         
-        <article style="padding: 1.5rem; border-left: 3px solid var(--ff-primary);">
+        <article style="padding: 1.5rem; border-left: 4px solid var(--ff-vintage-gold); background: rgba(15, 23, 42, 0.3);">
           <h3 style="margin-top: 0;">
-            <a href="{{ '/about/' | relative_url }}" style="color: var(--ff-primary);">The Story</a>
+            <a href="{{ '/about/' | relative_url }}" style="color: var(--ff-vintage-gold);">The Story</a>
           </h3>
           <p>
             A biographical and historical foundation: Devon's journey from childhood duality
@@ -101,9 +101,9 @@ description: "The story of a man raised between two houses in a world breaking b
           </p>
         </article>
 
-        <article style="padding: 1.5rem; border-left: 3px solid var(--ff-secondary);">
+        <article style="padding: 1.5rem; border-left: 4px solid var(--ff-primary); background: rgba(15, 23, 42, 0.3);">
           <h3 style="margin-top: 0;">
-            <a href="{{ '/essays/' | relative_url }}" style="color: var(--ff-secondary);">Essays & Commentary</a>
+            <a href="{{ '/essays/' | relative_url }}" style="color: var(--ff-primary);">Essays & Commentary</a>
           </h3>
           <p>
             Reflections on faith, covenant, sovereignty, and the tension between personal
@@ -111,7 +111,7 @@ description: "The story of a man raised between two houses in a world breaking b
           </p>
         </article>
 
-        <article style="padding: 1.5rem; border-left: 3px solid var(--ff-muted);">
+        <article style="padding: 1.5rem; border-left: 4px solid var(--ff-sepia); background: rgba(15, 23, 42, 0.3);">
           <h3 style="margin-top: 0;">
             <a href="{{ '/cases/' | relative_url }}" style="color: var(--ff-muted);">Case Records</a>
           </h3>
@@ -125,8 +125,8 @@ description: "The story of a man raised between two houses in a world breaking b
     </section>
 
     <!-- Call to Action -->
-    <section style="margin: 4rem auto; padding: 3rem 2rem; max-width: 60rem; text-align: center; background: rgba(15, 118, 110, 0.1); border-radius: 1rem; border: 1px solid var(--ff-primary);">
-      <h2 style="margin-top: 0;">For Those Who Feel the Same</h2>
+    <section style="margin: 4rem auto; padding: 3rem 2rem; max-width: 60rem; text-align: center; background: linear-gradient(135deg, rgba(15, 118, 110, 0.15) 0%, rgba(212, 165, 116, 0.1) 100%); border-radius: 12px; border: 2px solid var(--ff-vintage-gold); box-shadow: 0 4px 20px rgba(212, 165, 116, 0.2);">
+      <h2 style="margin-top: 0; color: var(--ff-cream);">For Those Who Feel the Same</h2>
       <p style="font-size: 1.1rem; line-height: 1.7;">
         This is for people who sense the weight of systems yet refuse to lose their humanity.
         For those rebuilding meaning and identity at human scale in an era of global reach.
