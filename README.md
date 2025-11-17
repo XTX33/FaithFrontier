@@ -75,5 +75,9 @@ OpenAI integration provides automated analysis of case records from two perspect
 2. Add it as a repository secret: Settings > Secrets and variables > Actions > New repository secret
 3. Name: `OPENAI_API_KEY`
 4. Value: Your OpenAI API key
+5. **Generate analysis**: See [QUICKSTART-GENERATE-ANALYSIS.md](QUICKSTART-GENERATE-ANALYSIS.md) for step-by-step instructions
 
-See [ANALYSIS-SYSTEM.md](ANALYSIS-SYSTEM.md) for complete setup and usage instructions.
+**Documentation:**
+- [QUICKSTART-GENERATE-ANALYSIS.md](QUICKSTART-GENERATE-ANALYSIS.md) - Quick start guide to generate analysis
+- [ANALYSIS-SYSTEM.md](ANALYSIS-SYSTEM.md) - Complete system documentation
+- [.github/SETUP-OPENAI.md](.github/SETUP-OPENAI.md) - API key setup instructions

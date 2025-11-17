@@ -142,13 +142,20 @@ By default, analyses older than 7 days are regenerated. Adjust in `scripts/analy
 if (daysSinceGenerated < 7) {  // Change to your preferred number of days
 ```
 
-### Rate Limiting
+### Rate Limiting Protection
 
-The script includes a 1-second delay between API calls. Adjust if needed:
+The script automatically handles rate limits with:
+- **20-second delays** between API calls (respects 3 RPM free tier limit)
+- **Exponential backoff retry** logic for 429 errors
+- **Partial saves** so progress isn't lost if one analysis fails
+
+To adjust the delays (if you have higher rate limits), edit `scripts/analyze-cases.js`:
 
 ```javascript
-await new Promise(resolve => setTimeout(resolve, 1000));  // milliseconds
+await new Promise(resolve => setTimeout(resolve, 20000));  // Change 20000 (20s) as needed
 ```
+
+**Note:** Free tier has 3 RPM limit = minimum 20 seconds between requests. Paid tiers have higher limits.
 
 ## Costs
 
@@ -180,10 +187,33 @@ For 10 cases: ~$0.02-0.04
 - Check that files have `.md` extension
 - Verify files have valid YAML front matter
 
-### Rate Limiting
-- The script processes cases sequentially with delays
-- If you hit rate limits, increase the delay between API calls
-- Consider using a higher tier API plan
+### Rate Limiting (HTTP 429 Errors)
+
+The script is designed to handle OpenAI rate limits automatically:
+
+**Free Tier Limits:**
+- 3 requests per minute (RPM)
+- 100,000 tokens per minute (TPM)
+
+**Built-in Protection:**
+- 20-second delay between API calls (respects 3 RPM limit)
+- Automatic retry with exponential backoff on rate limit errors
+- Partial results saved (judicial analysis saved even if journalistic fails)
+- Can resume analysis on subsequent runs (skips recently generated analyses)
+
+**If Rate Limits Are Hit:**
+- The script will automatically wait and retry (up to 5 attempts)
+- Wait times are extracted from error messages when possible
+- For very large case backlogs, consider:
+  - Running analysis in multiple smaller batches
+  - Upgrading to a paid OpenAI plan with higher rate limits
+  - Using the `force_reanalysis: false` option to only analyze new cases
+
+**Expected Runtime:**
+- Each case requires 2 API calls (judicial + journalistic)
+- With 3 RPM limit: ~40 seconds per case minimum
+- For 7 cases: ~5-6 minutes minimum
+- GitHub Actions timeout: 6 hours (plenty of time)
 
 ## Security
 
