@@ -14,6 +14,22 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
       - run: bundle exec jekyll build
+      - name: Verify CSS files exist
+        run: |
+          echo "Checking for critical CSS files..."
+          test -f _site/assets/css/theme.css || (echo "ERROR: theme.css not found" && exit 1)
+          test -f _site/assets/css/main.css || (echo "ERROR: main.css not found" && exit 1)
+          echo "✅ All critical CSS files found"
+          
+          echo "Verifying CSS files are not empty..."
+          test -s _site/assets/css/theme.css || (echo "ERROR: theme.css is empty" && exit 1)
+          test -s _site/assets/css/main.css || (echo "ERROR: main.css is empty" && exit 1)
+          echo "✅ All CSS files contain content"
+          
+          echo "Checking HTML references to CSS..."
+          grep -q 'href="/assets/css/theme.css"' _site/index.html || (echo "ERROR: theme.css not referenced in index.html" && exit 1)
+          grep -q 'href="/assets/css/main.css"' _site/index.html || (echo "ERROR: main.css not referenced in index.html" && exit 1)
+          echo "✅ CSS files properly referenced in HTML"
       - name: Check links
         uses: lycheeverse/lychee-action@v1
         with:

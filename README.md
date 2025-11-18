@@ -54,7 +54,53 @@ This repository powers **faithfrontier.org**.
 - `/cases/` — Public case index page.
 - `/essays/` — Public essays index page.
 
-To use:
+## Building and Deploying
+
+### Local Development
+
+To build and test the site locally:
+
+```bash
+# Install Ruby dependencies
+bundle install
+
+# Build the site (production mode)
+JEKYLL_ENV=production bundle exec jekyll build
+
+# Or run the development server
+bundle exec jekyll serve
+# Visit http://localhost:4000
+```
+
+### Deployment to GitHub Pages
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+**Important:** The site uses the custom domain `faithfrontier.org` configured in `_config.yml` and the `CNAME` file. The GitHub Actions workflow builds Jekyll without any baseurl override to ensure asset paths work correctly with the custom domain.
+
+**DNS Configuration:**
+- Add CNAME record: `faithfrontier.org` → `xtx33.github.io`
+- Or A records pointing to GitHub Pages IP addresses
+
+**GitHub Pages Settings:**
+- Repository > Settings > Pages
+- Source: Deploy from a branch
+- Branch: `main` / (root)
+- Custom domain: `faithfrontier.org`
+
+### Continuous Integration
+
+The repository includes two workflows:
+- **jekyll.yml**: Builds and deploys the site to GitHub Pages
+- **validate.yml**: Runs on every push/PR to verify:
+  - Jekyll builds successfully
+  - Critical CSS files exist and are not empty
+  - CSS files are properly referenced in HTML
+  - Links are valid
+
+## Usage
+
+## Usage
 
 1. Add or edit case records in `_cases/`.
 2. Place PDFs and exhibits under `assets/cases/<docket>/` and update the `assets_dir` and `documents` fields in each case file.
