@@ -22,6 +22,24 @@ description: "The story of a man raised between two houses in a world breaking b
   </div>
 </section>
 
+<section class="preamble">
+  <div class="container preamble__inner">
+    <p class="preamble__eyebrow">United States Constitution</p>
+    <h2 class="preamble__title">We the People</h2>
+    <p class="preamble__body">
+      We the People of the United States, in Order to form a more perfect Union, establish Justice,
+      insure domestic Tranquility, provide for the common defence, promote the general Welfare,
+      and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish
+      this Constitution for the United States of America.
+    </p>
+    <div class="preamble__principles">
+      <div class="preamble__principle">Guarding against foreign monopolies that would erode local stewardship.</div>
+      <div class="preamble__principle">Standing firm against invasion — of land, conscience, or spirit.</div>
+      <div class="preamble__principle">Preserving national identity with justice, tranquility, and mutual duty.</div>
+    </div>
+  </div>
+</section>
+
 <section class="site-main">
   <div class="container">
 

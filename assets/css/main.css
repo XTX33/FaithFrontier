@@ -152,6 +152,72 @@
   gap: 1rem;
 }
 
+/* U.S. Constitution Preamble callout */
+.preamble {
+  padding: 3.5rem 1.25rem 3rem;
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.08) 0%, rgba(15, 118, 110, 0.12) 100%);
+  border-top: 1px solid rgba(212, 165, 116, 0.35);
+  border-bottom: 1px solid rgba(212, 165, 116, 0.35);
+}
+
+.preamble__inner {
+  max-width: 62rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preamble__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: var(--ff-vintage-gold);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.preamble__title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--ff-cream);
+}
+
+.preamble__body {
+  margin: 0 auto 2rem;
+  max-width: 54rem;
+  line-height: 1.8;
+  color: var(--ff-ink);
+  font-size: 1.1rem;
+  font-family: 'Crimson Text', serif;
+}
+
+.preamble__principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  text-align: left;
+}
+
+.preamble__principle {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  color: var(--ff-muted);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .preamble {
+    padding: 3rem 1rem 2.5rem;
+  }
+
+  .preamble__principle {
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .hero--home {
     padding: 6rem 1.25rem 5rem;
