@@ -126,6 +126,38 @@ ${docketSummary || 'No docket entries available'}
 `.trim();
 };
 
+// Helper function to retry API calls with exponential backoff
+const retryWithBackoff = async (fn, maxRetries = 5) => {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (error.status === 429 && attempt < maxRetries - 1) {
+        // Rate limit hit - extract wait time from error message or use exponential backoff
+        const retryMatch = error.message.match(/try again in (\d+)([smh])/);
+        let waitTime = 20000; // Default 20 seconds
+        
+        if (retryMatch) {
+          const value = parseInt(retryMatch[1]);
+          const unit = retryMatch[2];
+          if (unit === 's') waitTime = value * 1000;
+          else if (unit === 'm') waitTime = value * 60 * 1000;
+          else if (unit === 'h') waitTime = value * 60 * 60 * 1000;
+        } else {
+          // Exponential backoff: 20s, 40s, 80s, 160s, 320s
+          waitTime = Math.min(20000 * Math.pow(2, attempt), 320000);
+        }
+        
+        console.log(`Rate limit hit. Waiting ${Math.round(waitTime / 1000)}s before retry ${attempt + 1}/${maxRetries}...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+      } else {
+        throw error;
+      }
+    }
+  }
+  throw new Error('Max retries exceeded');
+};
+
 // Generate judicial oversight analysis
 const generateJudicialAnalysis = async (caseData, docketEntries) => {
   const caseContent = formatCaseForAnalysis(caseData, docketEntries);
@@ -143,23 +175,25 @@ Provide a thorough, objective analysis that highlights key judicial oversight is
 ${caseContent}`;
 
   try {
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are an expert legal analyst specializing in judicial oversight, constitutional law, and due process. Provide detailed, thoughtful analysis based on legal principles.',
-        },
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
-      temperature: 0.7,
-      max_tokens: 2000,
+    return await retryWithBackoff(async () => {
+      const response = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are an expert legal analyst specializing in judicial oversight, constitutional law, and due process. Provide detailed, thoughtful analysis based on legal principles.',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+        temperature: 0.7,
+        max_tokens: 2000,
+      });
+      
+      return response.choices[0].message.content;
     });
-    
-    return response.choices[0].message.content;
   } catch (error) {
     console.error('Error generating judicial analysis:', error.message);
     return null;
@@ -184,23 +218,25 @@ Write in a clear, compelling style that makes the case accessible to the general
 ${caseContent}`;
 
   try {
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are an investigative journalist focused on civil liberties, government accountability, and constitutional rights. Write with clarity, passion for truth, and respect for individual freedom.',
-        },
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
-      temperature: 0.8,
-      max_tokens: 2000,
+    return await retryWithBackoff(async () => {
+      const response = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are an investigative journalist focused on civil liberties, government accountability, and constitutional rights. Write with clarity, passion for truth, and respect for individual freedom.',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+        temperature: 0.8,
+        max_tokens: 2000,
+      });
+      
+      return response.choices[0].message.content;
     });
-    
-    return response.choices[0].message.content;
   } catch (error) {
     console.error('Error generating journalistic commentary:', error.message);
     return null;
@@ -281,20 +317,35 @@ const main = async () => {
     console.log('\n🔍 Generating judicial oversight analysis...');
     const judicialAnalysis = await generateJudicialAnalysis(caseData, docketEntries);
     
+    // Save partial result if judicial analysis succeeded
+    if (judicialAnalysis) {
+      saveAnalysis(slug, {
+        judicial: judicialAnalysis,
+        journalistic: null,
+      });
+      console.log('✓ Judicial analysis saved');
+    }
+    
+    // Delay to respect rate limits (3 RPM = 20 seconds between requests minimum)
+    console.log('⏱️  Waiting 20s to respect rate limits...');
+    await new Promise(resolve => setTimeout(resolve, 20000));
+    
     console.log('📰 Generating journalistic commentary...');
     const journalisticCommentary = await generateJournalisticCommentary(caseData, docketEntries);
     
-    if (judicialAnalysis || journalisticCommentary) {
+    if (journalisticCommentary) {
+      // Update with both analyses
       saveAnalysis(slug, {
         judicial: judicialAnalysis,
         journalistic: journalisticCommentary,
       });
-    } else {
+      console.log('✓ Journalistic commentary saved');
+    } else if (!judicialAnalysis) {
       console.log('⚠ No analysis generated due to errors');
     }
     
-    // Add a small delay between API calls to avoid rate limiting
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Add a delay between cases to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 20000));
   }
   
   console.log('\n' + '═'.repeat(60));
