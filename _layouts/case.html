@@ -3,6 +3,8 @@ layout: default
 ---
 
 <article class="case-record shell">
+  {% include breadcrumbs.html %}
+
   <header class="case-header">
     <p class="case-eyebrow">
       {{ page.court }}{% if page.venue %} — {{ page.venue }}{% endif %}
