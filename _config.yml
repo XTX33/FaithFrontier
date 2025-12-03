@@ -16,10 +16,10 @@ permalink: /:title/  # for posts
 collections:
   cases:
     output: true
-    permalink: /cases/:name/
+    permalink: /cases/:path/
   essays:
     output: true
-    permalink: /essays/:name/
+    permalink: /essays/:slug/
   docs:
     output: true
     permalink: /docs/:name/

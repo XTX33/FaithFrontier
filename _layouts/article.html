@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="article shell" style="max-width: 72rem; margin: 0 auto;">
+  <header class="article-header" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(15,118,110,0.04); border-radius: 16px;">
+    <p class="article-kicker" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; color: var(--ff-emerald); margin: 0 0 0.5rem 0;">
+      Biography · Constitutional Narrative
+    </p>
+    <h1 class="article-title" style="margin: 0 0 0.75rem 0; font-size: clamp(2rem, 3vw, 3rem); color: var(--ff-cream);">
+      {{ page.title }}
+    </h1>
+    {% if page.description %}
+    <p class="article-description" style="font-size: 1.1rem; line-height: 1.7; margin: 0 0 0.75rem 0; color: var(--ff-muted);">
+      {{ page.description }}
+    </p>
+    {% endif %}
+    <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; font-size: 0.95rem; color: var(--ff-muted);">
+      {% if page.author %}
+      <span><strong style="color: var(--ff-emerald);">Author:</strong> {{ page.author }}</span>
+      {% endif %}
+      {% if page.date %}
+      <span><strong style="color: var(--ff-secondary);">Date:</strong> {{ page.date | date: "%B %-d, %Y" }}</span>
+      {% endif %}
+      {% if page.category %}
+      <span class="article-category" style="padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(212,165,116,0.14); color: var(--ff-vintage-gold); border: 1px solid rgba(212,165,116,0.35);">
+        {{ page.category }}
+      </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="article-body" style="padding: 0 0 2rem 0; display: grid; gap: 1.8rem;">
+    {{ content }}
+  </section>
+</article>
