@@ -26,6 +26,9 @@ collections:
   docs:
     output: true
     permalink: /docs/:name/
+  trust:
+    output: true
+    permalink: /sanctuary/trust/:name/
 
 # Defaults
 defaults:
@@ -39,6 +42,10 @@ defaults:
     values: { layout: "doc" }
   - scope: { path: "", type: "posts" }
     values: { layout: "post" }
+  - scope: { path: "_trust", type: "trust" }
+    values:
+      layout: "trust_document"
+      sitemap: false
 
 # Plugins
 plugins:

@@ -45,6 +45,11 @@ permalink: /tillerstead-sanctuary-vision/
   </article>
 
   <article class="card">
+    <h2><a href="{{ '/sanctuary/trust/' | relative_url }}">Ecclesiastical Trust Inner Room</a></h2>
+    <p>Formation, resolutions, and ecclesiastical governance records maintained in Sanctuary’s inner room.</p>
+  </article>
+
+  <article class="card">
     <h2><a href="{{ '/faith-frontier-brand-creed/' | relative_url }}">Faith Frontier Brand Creed</a></h2>
     <p>Approved language and tone for sanctuary storytelling without exploitation or gambling imagery.</p>
   </article>
