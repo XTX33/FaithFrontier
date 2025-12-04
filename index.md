@@ -15,6 +15,11 @@ description: "The story of a man raised between two houses in a world breaking b
       The story of a man raised between two houses in a world breaking between two eras.
       A declaration of identity over bureaucracy, spirit over systems, meaning over machinery.
     </p>
+    <p class="hero-lead" style="max-width: 48rem;">
+      Faith Frontier is a Christian, non-denominational witness to Jesus Christ — rooted in Biblical principles and serving
+      Atlantic City, New Jersey, and beyond. Learn more in our
+      <a href="{{ '/about/faith-frontier-identity/' | relative_url }}">Identity &amp; Beliefs</a> page.
+    </p>
     <div class="hero-actions">
       <a class="btn" href="{{ '/about/' | relative_url }}">Devon's Story</a>
       <a class="btn-ghost" href="{{ '/essays/' | relative_url }}">Read Essays</a>

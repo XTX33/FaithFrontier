@@ -13,6 +13,11 @@ body_class: page-about
     between two eras. It is a story of seeking clarity in confusion, identity in pressure,
     and meaning in a time when institutions are collapsing and local communities are being forgotten.
   </p>
+  <p class="lead" style="max-width: 54rem;">
+    Faith Frontier is a Christian, non-denominational witness to Jesus Christ, rooted in Biblical principles
+    and attentive to the needs of Atlantic City and New Jersey. Read more in our
+    <a href="{{ '/about/faith-frontier-identity/' | relative_url }}">Identity &amp; Beliefs</a> page.
+  </p>
 </section>
 
 <section class="section-content" style="max-width: 60rem; margin: 0 auto 3rem;">
