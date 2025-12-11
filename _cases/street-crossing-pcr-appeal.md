@@ -19,6 +19,10 @@ tags:
   - street-crossing
   - appeal
 assets_dir: "/cases/atl-24-001934/pcr/"
+overview: >
+  Combined Law Division PCR petition and Appellate Division review tied to the street-crossing
+  conviction. Active filings include the Chief Clambrone letter, demurrer/plea in abatement,
+  and formal notice of appeal to docket A-000313-25.
 documents:
   - label: "Chief Clambrone Letter"
     path: "09-25-2024-chief-clambrone-letter.pdf"
@@ -37,6 +41,12 @@ redirect_from:
 The street-crossing matter is being pursued through post-conviction relief in the Law Division and, in parallel, through an appeal in the Appellate Division. This consolidated record keeps both dockets together so filings, orders, and context remain aligned with the broader Faith Frontier narrative.
 
 Key filings and orders are organized in the docket below. Supporting materials remain available in the original PCR portal directory while appellate documents are linked directly.
+
+## Status Overview
+
+- **25 Sep 2024:** Chief Clambrone letter and PCR intake filings established the factual record for ATL-24-001934.
+- **26 Oct 2025:** Unified PCR petition and memorandum (see PDF) filed to surface due process errors; same document supports both trial and appellate tracks.
+- **29 Oct 2025:** Notice of Appeal docketed as A-000313-25 with fee waiver orders appended; Appellate Division monitoring for scheduling.
 
 ## AI-Powered Case Analysis
 

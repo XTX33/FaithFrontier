@@ -11,6 +11,7 @@
 <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+{% assign ff_logo_mark_svg = site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' %}
 {% assign ff_logo_mark_64 = site.logo_png_mark_64 | default: '/assets/img/faithfrontier-logo-mark-64.png' %}
 {% assign ff_logo_mark_128 = site.logo_png_mark_128 | default: '/assets/img/faithfrontier-logo-mark-128.png' %}
 {% assign ff_logo_mark_256 = site.logo_png_mark_256 | default: '/assets/img/faithfrontier-logo-mark-256.png' %}
@@ -18,11 +19,13 @@
 {% assign ff_logo_mark_1024 = site.logo_png_mark_1024 | default: '/assets/img/faithfrontier-logo-mark-1024.png' %}
 
 <!-- Favicon / Icons -->
+<link rel="icon" type="image/svg+xml" href="{{ ff_logo_mark_svg | relative_url }}">
 <link rel="icon" type="image/png" sizes="64x64" href="{{ ff_logo_mark_64 | relative_url }}">
 <link rel="icon" type="image/png" sizes="128x128" href="{{ ff_logo_mark_128 | relative_url }}">
 <link rel="icon" type="image/png" sizes="256x256" href="{{ ff_logo_mark_256 | relative_url }}">
 <link rel="icon" type="image/png" sizes="512x512" href="{{ ff_logo_mark_512 | relative_url }}">
 <link rel="apple-touch-icon" href="{{ ff_logo_mark_512 | relative_url }}">
+<link rel="mask-icon" href="{{ ff_logo_mark_svg | relative_url }}" color="#d4a574">
 <meta name="theme-color" content="#020617">
 
 <!-- Open Graph / Facebook -->
@@ -32,11 +35,12 @@
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 {% if page.image %}
-  <meta property="og:image" content="{{ page.image | relative_url }}">
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
 {% else %}
-  <meta property="og:image" content="{{ ff_logo_mark_1024 | relative_url }}">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
+  <meta property="og:image" content="{{ ff_logo_mark_svg | absolute_url }}">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
 {% endif %}
 
 <!-- Twitter -->
@@ -44,9 +48,9 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} Aú {% endif %}{{ site.title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 {% if page.image %}
-  <meta name="twitter:image" content="{{ page.image | relative_url }}">
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
 {% else %}
-  <meta name="twitter:image" content="{{ ff_logo_mark_512 | relative_url }}">
+  <meta name="twitter:image" content="{{ ff_logo_mark_svg | absolute_url }}">
 {% endif %}
 
 <!-- Performance hints -->
@@ -67,5 +71,4 @@
 {% if page.stylesheet %}
 <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">
 {% endif %}
-
 
