@@ -2,17 +2,29 @@
   <div class="site-header-inner container">
 
     <!-- Brand -->
-    <a class="site-logo"
-       href="{{ '/' | relative_url }}"
-       aria-label="{{ site.title | default: 'Faith Frontier – Home' }}">
-      <img
-        src="{{ '/assets/img/logo.png' | relative_url }}"
-        alt="{{ site.title | default: 'Faith Frontier' }} logo"
-        width="180"
-        height="auto"
-        decoding="async"
-        loading="lazy"
-        style="max-height: 64px; height: auto;" />
+    <a class="ff-brand" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home">
+      {% if site.logo_main %}
+        <img src="{{ site.logo_main | relative_url }}"
+             alt="Faith Frontier Ecclesiastical Trust"
+             class="ff-logo ff-logo--header"
+             decoding="async"
+             loading="eager" />
+      {% else %}
+        <img src="{{ '/assets/img/faithfrontier-logo.svg' | relative_url }}"
+             alt="Faith Frontier Ecclesiastical Trust"
+             class="ff-logo ff-logo--header"
+             decoding="async"
+             loading="eager" />
+      {% endif %}
+    </a>
+
+    <!-- Mobile brand (icon-only) -->
+    <a class="ff-brand ff-brand--mobile" href="{{ '/' | relative_url }}" aria-label="Faith Frontier home">
+      <img src="{{ site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' | relative_url }}"
+           alt="Faith Frontier"
+           class="ff-logo ff-logo--icon"
+           decoding="async"
+           loading="lazy" />
     </a>
 
     <!-- Mobile nav toggle -->

@@ -142,6 +142,52 @@ h3 {
   margin-right: 0.5rem;
 }
 
+/* Faith Frontier brand components */
+.ff-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.ff-logo {
+  display: block;
+  height: auto;
+}
+
+/* Header logo – desktop */
+.ff-logo--header {
+  max-height: 40px;
+}
+
+/* Header icon – mobile / nav */
+.ff-logo--icon {
+  max-height: 32px;
+}
+
+/* Footer logo */
+.ff-logo--footer {
+  max-height: 32px;
+  opacity: 0.9;
+}
+
+.ff-logo--responsive {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Mobile brand visibility */
+.ff-brand--mobile { display: none; }
+@media (max-width: 767px) {
+  .ff-brand--mobile { display: inline-flex; }
+}
+
+/* Dark mode tweaks (non-destructive) */
+[data-theme="dark"] .ff-logo--header,
+[data-theme="dark"] .ff-logo--footer {
+  filter: brightness(1.15) contrast(1.1);
+}
+
 /* Mobile nav toggle */
 
 .nav-toggle {

@@ -3,11 +3,13 @@
 
     <!-- Brand / Logo -->
     <div class="footer-brand">
-      <a href="{{ '/' | relative_url }}" class="footer-logo-link" itemprop="url">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}"
-             alt="Faith Frontier logo"
-             class="footer-logo"
-             itemprop="logo">
+      <a href="{{ '/' | relative_url }}" class="footer-logo-link" itemprop="url" aria-label="Faith Frontier Ecclesiastical Trust home">
+        <div class="ff-footer-brand">
+          <img src="{{ site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' | relative_url }}"
+               alt="Faith Frontier Ecclesiastical Trust"
+               class="ff-logo ff-logo--footer"
+               itemprop="logo">
+        </div>
         <span class="footer-name" itemprop="name">Faith Frontier</span>
       </a>
       <p class="footer-tagline">In the World, But Not of It</p>

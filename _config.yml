@@ -7,6 +7,10 @@ lang: en
 timezone: America/New_York
 author: Devon Tyler Barber
 
+# Brand assets
+logo_main: "/assets/img/faithfrontier-logo.svg"
+logo_mark: "/assets/img/faithfrontier-mark.svg"
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
