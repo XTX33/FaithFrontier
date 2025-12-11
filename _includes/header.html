@@ -64,13 +64,17 @@
 
     <!-- Primary navigation -->
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <ul>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a href="{{ '/manifesto/' | relative_url }}">Manifesto</a></li>
-        <li><a href="{{ '/tillerstead-sanctuary-vision/' | relative_url }}">Sanctuary</a></li>
-        <li><a href="{{ '/essays/' | relative_url }}">Essays</a></li>
-        <li><a href="{{ '/cases/' | relative_url }}">Cases</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+      <div class="nav-drawer-header" aria-hidden="true">
+        <span class="nav-title">Menu</span>
+        <button class="nav-close" type="button" aria-label="Close menu">×</button>
+      </div>
+      <ul class="nav-list">
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ '/manifesto/' | relative_url }}" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a></li>
+        <li><a href="{{ '/tillerstead-sanctuary-vision/' | relative_url }}" {% if page.url == '/tillerstead-sanctuary-vision/' %}aria-current="page"{% endif %}>Sanctuary</a></li>
+        <li><a href="{{ '/essays/' | relative_url }}" {% if page.url == '/essays/' %}aria-current="page"{% endif %}>Essays</a></li>
+        <li><a href="{{ '/cases/' | relative_url }}" {% if page.url == '/cases/' %}aria-current="page"{% endif %}>Cases</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
       </ul>
     </nav>
 

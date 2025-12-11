@@ -19,6 +19,11 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
         and seek restoration. We document hard cases, stand with families inside complex systems, and keep every action
         submitted to Yeshua the Messiah so that justice is both legal and holy.
       </p>
+      <div id="daily-verse" class="hero-scripture" style="margin: 1rem 0 1.25rem; color: var(--color-muted);">
+        <span class="dv-text">Loading daily verse…</span>
+        <span class="dv-ref" style="display:block; font-size: 0.95rem;"></span>
+        <span class="dv-note" style="display:block; font-size: 0.85rem; opacity: 0.8; margin-top: 0.35rem;">Updated daily (New Jersey)</span>
+      </div>
       <div class="hero-highlights">
         <article class="hero-highlight">
           <span class="hero-highlight__label">Due process clarity</span>
@@ -94,6 +99,10 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
       Faith Frontier is an ecclesiastical, faith-rooted public trust committed to New Jersey's people. We acknowledge the
       harms we have witnessed -- confusing hearings, paperwork traps, agencies that miss humanity -- and we turn those
       lessons into a constructive path forward.
+    </p>
+    <p style="color: var(--color-muted);">
+      We follow Christ's call to justice, mercy, and humility (cf. Matthew 5–7), anchoring our public recordkeeping in
+      the witness tradition of the Geneva Bible while inviting transparent comparison across translations.
     </p>
     <p>
       We are building an ethical advocacy culture: documenting cases, equipping residents with plain-language guidance,

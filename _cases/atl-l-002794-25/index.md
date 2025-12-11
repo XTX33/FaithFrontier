@@ -17,7 +17,7 @@ judge:
 tags:
   - civil
   - track-change
-assets_dir: "/cases/atl-l-002794-25/"
+assets_dir: "/cases/atl-l-002794-25/filings/"
 overview: >
   Track-change litigation pressing the Law Division to treat Barber's civil claims as complex
   equitable matters instead of a fast-track landlord docket. Verified pleadings, supplemental

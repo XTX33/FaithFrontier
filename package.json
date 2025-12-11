@@ -1,5 +1,13 @@
 {
+  "name": "faithfrontier",
+  "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "analyze": "node scripts/analyze-cases.js",
+    "docket:intake": "node scripts/docket-intake.js",
+    "checksums": "node scripts/generate-checksums.js",
+    "changelog:weekly": "node scripts/generate-weekly-changelog.js"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "js-yaml": "^4.1.1",

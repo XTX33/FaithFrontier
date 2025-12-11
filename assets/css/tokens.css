@@ -13,8 +13,8 @@
 
   /* Tonal values */
   --ff-ink: #f9fafb;
-  --ff-muted: #a8a29e;
-  --ff-surface: #0f172a;
+  --ff-muted: #cbd5e1;
+  --ff-surface: #0b1222;
   --ff-cream: #fef3c7;
 
   /* Spacing scale */
@@ -35,14 +35,14 @@
   --radius-lg: 24px;
 
   /* Shadows */
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.25);
-  --shadow-mid: 0 16px 40px rgba(0, 0, 0, 0.35);
-  --shadow-strong: 0 25px 60px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --shadow-mid: 0 16px 40px rgba(0, 0, 0, 0.38);
+  --shadow-strong: 0 25px 60px rgba(0, 0, 0, 0.48);
 }
 
 .ff-notice {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  margin-top: 1rem;
-  color: var(--ts-brass-muted);
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-top: var(--space-md);
+  color: var(--ff-muted);
 }

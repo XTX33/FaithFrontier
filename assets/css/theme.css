@@ -92,7 +92,7 @@ h3 {
 .shell {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 var(--space-sm, 1rem);
 }
 
 /* ======================================
@@ -114,7 +114,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 0;
+  padding: 0.5rem 0;
 }
 
 .site-logo {
@@ -136,9 +136,9 @@ h3 {
 
 .site-logo img {
   display: block;
-  height: 48px;
+  height: 36px;
   width: auto;
-  max-width: 200px;
+  max-width: 180px;
   margin-right: 0.5rem;
 }
 
@@ -161,13 +161,13 @@ h3 {
 
 /* Header logo – desktop */
 .ff-logo--header {
-  max-height: 48px;
+  max-height: 36px;
   width: auto;
 }
 
 .ff-logo-inline svg {
   display: block;
-  max-height: 48px;
+  max-height: 36px;
   width: auto;
 }
 
@@ -178,8 +178,67 @@ h3 {
 
 /* Footer logo */
 .ff-logo--footer {
-  max-height: 32px;
-  opacity: 0.9;
+  max-height: 36px;
+  opacity: 0.95;
+}
+
+/* ======================================
+   Hero – Daily Verse styling
+====================================== */
+.hero-scripture {
+  margin-top: var(--space-sm, 0.75rem);
+  margin-bottom: var(--space-sm, 0.75rem);
+  padding: var(--space-sm, 0.75rem) var(--space-md, 1rem);
+  border-left: 3px solid var(--accent-brass);
+  background: rgba(255, 255, 255, 0.045);
+  border-radius: var(--radius-sm, 10px);
+}
+.hero-scripture .dv-text {
+  color: var(--color-text);
+}
+.hero-scripture .dv-ref {
+  color: var(--color-muted);
+}
+.hero-scripture a {
+  color: var(--color-text);
+}
+.hero-scripture a:hover {
+  color: var(--accent-brass);
+  text-decoration: none;
+}
+
+/* Responsive tuning for Daily Verse */
+@media (max-width: 639px) {
+  .hero-scripture {
+    margin-top: var(--space-xs, 0.5rem);
+    margin-bottom: var(--space-xs, 0.5rem);
+    padding: var(--space-xs, 0.5rem) var(--space-sm, 0.75rem);
+    border-left-width: 2px;
+  }
+  .hero-scripture .dv-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .hero-scripture .dv-ref {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-scripture .dv-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .hero-scripture .dv-ref {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-scripture .dv-text {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
 }
 
 .ff-logo--responsive {
@@ -238,11 +297,22 @@ h3 {
   transition: all 0.3s ease;
 }
 
+/* Animated hamburger → close */
+.nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 /* Backdrop overlay when nav is open */
 .nav-backdrop {
   display: none;
   position: fixed;
-  top: 70px;
+  top: 56px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -335,6 +405,19 @@ h3 {
   outline: none;
 }
 
+/* Visible focus for accessibility */
+.site-nav a:focus-visible {
+  outline: 2px solid var(--accent-emerald);
+  outline-offset: 2px;
+}
+
+/* Active page state */
+.site-nav a[aria-current="page"] {
+  color: var(--accent-brass);
+  background: rgba(184, 138, 57, 0.12);
+  border-color: rgba(184, 138, 57, 0.35);
+}
+
 .site-nav a:active {
   background: rgba(1, 138, 106, 0.16);
   transform: scale(0.98);
@@ -345,18 +428,50 @@ h3 {
 .site-nav.is-open {
   display: block;
   position: fixed;
-  top: 70px;
+  top: 56px;
   right: 0;
   width: min(280px, 75vw);
-  max-height: calc(100vh - 70px);
+  max-height: calc(100vh - 56px);
   overflow-y: auto;
   background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(10px);
-  padding: 1.75rem 1.5rem;
+  padding: 1rem 1rem 1.25rem;
   border-left: 2px solid var(--accent-brass);
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.6);
   z-index: 999;
   animation: slideInRight 0.25s ease;
+}
+
+/* Drawer title/header (mobile only) */
+.nav-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.5rem 0;
+  padding: 0.25rem 0.25rem 0.5rem;
+  border-bottom: 1px solid rgba(184, 138, 57, 0.25);
+}
+.nav-title {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+.nav-close {
+  background: transparent;
+  border: 1px solid rgba(184, 138, 57, 0.4);
+  color: var(--color-text);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.nav-close:hover {
+  background: rgba(184, 138, 57, 0.12);
 }
 
 @keyframes slideInRight {
@@ -367,6 +482,19 @@ h3 {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .site-nav.is-open {
+    animation: none !important;
+  }
+  .nav-toggle-bar,
+  .nav-backdrop,
+  .site-nav,
+  .site-nav a {
+    transition: none !important;
   }
 }
 
@@ -386,6 +514,9 @@ h3 {
     padding: 0;
     border: none;
   }
+
+  /* Hide drawer header on desktop */
+  .nav-drawer-header, .nav-close { display: none; }
 
   .nav-list {
     flex-direction: row;
@@ -472,7 +603,7 @@ h3 {
 .footer-inner {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 var(--space-sm, 1rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -500,17 +631,17 @@ h3 {
 }
 
 .footer-tagline {
-  margin-top: 0.25rem;
-  color: var(--color-muted);
+  margin-top: 0.35rem;
+  color: var(--color-highlight);
   font-style: italic;
   font-family: var(--ff-serif);
 }
 
 .footer-about {
-  max-width: 700px;
+  max-width: 740px;
   margin: 0 auto;
   color: var(--color-text);
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .footer-nav ul {
@@ -531,8 +662,8 @@ h3 {
 }
 
 .footer-meta {
-  font-size: 0.85rem;
-  margin-top: 1rem;
+  font-size: 0.9rem;
+  margin-top: var(--space-md, 1rem);
 }
 
 .footer-bottom {

@@ -17,7 +17,7 @@ judge:
 tags:
   - civil
   - declaratory
-assets_dir: "/cases/atl-l-002869-25/"
+assets_dir: "/cases/atl-l-002869-25/filings/"
 overview: >
   Declaratory-judgment action establishing ownership and indemnity rights tied to vehicle
   registration disputes. Track assignment and amended pleadings are active as of October 2025.

@@ -41,6 +41,32 @@ layout: default
     {{ content }}
   </section>
 
+  {% if page.source_url or page.received_via or page.provenance_note %}
+  <section class="case-provenance">
+    <h2>Provenance</h2>
+    <dl class="provenance-meta">
+      {% if page.source_url %}
+      <div>
+        <dt>Primary Source</dt>
+        <dd><a href="{{ page.source_url }}" rel="noopener" target="_blank">Link</a></dd>
+      </div>
+      {% endif %}
+      {% if page.received_via %}
+      <div>
+        <dt>Received Via</dt>
+        <dd>{{ page.received_via }}</dd>
+      </div>
+      {% endif %}
+      {% if page.provenance_note %}
+      <div>
+        <dt>Notes</dt>
+        <dd>{{ page.provenance_note }}</dd>
+      </div>
+      {% endif %}
+    </dl>
+  </section>
+  {% endif %}
+
   <section class="docket">
     <h2>Docket</h2>
     {% assign slug = page.url | split:'/' | last | default: page.slug %}
@@ -70,6 +96,11 @@ layout: default
         <a href="{{ page.assets_dir | append: doc.path }}" target="_blank" rel="noopener">
           {{ doc.label }}
         </a>
+        {% assign cs_slug = page.slug | default: slug %}
+        {% assign checksums = site.data.checksums[cs_slug] %}
+        {% if checksums and checksums[doc.path] %}
+        <span class="checksum"> · SHA256: {{ checksums[doc.path] }}</span>
+        {% endif %}
         {% if doc.note %}
         <span class="case-doc-note"> — {{ doc.note }}</span>
         {% endif %}
