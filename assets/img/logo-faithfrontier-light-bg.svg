@@ -1,18 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="markTitle markDesc">
-  <title id="markTitle">Faith Frontier crest mark</title>
-  <desc id="markDesc">Orthodox cross with two witness crosses and regal halo inside a transparent seal.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="logoLightTitle logoLightDesc" style="--logo-faith-color:#059669; --logo-frontier-color:#041322; --logo-tagline-color:#5b6372;">
+  <title id="logoLightTitle">Faith Frontier crest wordmark for light backgrounds</title>
+  <desc id="logoLightDesc">Orthodox cross crest with haloed witnesses beside the Faith Frontier wordmark tuned for white surfaces.</desc>
   <defs>
     <style>
       :root {
-        --logo-gold: #d8b061;
+        --logo-ink: #041322;
+        --logo-deep-ink: #020a16;
+        --logo-gold: #c99b52;
+        --logo-gold-muted: #a57632;
         --logo-emerald: #059669;
         --logo-emerald-deep: #0f766e;
-        --logo-cream: #fdf8ef;
+        --logo-cream: #fef6e7;
+      }
+
+      #logo-mark {
+        transform-origin: 48px 48px;
       }
 
       .mark-ring {
         fill: none;
-        stroke-width: 2.4;
+        stroke-width: 2.2;
       }
 
       .mark-ring--outer {
@@ -34,7 +41,7 @@
 
       .mark-arch--halo {
         stroke: var(--logo-gold);
-        stroke-width: 1.8;
+        stroke-width: 1.6;
       }
 
       .mark-foundation {
@@ -53,7 +60,7 @@
 
       .side-cross line {
         stroke: var(--logo-emerald);
-        stroke-width: 1.9;
+        stroke-width: 1.8;
         stroke-linecap: round;
       }
 
@@ -72,10 +79,37 @@
       .crest-star {
         fill: var(--logo-gold);
       }
+
+      .wordmark-primary {
+        font-family: 'Cinzel', 'Playfair Display', 'Libre Baskerville', 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.28em;
+      }
+
+      .logo-faith {
+        fill: var(--logo-faith-color, #059669);
+      }
+
+      .logo-frontier {
+        fill: var(--logo-frontier-color, #041322);
+        letter-spacing: 0.2em;
+      }
+
+      .wordmark-subtitle {
+        font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.38em;
+        text-transform: uppercase;
+        fill: var(--logo-tagline-color, #5b6372);
+      }
     </style>
   </defs>
 
-  <g id="crest">
+  <g id="logo-mark" aria-labelledby="crestLightTitle crestLightDesc">
+    <title id="crestLightTitle">Crest with Trinitarian crosses</title>
+    <desc id="crestLightDesc">Central cross extends downward with two smaller crosses, halo, and foundation line.</desc>
     <circle class="mark-ring mark-ring--outer" cx="48" cy="48" r="42" />
     <circle class="mark-ring mark-ring--inner" cx="48" cy="48" r="32" />
     <path class="mark-arch mark-arch--halo" d="M24 30 Q48 12 72 30" />
@@ -98,5 +132,13 @@
     <rect class="cross-foot" x="45.6" y="56" width="4.8" height="16" rx="2.2" />
     <circle class="crest-star" cx="48" cy="26" r="2.2" />
     <circle class="crest-star" cx="48" cy="70" r="1.7" />
+  </g>
+
+  <g id="logo-type" transform="translate(120 0)">
+    <text class="wordmark-primary" x="0" y="50" dominant-baseline="middle">
+      <tspan class="logo-faith">FAITH</tspan>
+      <tspan class="logo-frontier" dx="20">FRONTIER</tspan>
+    </text>
+    <text class="wordmark-subtitle" x="0" y="82">ECCLESIASTICAL TRUST</text>
   </g>
 </svg>

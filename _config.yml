@@ -8,7 +8,9 @@ timezone: America/New_York
 author: Devon Tyler Barber
 
 # Brand assets
-logo_main: "/assets/img/faithfrontier-logo.svg"
+logo_main_dark: "/assets/img/logo-faithfrontier-dark-bg.svg"
+logo_main_light: "/assets/img/logo-faithfrontier-light-bg.svg"
+logo_main: "/assets/img/logo-faithfrontier-dark-bg.svg" # legacy key retained for plugins/includes
 logo_mark: "/assets/img/faithfrontier-mark.svg"
 brand_png: true
 logo_png_full_4000: "/assets/img/faithfrontier-logo-full-4000.png"

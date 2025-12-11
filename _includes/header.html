@@ -1,15 +1,24 @@
 <header class="site-header" role="banner">
   <div class="site-header-inner container">
 
-    {% assign ff_header_logo_svg = site.logo_main | default: '/assets/img/faithfrontier-logo.svg' %}
+    {% assign ff_header_logo_dark = site.logo_main_dark | default: site.logo_main | default: '/assets/img/logo-faithfrontier-dark-bg.svg' %}
+    {% assign ff_header_logo_light = site.logo_main_light | default: '/assets/img/logo-faithfrontier-light-bg.svg' %}
     {% assign ff_header_logo_png = site.logo_png_full_2000 | default: '/assets/img/faithfrontier-logo-full-2000.png' %}
     {% assign ff_header_mark_svg = site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' %}
     {% assign ff_header_mark_png = site.logo_png_mark_512 | default: '/assets/img/faithfrontier-logo-mark-512.png' %}
 
     <!-- Brand -->
+    <!--
+      Faith Frontier logos:
+      - Use ff_header_logo_dark (FAITH=#FFFFFF) anywhere the nav/hero background trends dark (site header/footer defaults).
+      - Use ff_header_logo_light (FAITH=#059669) when the crest sits on white or parchment surfaces.
+      - Each SVG exposes --logo-faith-color and --logo-frontier-color on the root for theme overrides if the markup is ever inlined.
+    -->
     <a class="ff-brand" href="{{ '/' | relative_url }}" aria-label="Faith Frontier Ecclesiastical Trust home">
-      {% if site.logo_main %}
-        <img src="{{ ff_header_logo_svg | relative_url }}"
+      {% if site.logo_main_dark or site.logo_main_light or site.logo_main %}
+        <img src="{{ ff_header_logo_dark | relative_url }}"
+             data-logo-dark="{{ ff_header_logo_dark | relative_url }}"
+             data-logo-light="{{ ff_header_logo_light | relative_url }}"
              alt="Faith Frontier Ecclesiastical Trust"
              class="ff-logo ff-logo--header ff-logo--dark"
              decoding="async"
@@ -21,7 +30,9 @@
              decoding="async"
              loading="eager" />
       {% else %}
-        <img src="{{ ff_header_logo_svg | relative_url }}"
+        <img src="{{ ff_header_logo_dark | relative_url }}"
+             data-logo-dark="{{ ff_header_logo_dark | relative_url }}"
+             data-logo-light="{{ ff_header_logo_light | relative_url }}"
              alt="Faith Frontier Ecclesiastical Trust"
              class="ff-logo ff-logo--header ff-logo--dark"
              decoding="async"
