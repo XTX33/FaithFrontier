@@ -1,0 +1,22 @@
+name: Auto Slugify Filenames
+
+on:
+  push:
+    paths:
+      - '_cases/**'
+
+jobs:
+  slugify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run slugify script
+        run: node scripts/slugify.js
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Slugified filenames" || echo "No changes"
+      - name: Push changes
+        run: git push

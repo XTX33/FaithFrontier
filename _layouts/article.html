@@ -3,27 +3,27 @@ layout: default
 ---
 
 <article class="article shell" style="max-width: 72rem; margin: 0 auto;">
-  <header class="article-header" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(15,118,110,0.04); border-radius: 16px;">
-    <p class="article-kicker" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; color: var(--ff-emerald); margin: 0 0 0.5rem 0;">
+  <header class="article-header" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(1,138,106,0.06); border-radius: 16px;">
+    <p class="article-kicker" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; color: var(--accent-emerald); margin: 0 0 0.5rem 0;">
       Biography · Constitutional Narrative
     </p>
-    <h1 class="article-title" style="margin: 0 0 0.75rem 0; font-size: clamp(2rem, 3vw, 3rem); color: var(--ff-cream);">
+    <h1 class="article-title" style="margin: 0 0 0.75rem 0; font-size: clamp(2rem, 3vw, 3rem); color: var(--color-highlight);">
       {{ page.title }}
     </h1>
     {% if page.description %}
-    <p class="article-description" style="font-size: 1.1rem; line-height: 1.7; margin: 0 0 0.75rem 0; color: var(--ff-muted);">
+    <p class="article-description" style="font-size: 1.1rem; line-height: 1.7; margin: 0 0 0.75rem 0; color: var(--color-muted);">
       {{ page.description }}
     </p>
     {% endif %}
-    <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; font-size: 0.95rem; color: var(--ff-muted);">
+    <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; font-size: 0.95rem; color: var(--color-muted);">
       {% if page.author %}
-      <span><strong style="color: var(--ff-emerald);">Author:</strong> {{ page.author }}</span>
+      <span><strong style="color: var(--accent-emerald);">Author:</strong> {{ page.author }}</span>
       {% endif %}
       {% if page.date %}
-      <span><strong style="color: var(--ff-secondary);">Date:</strong> {{ page.date | date: "%B %-d, %Y" }}</span>
+      <span><strong style="color: var(--accent-brass);">Date:</strong> {{ page.date | date: "%B %-d, %Y" }}</span>
       {% endif %}
       {% if page.category %}
-      <span class="article-category" style="padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(212,165,116,0.14); color: var(--ff-vintage-gold); border: 1px solid rgba(212,165,116,0.35);">
+      <span class="article-category" style="padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(184,138,57,0.18); color: var(--accent-brass); border: 1px solid rgba(184,138,57,0.35);">
         {{ page.category }}
       </span>
       {% endif %}

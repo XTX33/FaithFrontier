@@ -28,11 +28,14 @@ documents:
     path: "09-25-2024-chief-clambrone-letter.pdf"
     note: "Initial record clarification submitted with PCR filing."
   - label: "Demurrer and Plea in Abatement"
-    path: "Demurer-and-Plea-in-Abatement-with-Certificate_EF-3721525.pdf"
+    path: "demurer-and-plea-in-abatement-with-certificate-ef-3721525.pdf"
     note: "Filed with PCR petition."
-  - label: "Notice of Appeal"
-    path: "/cases/a-000313-25/2025-10-29_notice-of-appeal.pdf"
-    note: "Appellate Division docketing of the matter."
+  - label: "Appellate Order (IFP Granted)"
+    path: "/cases/a-000313-25/filings/order-granted-ifp.pdf"
+    note: "In forma pauperis status approved alongside the appeal."
+  - label: "Appellate Order (Docketing)"
+    path: "/cases/a-000313-25/filings/order-granted.pdf"
+    note: "Order acknowledging docketing of the appellate action."
 redirect_from:
   - /cases/atl-24-001934/
   - /cases/a-000313-25/

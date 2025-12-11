@@ -15,14 +15,14 @@ filed_date: 2025-10-29
 judge:
 tags:
   - appeal
-assets_dir: "/cases/a-000308-25/"
+assets_dir: "/cases/a-000308-25/filings/"
 documents:
   - label: "Notice of Deficiencies"
-    path: "2025-10-29_notice-of-deficiencies-and-required-corrections.pdf"
+    path: "2025-10-29-notice-of-deficiencies-and-required-corrections.pdf"
   - label: "Order Denying Late Appeal"
-    path: "2025-10-29_order-denying-late-appeal-signed.pdf"
+    path: "2025-10-29-order-denying-late-appeal-signed.pdf"
   - label: "Motion for Reconsideration"
-    path: "2025-11-05_motion-for-reconsideration-and-reinstatement.pdf"
+    path: "2025-11-05-motion-for-reconsideration-and-reinstatement.pdf"
 ---
 
 This docket tracks the appeal relating to late-filing issues. It consolidates the deficiency notice, the denial order, and the motion seeking reconsideration and reinstatement.

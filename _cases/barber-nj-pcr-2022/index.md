@@ -21,10 +21,10 @@ tags:
 assets_dir: "/cases/atl-22-002292/pcr/"
 documents:
   - label: "PCR Petition"
-    path: "2025-10-26_NJSC_ATL-22-002292_Barber_Petition_for_PostConvictionRelief_with_Certification_and_Memorandum.pdf"
+    path: "2025-10-26-njsc-atl-22-002292-barber-petition-for-postconvictionrelief-with-certification-and-memorandum.pdf"
     note: "Filed with supporting certification."
   - label: "Certification of Supplemental Record"
-    path: "2025-10-27_NJSC_ATL-22-002292_Barber_Certification_of_SupplementalRecord_and_Request_for_Transmittal_to_AppDiv.pdf"
+    path: "2025-10-27-njsc-atl-22-002292-barber-certification-of-supplementalrecord-and-request-for-transmittal-to-appdiv.pdf"
     note: "Requesting transmittal to Appellate Division."
 redirect_from:
   - /cases/atl-22-002292/

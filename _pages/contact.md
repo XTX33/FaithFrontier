@@ -20,7 +20,7 @@ body_class: page-contact
     For inquiries, dialogue, or collaboration, write to:
   </p>
   <p>
-    <a href="mailto:Tylerstead@protonmail.com" style="color: var(--ff-primary); font-weight: 600;">Tylerstead@ProtonMail.com</a>
+    <a href="mailto:Tylerstead@protonmail.com" style="color: var(--accent-emerald); font-weight: 600;">Tylerstead@ProtonMail.com</a>
   </p>
   <p>
     Please include a clear subject line that reflects your purpose — whether it's about
@@ -56,7 +56,7 @@ body_class: page-contact
   </p>
 </section>
 
-<section class="section-content" style="padding: 2rem; background: rgba(15, 118, 110, 0.1); border-radius: 0.75rem; border-left: 3px solid var(--ff-primary);">
+<section class="section-content" style="padding: 2rem; background: rgba(15, 118, 110, 0.1); border-radius: 0.75rem; border-left: 3px solid var(--accent-emerald);">
   <h2 style="margin-top: 0;">Prayer & Encouragement</h2>
   <p style="margin-bottom: 0;">
     If you are walking through trials — legal, spiritual, or otherwise — and need someone to
@@ -75,7 +75,7 @@ body_class: page-contact
   </p>
 </section>
 
-<section style="max-width: 48rem; margin: 3rem auto; text-align: center; padding: 2rem; background: rgba(176, 137, 104, 0.1); border-radius: 0.75rem; border: 1px solid var(--ff-secondary);">
+<section style="max-width: 48rem; margin: 3rem auto; text-align: center; padding: 2rem; background: rgba(176, 137, 104, 0.1); border-radius: 0.75rem; border: 1px solid var(--accent-brass);">
   <p style="font-size: 1.05rem; line-height: 1.7; margin: 0;">
     <em>"For those who are in the world, but not of it — this frontier is yours too."</em>
   </p>

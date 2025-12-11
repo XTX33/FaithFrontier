@@ -1,9 +1,9 @@
 ---
-layout: essay
+layout: article
 title: "Devon Tyler Barber – Biography"
 author: "Devon Tyler Barber"
 date: 2025-12-03
-permalink: "/essays/devon-barber-biography/"
+permalink: "/articles/biography/"
 description: "A constitutionally grounded biography intertwining tradesmanship, pro se litigation, and faith-rooted civic duty across New Jersey."
 tags: [biography, faithfrontier]
 ---

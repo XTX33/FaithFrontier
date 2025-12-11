@@ -15,18 +15,22 @@ filed_date: 2025-09-09
 judge:
 tags:
   - federal
+<<<<<<< HEAD:_cases/usdj-1-25-cv-15641.md
 assets_dir: "/cases/usdj-1-25-cv-15641/"
 overview: >
   Federal civil action filed in September 2025 raising constitutional tort claims and
   emergency equitable relief after state-level retaliation. Complaint, demurrer/abatement,
   and supporting exhibits are live.
+=======
+assets_dir: "/cases/usdj-1-25-cv-15641/filings/"
+>>>>>>> origin/codex/audit-and-enhance-xtx33/faithfrontier-repository:_cases/usdj-1-25-cv-15641/index.md
 documents:
   - label: "Complaint"
-    path: "2025-09-09_complaint.pdf"
+    path: "2025-09-09-complaint.pdf"
   - label: "Demurrer and Abatement"
-    path: "2025-09-09_demurrer-and-abatement.pdf"
+    path: "2025-09-09-demurrer-and-abatement.pdf"
   - label: "Envelope"
-    path: "2025-09-09_envelope.pdf"
+    path: "2025-09-09-envelope.pdf"
 ---
 
 Federal filing capturing the complaint and initial motions challenging jurisdiction and procedure. Entries below track the filings submitted to initiate the action.

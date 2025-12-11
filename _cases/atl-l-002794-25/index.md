@@ -17,18 +17,22 @@ judge:
 tags:
   - civil
   - track-change
+<<<<<<< HEAD:_cases/atl-l-002794-25.md
 assets_dir: "/cases/atl-l-002794-25/"
 overview: >
   Track-change litigation pressing the Law Division to treat Barber's civil claims as complex
   equitable matters instead of a fast-track landlord docket. Verified pleadings, supplemental
   memoranda, and the granted order are all uploaded for review.
+=======
+assets_dir: "/cases/atl-l-002794-25/filings/"
+>>>>>>> origin/codex/audit-and-enhance-xtx33/faithfrontier-repository:_cases/atl-l-002794-25/index.md
 documents:
   - label: "Verified Complaint and CIS"
-    path: "2025-10-03_verified-complaint-and-cis.pdf"
+    path: "2025-10-03-verified-complaint-and-cis.pdf"
   - label: "Track Assignment"
-    path: "2025-10-07_NJSC_ATL-L-002794-25_TrackAssignment_Notice_Team102.pdf"
+    path: "2025-10-07-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf"
   - label: "Order Changing Track"
-    path: "2025-11-07_order-to-change-track-assignment.pdf"
+    path: "2025-11-07-order-to-change-track-assignment.pdf"
 ---
 
 This filing covers the Law Division civil action focused on rebalancing the track assignment and securing timely relief. All pleadings, orders, and correspondence are cataloged in the docket list for clarity.

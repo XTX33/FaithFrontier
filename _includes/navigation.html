@@ -1,0 +1,44 @@
+<ul class="nav-list">
+  <li><a href="{{ '/' | relative_url }}">Home</a></li>
+  <li class="nav-group">
+    <a href="{{ '/cases/' | relative_url }}">Cases</a>
+    <ul class="nav-sublist">
+      {% assign case_pages = site.cases | sort: 'order' %}
+      {% for case in case_pages %}
+      <li><a href="{{ case.url | relative_url }}">{{ case.short_title | default: case.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li class="nav-group">
+    <a href="{{ '/essays/' | relative_url }}">Essays</a>
+    <ul class="nav-sublist">
+      {% assign essay_pages = site.essays | sort: 'order' %}
+      {% for essay in essay_pages %}
+      <li><a href="{{ essay.url | relative_url }}">{{ essay.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li class="nav-group">
+    <a href="{{ '/articles/' | relative_url }}">Articles</a>
+    <ul class="nav-sublist">
+      {% assign article_pages = site.articles | sort: 'order' %}
+      {% for article in article_pages %}
+      <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li class="nav-group">
+    <a href="{{ '/posts/' | relative_url }}">Dispatches</a>
+    {% assign post_pages = site.posts | sort: 'date' | reverse %}
+    {% if post_pages.size > 0 %}
+    <ul class="nav-sublist">
+      {% for post in post_pages %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+  <li><a href="{{ '/manifesto/' | relative_url }}">Manifesto</a></li>
+  <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+</ul>
