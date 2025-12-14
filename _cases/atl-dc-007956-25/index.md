@@ -38,7 +38,7 @@ This matter documents toll-enforcement claims alongside counterclaims challengin
 ## Status Overview
 
 - **19 Aug 2025:** Complaint and summons were served alleging unpaid toll assessments.
-- **3 Sep 2025:** Answer/First Appearance objected to jurisdiction and set the stage for ADA accommodations (see placeholder PDF for the responsive outline).
+- **3 Sep 2025:** Answer/First Appearance objected to jurisdiction and set the stage for ADA accommodations.
 - **8 Oct 2025:** Counterclaim and discovery packet delivered, outlining damages from State Contractor fraud.
 - **27 Oct 2025:** Court issued order on default/discovery; ongoing correspondence (Nov. letters) continues pressing for accessible hearings.
 

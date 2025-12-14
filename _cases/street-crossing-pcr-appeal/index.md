@@ -48,7 +48,7 @@ Key filings and orders are organized in the docket below. Supporting materials r
 ## Status Overview
 
 - **25 Sep 2024:** Chief Clambrone letter and PCR intake filings established the factual record for ATL-24-001934.
-- **26 Oct 2025:** Unified PCR petition and memorandum (see PDF) filed to surface due process errors; same document supports both trial and appellate tracks.
+- **26 Oct 2025:** Unified PCR petition and memorandum filed to surface due process errors; same document supports both trial and appellate tracks.
 - **29 Oct 2025:** Notice of Appeal docketed as A-000313-25 with fee waiver orders appended; Appellate Division monitoring for scheduling.
 
 ## AI-Powered Case Analysis
