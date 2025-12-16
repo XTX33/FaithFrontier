@@ -10,15 +10,16 @@
   {%- assign path = page.url | replace: 'index.html', '' -%}
   {%- assign segments = path | split: '/' -%}
 
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <nav class="breadcrumbs u-mb-md u-text-sm u-bg-surface u-py-xs u-px-md u-radius-sm u-shadow-xs" aria-label="Breadcrumb">
+    <ol class="breadcrumbs-list u-flex u-gap-xs u-list-none u-m-0 u-p-0" itemscope itemtype="https://schema.org/BreadcrumbList">
       {%- assign position = 1 -%}
 
       <!-- Home -->
       <li itemprop="itemListElement"
           itemscope
-          itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{ '/' | relative_url }}">
+          itemtype="https://schema.org/ListItem"
+          class="u-flex u-align-center u-gap-xs">
+        <a itemprop="item" href="{{ '/' | relative_url }}" class="u-text-accent u-hover-underline">
           <span itemprop="name">Home</span>
         </a>
         <meta itemprop="position" content="{{ position }}">

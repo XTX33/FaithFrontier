@@ -279,37 +279,162 @@ description: "Faith Frontier Ecclesiastical Trust builds a faith-rooted public t
         courts, agencies, and public servants with confidence.
       </p>
     </div>
-    <ul class="law-list">
-      <li>Documenting cases to surface systemic gaps and recommend constructive reforms.</li>
-      <li>Providing educational resources on filings, timelines, and respectful engagement with officials.</li>
-      <li>Collaborating with attorneys, advocates, and community leaders who share commitments to justice and mercy.</li>
-      <li>Anchoring every effort in prayerful discernment, stewardship, and accountability to the communities we serve.</li>
-    </ul>
-  </div>
-</section>
-
-<div class="section-divider" aria-hidden="true"><span></span></div>
-
-<section class="section-block section-block--cta">
-  <div class="container">
-    <div class="cta-panel">
-      <div class="cta-panel__body">
-        <h2>For New Jersey Residents</h2>
-        <p>
-          Use these resources to understand processes, gather language that protects dignity, and find pathways toward housing,
-          work, and restoration. Bring these insights to licensed counsel or trusted advocates so you can act with clarity and
-          peace. We believe courts and agencies can serve the people when neighbors participate with truth and respect.
-        </p>
-        <p class="cta-panel__disclaimer">
-          <strong>Disclaimer:</strong> Faith Frontier Ecclesiastical Trust is not a law firm and does not provide legal advice. Viewing this
-          site or contacting us does not create an attorney-client relationship. All materials are educational and faith- and equity-based
-          perspectives intended to support informed engagement with licensed counsel and public officials.
-        </p>
-      </div>
-      <div class="cta-panel__actions">
-        <a class="btn" href="{{ '/about/' | relative_url }}">Explore the Trust</a>
-        <a class="btn-ghost" href="{{ '/contact/' | relative_url }}">Connect with Us</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <style>
+      :root {
+        --max-width: 1400px;
+        --container-pad: clamp(1.5rem, 4vw, 3rem);
+        --gutter: clamp(1.5rem, 4vw, 2.5rem);
+        --muted: #b6c2d1;
+        --accent: #f4efe7;
+        --accent-brass: #d4a574;
+        --accent-emerald: #10b981;
+        --color-bg: #0b1220;
+        --color-panel: #151c2e;
+        --color-panel-dark: #101624;
+        --card-bg: rgba(20,30,50,0.92);
+        --shadow: 0 4px 32px rgba(15,23,42,0.22);
+        --radius: 16px;
+      }
+      html { box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: var(--accent);
+        background: var(--color-bg);
+      }
+      .container {
+        max-width: var(--max-width);
+        padding: 0 var(--container-pad);
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      h1, h2, h3 {
+        color: var(--accent);
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 700;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+        letter-spacing: -0.01em;
+      }
+      h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.08; }
+      h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+      h3 { font-size: clamp(1.15rem, 2vw, 1.35rem); }
+      p {
+        margin: .5em 0;
+        color: var(--muted);
+        max-width: 70ch;
+        line-height: 1.8;
+        font-size: 1.08rem;
+      }
+      section {
+        padding: clamp(1.5rem, 4vw, 3rem) 0;
+      }
+      .section-divider {
+        margin: 0;
+        height: 2px;
+        background: rgba(212,165,116,0.08);
+        border: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.5fr minmax(340px, 1fr);
+        gap: var(--gutter);
+        align-items: stretch;
+        align-content: start;
+        min-height: 60vh;
+      }
+      .hero-main {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .hero-side-panel {
+        background: var(--card-bg);
+        color: var(--accent);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 2vw, 2rem);
+        align-items: flex-start;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 2.5rem 2rem;
+        margin-top: 0;
+        min-width: 320px;
+        max-width: 480px;
+      }
+      .hero-highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: clamp(1rem, 2vw, 2rem);
+        margin-top: 1.5rem;
+      }
+      .hero-highlight {
+        background: var(--color-panel);
+        color: var(--accent);
+        padding: 1.25rem 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(15,23,42,0.18);
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid rgba(212,165,116,0.13);
+      }
+      .hero-highlight__label {
+        color: var(--accent-brass);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.2rem;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        justify-content: center;
+      }
+      .hero-actions .btn {
+        min-width: 140px;
+        padding: .7rem 1.25rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        background: linear-gradient(90deg, var(--accent-brass), var(--accent-emerald));
+        color: #181818;
+        border: none;
+        box-shadow: 0 2px 12px rgba(212, 165, 116, 0.12);
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      .hero-actions .btn-ghost {
+        background: transparent;
+        color: var(--accent-brass);
+        border: 1.5px solid var(--accent-brass);
+        box-shadow: none;
+      }
+      .hero-actions .btn:hover, .hero-actions .btn:focus {
+        background: linear-gradient(90deg, var(--accent-emerald), var(--accent-brass));
+        box-shadow: 0 4px 18px rgba(212, 165, 116, 0.18);
+        color: #181818;
+      }
+      .hero-actions .btn-ghost:hover, .hero-actions .btn-ghost:focus {
+        background: var(--accent-brass);
+        color: #181818;
+        border-color: var(--accent-brass);
+      }
+      @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; }
+        .hero-side-panel { order: 2; width: 100%; max-width: none; min-width: 0; }
+        .hero-actions .btn { flex: 1; }
+        .hero-highlights { grid-template-columns: 1fr; }
+      }
+      img { max-width: 100%; height: auto; display: block; }
+      @media (prefers-reduced-motion:reduce){*{animation-duration:0.001ms!important;transition-duration:0.001ms!important}}
+    </style>

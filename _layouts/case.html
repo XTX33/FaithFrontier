@@ -2,18 +2,18 @@
 layout: default
 ---
 
-<article class="case-record shell">
+<article class="case-record shell u-max-w-4xl u-mx-auto">
   {% include breadcrumbs.html %}
 
-  <header class="case-header">
-    <p class="case-eyebrow">
+  <header class="case-header u-mb-xl u-p-md">
+    <p class="case-eyebrow u-text-accent">
       {{ page.court }}{% if page.venue %} — {{ page.venue }}{% endif %}
     </p>
-    <h1 class="case-title">{{ page.title }}</h1>
-    <p class="case-subtitle">
+    <h1 class="case-title u-mb-sm u-text-highlight">{{ page.title }}</h1>
+    <p class="case-subtitle u-text-muted">
       {{ page.short_title }} · Docket {{ page.primary_docket | default: page.docket | default: page.dockets | join: ", " }}
     </p>
-    <dl class="case-meta">
+    <dl class="case-meta u-mt-md u-mb-md">
       <div>
         <dt>Case Type</dt>
         <dd>{{ page.case_type }}</dd>
@@ -37,13 +37,13 @@ layout: default
     </dl>
   </header>
 
-  <section class="case-body">
+  <section class="case-body u-pb-xl">
     {{ content }}
   </section>
 
   {% if page.source_url or page.received_via or page.provenance_note %}
-  <section class="case-provenance">
-    <h2>Provenance</h2>
+  <section class="case-provenance u-mt-lg">
+    <h2 class="u-text-accent">Provenance</h2>
     <dl class="provenance-meta">
       {% if page.source_url %}
       <div>

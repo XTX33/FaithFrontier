@@ -4,19 +4,19 @@
   - Can be used in case markdown content if custom header is needed
 {%- endcomment -%}
 
-<header class="case-hero">
+<header class="case-hero u-bg-surface u-py-xl u-mb-lg u-radius-md u-shadow-md">
   {% if page.court %}
-  <p class="case-hero-eyebrow">
+  <p class="case-hero-eyebrow u-text-accent u-mb-xs u-text-sm">
     {{ page.court }}{% if page.venue %} — {{ page.venue }}{% endif %}
   </p>
   {% endif %}
   
-  <h1 class="case-hero-title">
+  <h1 class="case-hero-title u-text-2xl u-text-bold u-mb-xs">
     {{ page.hero_title | default: page.title }}
   </h1>
   
   {% if page.short_title or page.docket %}
-  <p class="case-hero-subtitle">
+  <p class="case-hero-subtitle u-text-md u-mb-sm u-text-muted">
     {% if page.short_title %}{{ page.short_title }}{% endif %}
     {% if page.short_title and page.docket %} · {% endif %}
     {% if page.docket %}Docket {{ page.docket }}{% endif %}
@@ -24,14 +24,14 @@
   {% endif %}
   
   {% if page.case_type or page.status %}
-  <div class="case-hero-meta">
+  <div class="case-hero-meta u-flex u-gap-md u-mt-xs">
     {% if page.case_type %}
-    <span class="meta-item">
+    <span class="meta-item u-badge u-badge-type u-bg-accent u-text-bg u-radius-full u-px-md u-py-xs">
       <strong>Type:</strong> {{ page.case_type }}
     </span>
     {% endif %}
     {% if page.status %}
-    <span class="meta-item">
+    <span class="meta-item u-badge u-badge-status u-bg-contrast u-text-accent u-radius-full u-px-md u-py-xs">
       <strong>Status:</strong> {{ page.status }}
     </span>
     {% endif %}

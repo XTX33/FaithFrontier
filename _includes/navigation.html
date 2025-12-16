@@ -1,37 +1,37 @@
-<ul class="nav-list">
+<ul class="nav-list u-list-none u-m-0 u-p-0 u-flex u-gap-md u-flex-wrap">
   <li><a href="{{ '/' | relative_url }}">Home</a></li>
-  <li class="nav-group">
-    <a href="{{ '/cases/' | relative_url }}">Cases</a>
-    <ul class="nav-sublist">
+  <li class="nav-group u-relative">
+    <a href="{{ '/cases/' | relative_url }}" class="u-text-accent u-hover-underline">Cases</a>
+    <ul class="nav-sublist u-absolute u-bg-surface u-radius-sm u-shadow-md u-py-xs u-px-sm u-list-none u-mt-xs" style="display:none;">
       {% assign case_pages = site.cases | sort: 'order' %}
       {% for case in case_pages %}
       <li><a href="{{ case.url | relative_url }}">{{ case.short_title | default: case.title }}</a></li>
       {% endfor %}
     </ul>
   </li>
-  <li class="nav-group">
-    <a href="{{ '/essays/' | relative_url }}">Essays</a>
-    <ul class="nav-sublist">
+  <li class="nav-group u-relative">
+    <a href="{{ '/essays/' | relative_url }}" class="u-text-accent u-hover-underline">Essays</a>
+    <ul class="nav-sublist u-absolute u-bg-surface u-radius-sm u-shadow-md u-py-xs u-px-sm u-list-none u-mt-xs" style="display:none;">
       {% assign essay_pages = site.essays | sort: 'order' %}
       {% for essay in essay_pages %}
       <li><a href="{{ essay.url | relative_url }}">{{ essay.title }}</a></li>
       {% endfor %}
     </ul>
   </li>
-  <li class="nav-group">
-    <a href="{{ '/articles/' | relative_url }}">Articles</a>
-    <ul class="nav-sublist">
+  <li class="nav-group u-relative">
+    <a href="{{ '/articles/' | relative_url }}" class="u-text-accent u-hover-underline">Articles</a>
+    <ul class="nav-sublist u-absolute u-bg-surface u-radius-sm u-shadow-md u-py-xs u-px-sm u-list-none u-mt-xs" style="display:none;">
       {% assign article_pages = site.articles | sort: 'order' %}
       {% for article in article_pages %}
       <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
       {% endfor %}
     </ul>
   </li>
-  <li class="nav-group">
-    <a href="{{ '/posts/' | relative_url }}">Dispatches</a>
+  <li class="nav-group u-relative">
+    <a href="{{ '/posts/' | relative_url }}" class="u-text-accent u-hover-underline">Dispatches</a>
     {% assign post_pages = site.posts | sort: 'date' | reverse %}
     {% if post_pages.size > 0 %}
-    <ul class="nav-sublist">
+    <ul class="nav-sublist u-absolute u-bg-surface u-radius-sm u-shadow-md u-py-xs u-px-sm u-list-none u-mt-xs" style="display:none;">
       {% for post in post_pages %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
       {% endfor %}
