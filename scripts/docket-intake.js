@@ -184,8 +184,23 @@ const main = () => {
   const changes = [];
   for (const {p, st} of items) {
     const base = path.basename(p);
-    // Try to match by known tokens in filename
-    const token = (base.match(/([A-Z]{1,3}-[A-Z]-\d{6,}-\d{2})/) || base.match(/A-\d{6}-\d{2}/) || [])[0];
+    // Try to match by known tokens in filename - support multiple patterns:
+    // ATL-L-002794-25, ATL-22-002292, A-000313-25, 1:25-cv-15641-RMB-MJS, etc.
+    // Patterns are ordered from most specific to least specific
+    const patterns = [
+      /\b(\d:\d{2}-cv-\d{5}(?:-[A-Z]{3}(?:-[A-Z]{3})?)?)\b/i,  // 1:25-cv-15641-RMB-MJS (federal)
+      /\b(ATL-[A-Z]{1,2}-\d{6}-\d{2})\b/i,      // ATL-L-002794-25, ATL-DC-007956-25
+      /\b(ATL-\d{2}-\d{6})\b/i,                 // ATL-22-002292, ATL-24-001934
+      /\b(A-\d{6}-\d{2})\b/                     // A-000313-25
+    ];
+    let token = null;
+    for (const pattern of patterns) {
+      const match = base.match(pattern);
+      if (match) {
+        token = match[1];
+        break;
+      }
+    }
     let slug = token ? slugFromDocket(token) : null;
 
     // If path already under assets/cases/<slug>/..., respect it
