@@ -77,7 +77,7 @@ layout: default
         {% for d in docket %}
           <li>
             <time>{{ d.date }}</time> — <strong>{{ d.type }}</strong>:
-            {% if d.file %}<a href="{{ d.file | relative_url }}">{{ d.title }}</a>{% else %}{{ d.title }}{% endif %}
+            <a href="/cases/{{ slug }}/docket/{{ d.id }}">{{ d.title }}</a>
             {% if d.notes %}<div class="notes">{{ d.notes }}</div>{% endif %}
           </li>
         {% endfor %}
