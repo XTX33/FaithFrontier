@@ -82,23 +82,22 @@ These standardized values enable consistent filtering and searching across all c
 
 Docket entries in `_data/docket/<slug>.yml`:
 
+- PDFs live at: `cases/<slug>/filings/`
+
 ```yaml
 - id: 2025-11-12-unique-identifier
   date: 2025-11-12
   type: Filing|Order|Notice|Brief|Exhibit|Motion|Other
   title: Human-readable title
-  file: /assets/cases/<slug>/docket/filename.pdf
-  notes: Optional notes
+  file: /cases/<slug>/filings/filename.pdf
 ```
 
 ## Usage
 
 ### Method 1: Web Upload (Recommended)
 
-1. Navigate to `/docket/submit/`
-2. Fill out the form with case, date, type, title, and PDF
-3. Submit - this creates a PR for review
-4. Review and merge the PR
+1. Upload PDF to `cases/<slug>/filings/`
+2. Add a docket entry in `_data/docket/<slug>.yml` that points to `/cases/<slug>/filings/<filename>.pdf`
 
 **Note:** Requires Cloudflare Worker setup (see `worker/README.md`)
 
@@ -111,7 +110,7 @@ Docket entries in `_data/docket/<slug>.yml`:
 
 ### Method 3: Manual
 
-1. Upload PDF to `assets/cases/<slug>/docket/`
+1. Upload PDF to `cases/<slug>/filings/`
 2. Edit `_data/docket/<slug>.yml` to add entry
 3. Commit and push
 
@@ -128,7 +127,7 @@ When manually adding docket entries to `_data/docket/<slug>.yml`, follow these g
      date: 2025-11-16
      type: Motion|Filing|Order|Notice|Brief|Exhibit|Other
      title: Human-readable title describing the document
-     file: /assets/cases/<slug>/docket/2025-11-16_Type_Description.pdf
+     file: /cases/<slug>/filings/2025-11-16_Type_Description.pdf
      notes: (Optional) Additional context or notes
    ```
 
@@ -140,19 +139,19 @@ When manually adding docket entries to `_data/docket/<slug>.yml`, follow these g
   date: 2025-10-01
   type: Filing
   title: Initial Complaint
-  file: /assets/cases/example-case/docket/2025-10-01_Filing_Complaint.pdf
+  file: /cases/example-case/filings/2025-10-01_Filing_Complaint.pdf
 
 - id: 2025-10-15-answer
   date: 2025-10-15
   type: Filing
   title: Defendant's Answer
-  file: /assets/cases/example-case/docket/2025-10-15_Filing_Answer.pdf
+  file: /cases/example-case/filings/2025-10-15_Filing_Answer.pdf
 
 - id: 2025-11-01-motion
   date: 2025-11-01
   type: Motion
   title: Motion for Summary Judgment
-  file: /assets/cases/example-case/docket/2025-11-01_Motion_Summary-Judgment.pdf
+  file: /cases/example-case/filings/2025-11-01_Motion_Summary-Judgment.pdf
 ```
 
 By maintaining this chronological structure, the docket entries will display in the correct temporal sequence on the case page, making it easier for readers to follow the progression of the case.
@@ -176,9 +175,9 @@ By maintaining this chronological structure, the docket entries will display in 
 The `_data/cases-map.yml` file maps docket numbers to case slugs:
 
 ```yaml
-A-000313-25: street-crossing-pcr-appeal
-ATL-24-001934: street-crossing-pcr-appeal
+A-000313-25: a-000313-25
 ATL-L-002794-25: atl-l-002794-25
+ATL-22-002292: barber-nj-pcr-2022
 ```
 
 This helps the intake automation route PDFs to the correct case folder.
@@ -192,25 +191,22 @@ If `_data/cases-map.yml` is missing or empty, the intake script will automatical
    - `dockets:` array (inline or YAML list format)
    - `docket:` single field
    - `primary_docket:` field
-3. **Prioritizes consolidated cases** - Cases with multiple dockets are processed first, ensuring that consolidated case pages take precedence over individual docket-specific pages
-4. **Extracts slugs** from `permalink:` field or uses directory name as fallback
-5. **Writes the map** to `_data/cases-map.yml`
+3. **Extracts slugs** from `permalink:` field or uses directory name as fallback
+4. **Writes the map** to `_data/cases-map.yml`
 
 **Example**: If you have cases with these front matter fields:
 
 ```yaml
-# _cases/street-crossing-pcr-appeal/index.md
-permalink: /cases/street-crossing-pcr-appeal/
-dockets:
-  - ATL-24-001934
-  - A-000313-25
-
 # _cases/a-000313-25/index.md
 permalink: /cases/a-000313-25/
 docket: A-000313-25
-```
 
-The bootstrap will map **both** `ATL-24-001934` and `A-000313-25` to `street-crossing-pcr-appeal` (not `a-000313-25`) because the consolidated case has multiple dockets and is processed first.
+# _cases/barber-nj-pcr-2022/index.md
+permalink: /cases/barber-nj-pcr-2022/
+dockets:
+  - ATL-22-002292
+  - ATL-22-002313
+```
 
 ### Manual Updates
 
@@ -248,7 +244,7 @@ Example: `2025-11-12-written-appearance`
 1. Create `_cases/<slug>/index.md` with proper front matter (including `dockets:` array)
 2. Create `_data/docket/<slug>.yml` (can be empty initially)
 3. (Optional) Add docket number mappings to `_data/cases-map.yml` - or let the bootstrap auto-generate it
-4. Create folder: `assets/cases/<slug>/docket/`
+4. Create folder: `cases/<slug>/filings/`
 
 **Note**: If you include `dockets:` in your case front matter, the intake script will automatically add those mappings to `_data/cases-map.yml` if needed.
 

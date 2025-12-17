@@ -58,7 +58,7 @@ hero_scripture: >
         <div class="revelation-cases">
           <p><strong>Revealed in these cases:</strong></p>
           <ul>
-            <li><a href="{{ '/cases/njta-v-barber/' | relative_url }}">NJTA v. Barber</a> —
+            <li><a href="{{ '/cases/atl-dc-007956-25/' | relative_url }}">NJTA v. Barber</a> —
                 Toll authorities must enforce fees proportionally, not punitively</li>
             <li><a href="{{ '/cases/atl-l-002794-25/' | relative_url }}">Barber v. Tumelty</a> —
                 Attorneys hold client trust as fiduciaries</li>
@@ -85,7 +85,7 @@ hero_scripture: >
         <div class="revelation-cases">
           <p><strong>Revealed in these cases:</strong></p>
           <ul>
-            <li><a href="{{ '/cases/njta-v-barber/' | relative_url }}">NJTA v. Barber</a> —
+            <li><a href="{{ '/cases/atl-dc-007956-25/' | relative_url }}">NJTA v. Barber</a> —
                 $204 in tolls, $4,905 in fees = excessive and punitive</li>
           </ul>
         </div>
@@ -114,9 +114,7 @@ hero_scripture: >
           <ul>
             <li><a href="{{ '/cases/barber-nj-pcr-2022/' | relative_url }}">State v. Barber (PCR)</a> —
                 Ineffective counsel deprives defendants of fair trial</li>
-            <li><a href="{{ '/cases/a-000308-25/' | relative_url }}">Barber v. State (A-000308-25)</a> —
-                Procedural fairness in appellate process</li>
-            <li><a href="{{ '/cases/street-crossing-pcr-appeal/' | relative_url }}">Street-Crossing PCR Appeal (A-000313-25)</a> —
+            <li><a href="{{ '/cases/a-000313-25/' | relative_url }}">Street-Crossing Appeal (A-000313-25)</a> —
                 Notice and opportunity to challenge street-level detention and charges</li>
           </ul>
         </div>
@@ -143,7 +141,7 @@ hero_scripture: >
           <ul>
             <li><a href="{{ '/cases/atl-l-002794-25/' | relative_url }}">Barber v. Tumelty</a> —
                 Attorney's duty to investigate, preserve defenses, and communicate honestly</li>
-            <li><a href="{{ '/cases/njta-v-barber/' | relative_url }}">NJTA v. Barber</a> —
+            <li><a href="{{ '/cases/atl-dc-007956-25/' | relative_url }}">NJTA v. Barber</a> —
                 Public agency's duty to serve, not exploit, the traveling public</li>
           </ul>
         </div>
@@ -168,7 +166,7 @@ hero_scripture: >
         <div class="revelation-cases">
           <p><strong>Revealed in these cases:</strong></p>
           <ul>
-            <li><a href="{{ '/cases/njta-v-barber/' | relative_url }}">NJTA v. Barber</a> —
+            <li><a href="{{ '/cases/atl-dc-007956-25/' | relative_url }}">NJTA v. Barber</a> —
                 Toll enforcement as stewardship vs. revenue extraction</li>
             <li><strong>All PCR cases</strong> —
                 Criminal justice system must serve rehabilitation, not merely punishment</li>
@@ -217,7 +215,7 @@ hero_scripture: >
         <ul>
           <li><strong>NJTA v. Barber (ATL-DC-007956-25)</strong> —
               Toll authority overreach and disproportionate fees</li>
-          <li><strong>Appeals (A-000308-25, A-000313-25)</strong> —
+          <li><strong>Appeals (A-000313-25)</strong> —
               Procedural fairness and access to appellate review</li>
         </ul>
         <p class="text-muted">
@@ -340,7 +338,7 @@ hero_scripture: >
           others facing injustice, exploitation, or government overreach.
         </p>
         <p>
-          <a class="btn btn-secondary" href="{{ '/faith/' | relative_url }}">Read Faith Essays →</a>
+          <a class="btn btn-secondary" href="{{ '/essays/' | relative_url }}">Read Faith Essays →</a>
         </p>
       </article>
 

@@ -1,20 +1,24 @@
-// FaithFrontier Batch PDF Upload & Case Initiative Dashboard
-// Enhances pdf-intake.js with batch upload, user prompts, and a public dashboard
-// Requires: npm install pdf-parse js-yaml inquirer
+// FaithFrontier Batch PDF Upload & Case Initiative Dashboard (legacy)
+// Note: The canonical intake is scripts/docket-intake.js. This script is kept for compatibility.
 
-const fs = require('fs');
-const path = require('path');
-const pdf = require('pdf-parse');
-const yaml = require('js-yaml');
-const inquirer = require('inquirer');
-const CASES_MAP_PATH = path.join(__dirname, '../_data/cases-map.yml');
-const LOG_PATH = path.join(__dirname, '../reports/intake-log.txt');
-const REVIEW_PATH = path.join(__dirname, '../reports/intake-review.md');
+import fs from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import { createInterface } from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
+import pdf from 'pdf-parse';
+import yaml from 'js-yaml';
 
-const INBOX = path.join(__dirname, '../_inbox');
-const CASES_DIR = path.join(__dirname, '../assets/cases');
-const DOCKET_DATA_DIR = path.join(__dirname, '../_data/docket');
-const DASHBOARD_MD = path.join(__dirname, '../_site/case-initiatives.md');
+const repoRoot = process.cwd();
+
+const CASES_MAP_PATH = path.join(repoRoot, '_data', 'cases-map.yml');
+const LOG_PATH = path.join(repoRoot, 'reports', 'intake-log.txt');
+const REVIEW_PATH = path.join(repoRoot, 'reports', 'intake-review.md');
+
+const INBOX = path.join(repoRoot, '_inbox');
+const CASES_DIR = path.join(repoRoot, 'cases');
+const DOCKET_DATA_DIR = path.join(repoRoot, '_data', 'docket');
+const DASHBOARD_MD = path.join(repoRoot, '_site', 'case-initiatives.md');
 
 // Helper: Extract metadata from filename
 function parseFilename(filename) {
@@ -50,7 +54,7 @@ function updateDocketYaml(caseSlug, meta, filename) {
     date: meta.date || '',
     type: meta.type || '',
     title: meta.short || '',
-    file: filename
+    file: `/cases/${caseSlug}/filings/${filename}`
   });
   fs.writeFileSync(ymlPath, yaml.dump(entries, { lineWidth: 120 }));
 }
@@ -63,7 +67,7 @@ function updateOrCreateMarkdown(caseSlug, meta, filename) {
   if (fs.existsSync(mdPath)) {
     md = fs.readFileSync(mdPath, 'utf8');
   }
-  md += `\n- **${meta.date || 'Unknown'}**: [${meta.short || filename}](/assets/cases/${caseSlug}/docket/${filename})\n`;
+  md += `\n- **${meta.date || 'Unknown'}**: [${meta.short || filename}](/cases/${caseSlug}/filings/${filename})\n`;
   fs.writeFileSync(mdPath, md);
 }
 
@@ -75,7 +79,8 @@ function updateDashboard(caseSlugs) {
       const entries = yaml.load(fs.readFileSync(ymlPath, 'utf8')) || [];
       dashboard += `## ${slug.replace(/-/g, ' ').toUpperCase()}\n`;
       for (const entry of entries) {
-        dashboard += `- **${entry.date}**: ${entry.title} ([PDF](/assets/cases/${slug}/docket/${entry.file}))\n`;
+        const fileUrl = entry.file?.startsWith('/') ? entry.file : `/cases/${slug}/filings/${entry.file}`;
+        dashboard += `- **${entry.date}**: ${entry.title} ([PDF](${fileUrl}))\n`;
       }
       dashboard += '\n';
     }
@@ -155,6 +160,7 @@ async function processInboxBatch() {
   const files = fs.readdirSync(INBOX).filter(f => f.toLowerCase().endsWith('.pdf'));
   let caseSlugs = new Set();
   const knownSlugs = loadCaseSlugs();
+  const rl = createInterface({ input, output });
   for (const file of files) {
     const filePath = path.join(INBOX, file);
     let meta = parseFilename(file);
@@ -171,20 +177,12 @@ async function processInboxBatch() {
     // Auto-detect case slug
     let caseSlug = autoDetectCaseSlug(meta, text, knownSlugs);
     if (!caseSlug) {
-      // Prompt only if ambiguous
-      let defaultSlug = meta.short ? meta.short.toLowerCase().replace(/\s+/g, '-') : 'general';
-      caseSlug = (await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'slug',
-          message: 'Enter case slug (e.g., atl-l-002794-25):',
-          default: defaultSlug,
-          validate: s => s.length > 0
-        }
-      ])).slug;
+      const defaultSlug = meta.short ? meta.short.toLowerCase().replace(/\s+/g, '-') : 'general';
+      const answer = await rl.question(`Enter case slug (e.g., atl-l-002794-25) [${defaultSlug}]: `);
+      caseSlug = (answer || defaultSlug).trim();
     }
     caseSlugs.add(caseSlug);
-    const caseDocketDir = path.join(CASES_DIR, caseSlug, 'docket');
+    const caseDocketDir = path.join(CASES_DIR, caseSlug, 'filings');
     if (!fs.existsSync(caseDocketDir)) fs.mkdirSync(caseDocketDir, { recursive: true });
     let newName = buildFilename(meta);
     // Duplicate/versioning logic
@@ -205,6 +203,7 @@ async function processInboxBatch() {
       reviewItems.push({ file, caseSlug, meta, note: 'Missing/ambiguous metadata' });
     }
   }
+  rl.close();
   updateDashboard(Array.from(caseSlugs));
   // Write review dashboard
   let reviewMd = '# Intake Review Dashboard\n\n';

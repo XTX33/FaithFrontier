@@ -1,7 +1,6 @@
 ---
 title: "Faith Frontier Ecclesiastical Trust & Governance Overview"
-layout: page
-category: governance
+layout: default
 summary: "An accessible explanation of the Trust, its mission lock, and how Tillerstead Sanctuary is stewarded."
 permalink: /faith-frontier-trust-and-governance/
 ---

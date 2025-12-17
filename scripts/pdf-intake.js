@@ -1,15 +1,16 @@
-// FaithFrontier PDF Intake & Docket Automation
-// Drop-in Node.js script for automated PDF renaming, metadata extraction, and docket updates
-// Requires: npm install pdf-parse js-yaml
+// FaithFrontier PDF Intake & Docket Automation (legacy)
+// Note: The canonical intake is scripts/docket-intake.js. This script is kept for compatibility.
 
-const fs = require('fs');
-const path = require('path');
-const pdf = require('pdf-parse');
-const yaml = require('js-yaml');
+import fs from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import pdf from 'pdf-parse';
+import yaml from 'js-yaml';
 
-const INBOX = path.join(__dirname, '../_inbox');
-const CASES_DIR = path.join(__dirname, '../assets/cases');
-const DOCKET_DATA_DIR = path.join(__dirname, '../_data/docket');
+const repoRoot = process.cwd();
+const INBOX = path.join(repoRoot, '_inbox');
+const CASES_DIR = path.join(repoRoot, 'cases');
+const DOCKET_DATA_DIR = path.join(repoRoot, '_data', 'docket');
 
 // Helper: Extract metadata from filename
 function parseFilename(filename) {
@@ -69,7 +70,7 @@ function updateDocketYaml(caseSlug, meta, filename) {
     date: meta.date || '',
     type: meta.type || '',
     title: meta.short || '',
-    file: filename
+    file: `/cases/${caseSlug}/filings/${filename}`
   });
   fs.writeFileSync(ymlPath, yaml.dump(entries, { lineWidth: 120 }));
 }
@@ -83,7 +84,7 @@ function updateOrCreateMarkdown(caseSlug, meta, filename) {
   if (fs.existsSync(mdPath)) {
     md = fs.readFileSync(mdPath, 'utf8');
   }
-  md += `\n- **${meta.date || 'Unknown'}**: [${meta.short || filename}](/assets/cases/${caseSlug}/docket/${filename})\n`;
+  md += `\n- **${meta.date || 'Unknown'}**: [${meta.short || filename}](/cases/${caseSlug}/filings/${filename})\n`;
   fs.writeFileSync(mdPath, md);
 }
 
@@ -106,7 +107,7 @@ async function processInbox() {
     // Ask user for case slug or infer from folder/filename (customize as needed)
     let caseSlug = 'general'; // TODO: improve slug inference or prompt user
     // Organize PDFs by case
-    const caseDocketDir = path.join(CASES_DIR, caseSlug, 'docket');
+    const caseDocketDir = path.join(CASES_DIR, caseSlug, 'filings');
     if (!fs.existsSync(caseDocketDir)) fs.mkdirSync(caseDocketDir, { recursive: true });
     const newName = buildFilename(meta);
     const destPath = path.join(caseDocketDir, newName);

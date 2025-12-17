@@ -19,11 +19,11 @@ tags:
 assets_dir: "/cases/usdj-1-22-cv-06206/filings/"
 documents:
   - label: "Original Complaint"
-    path: "2022-10-09-original-complaint.pdf"
+    path: "20221009-original-complaint.pdf"
   - label: "Amended Complaint"
-    path: "2025-08-27-amended-complaint.pdf"
+    path: "20250827-amended-complaint.pdf"
   - label: "Motion to Reopen"
-    path: "2025-08-27-motion-to-reopen.pdf"
+    path: "20250827-motion-to-reopen.pdf"
 ---
 
 Federal civil-rights action documenting the original filing and subsequent motion practice to reopen proceedings. Exhibits, declarations, and service materials are cataloged in the docket entries below.

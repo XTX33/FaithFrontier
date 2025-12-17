@@ -28,7 +28,7 @@ Heritage is treated as responsibility, not entitlement: generational American ro
 
 Faith Frontier content is intentionally separated to reduce confusion:
 
-- **Public case records (`cases/`, `assets/cases/`, `_cases/`):** Procedural histories, dockets, and filings are posted for transparency, independent verification, and civic education. The goal is to document what happened—not to advance grievance or conspiracy narratives.
+- **Public case records (`cases/`, `_cases/`):** Procedural histories, dockets, and filings are posted for transparency, independent verification, and civic education. The goal is to document what happened—not to advance grievance or conspiracy narratives.
 - **Faith and ethics essays (`_essays/`, `_articles/`, `_manifesto/`, `_pages/`, `_posts/`):** Reflections on stewardship, accountability, and moral formation. These writings express belief and conscience, not binding law.
 - **Operational guidance (`_trust/`, `scripts/`, automation docs):** Tools and checklists for lawful governance, automation usage, and stewardship operations.
 
@@ -76,7 +76,6 @@ Automation is **assistive, not autonomous**: systems propose, humans decide, and
 _cases/              # Case summaries and metadata (Markdown)
   _TEMPLATE.md       # Template for creating new cases
 cases/               # Normalized public-facing case folders with filings
-assets/cases/        # Binary filings, exhibits, envelopes, media
 _essays/             # Protected essays and narratives
 _articles/, articles/ # Long-form content and features
 _layouts/            # Jekyll templates (MIT-licensed code)
@@ -92,7 +91,7 @@ scripts/             # Automation utilities (MIT-licensed code)
 
 Navigation cues:
 
-- Case materials live in `cases/` and `assets/cases/` for public verification.
+- Case materials live in `cases/` for public verification.
 - Faith and civic essays live in `_essays/`, `_articles/`, `_manifesto/`, `_pages/`, and `_posts/` to keep interpretation distinct from recordkeeping.
 - Operational and automation files sit in `scripts/`, `_trust/`, and supporting docs to guide lawful use.
 
@@ -136,13 +135,13 @@ FaithFrontier content falls into two distinct categories:
 
 2. **Creative, legal, and theological content – Restricted use**
 
-   Essays, metadata, branding, and case narratives are protected under [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md), [`TRADEMARK_NOTICE.md`](./TRADEMARK_NOTICE.md), and [`DISCLAIMER.md`](./DISCLAIMER.md).
+  Essays, metadata, branding, and case narratives are protected under [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md), [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md), and [`DISCLAIMER.md`](./DISCLAIMER.md).
 
 ### Required Legal References
 
 - [`LICENSE`](./LICENSE): MIT license for code only.
 - [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md): Ecclesiastical license for all non-code works.
-- [`TRADEMARK_NOTICE.md`](./TRADEMARK_NOTICE.md): Protection for FaithFrontier marks, logos, seals, and visual theology.
+- [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md): Protection for FaithFrontier marks, logos, seals, and visual theology.
 - [`DISCLAIMER.md`](./DISCLAIMER.md): Reliance, liability, and public-trust usage boundaries.
 
 Every contribution must preserve these boundaries. Do **not** treat essays, case records, metadata, or imagery as open-source material; obtain written approval before republishing any protected work.
@@ -150,8 +149,8 @@ Every contribution must preserve these boundaries. Do **not** treat essays, case
 ### Directory-Level Enforcement
 
 - `_cases/`, `_articles/`, `_essays/`, `_manifesto/`, `_pages/`, `_posts/`, `_trust/`: Markdown narratives governed by `CONTENT_LICENSE.md`.
-- `cases/`, `assets/cases/`: Filings and exhibits. Public-record PDFs remain public domain, but FaithFrontier's summaries and organization remain protected.
-- `assets/images/`: Logos and artwork subject to `TRADEMARK_NOTICE.md`.
+- `cases/`: Filings and exhibits. Public-record PDFs remain public domain, but FaithFrontier's summaries and organization remain protected.
+- `assets/images/`: Logos and artwork subject to `_docs/TRADEMARK_NOTICE.md`.
 - `_layouts/`, `_includes/`, `assets/css/`, `assets/js/`, `scripts/`, workflows: MIT-licensed code covered by `LICENSE`.
 
 When adding new material, identify whether it is code or content, apply the appropriate license, and reference the governing document where necessary.
@@ -172,11 +171,11 @@ Faith Frontier features a structured case documentation system with two layout o
   - Enhanced docket entry styling
   - Professional print-ready formatting
 
-See `CASE-ARCHIVE-GUIDE.md` for complete documentation on using the enhanced case system.
+See `_docs/CASE-ARCHIVE-GUIDE.md` for complete documentation on using the enhanced case system.
 
 ## AI-Assisted Analysis
 
-Optional tooling in `scripts/` leverages OpenAI APIs. Configure credentials via `.github/SETUP-OPENAI.md` and review `QUICKSTART-GENERATE-ANALYSIS.md` plus `ANALYSIS-SYSTEM.md` before running any automation. Outputs remain subject to the disclaimer and content-license rules.
+Optional tooling in `scripts/` leverages OpenAI APIs. Configure credentials via `.github/SETUP-OPENAI.md` and review `_docs/QUICKSTART-GENERATE-ANALYSIS.md` plus `_docs/ANALYSIS-SYSTEM.md` before running any automation. Outputs remain subject to the disclaimer and content-license rules.
 
 ---
 

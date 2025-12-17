@@ -1,7 +1,6 @@
 ---
 title: "Founder’s Covenant of Stewardship"
-layout: article
-category: covenant
+layout: default
 summary: "A personal covenant to steward Tillerstead Sanctuary and Faith Frontier’s mission faithfully."
 permalink: /founders-covenant-devon-tyler/
 ---

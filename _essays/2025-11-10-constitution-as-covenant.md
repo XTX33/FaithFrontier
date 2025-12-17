@@ -1,5 +1,5 @@
 ---
-layout: essay
+layout: default
 title: "Constitution as Covenant"
 date: 2025-11-10
 permalink: /essays/constitution-covenant/

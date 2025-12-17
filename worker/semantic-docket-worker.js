@@ -1,5 +1,5 @@
 // Cloudflare Worker: Semantic Docket URL Routing
-// This worker maps /cases/<slug>/docket/<entry-id> to the correct PDF in /assets/cases/<slug>/docket/...
+// This worker maps /cases/<slug>/docket/<entry-id> to the correct PDF in /cases/<slug>/filings/...
 // Place this logic in your worker.js (or merge with existing logic)
 
 addEventListener('fetch', event => {

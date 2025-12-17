@@ -1,12 +1,12 @@
 // repair-docket.js
-// Audits and repairs case folders: ensures all PDFs in assets/cases/<slug>/docket/ are registered in _data/docket/<slug>.yml
+// Audits and repairs case folders: ensures all PDFs in cases/<slug>/filings/ are registered in _data/docket/<slug>.yml
 // Usage: node scripts/repair-docket.js
 
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-const CASES_DIR = 'assets/cases';
+const CASES_DIR = 'cases';
 const DOCKET_DIR = '_data/docket';
 
 const ensureDir = p => fs.mkdirSync(p, { recursive: true });
@@ -31,7 +31,7 @@ const guessDate = (name, statsMtime) => {
 };
 
 const repairDocket = slug => {
-  const docketDir = path.join(CASES_DIR, slug, 'docket');
+  const docketDir = path.join(CASES_DIR, slug, 'filings');
   if (!fs.existsSync(docketDir)) return;
   const files = fs.readdirSync(docketDir).filter(f => f.toLowerCase().endsWith('.pdf'));
   const docketFile = path.join(DOCKET_DIR, `${slug}.yml`);
@@ -45,9 +45,9 @@ const repairDocket = slug => {
     const date = guessDate(file, stats.mtimeMs);
     const type = guessType(file);
     const title = file.replace(/\.pdf$/i,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();
-    const relPath = `${file}`;
-    if (!entries.find(e => e.file === relPath)) {
-      entries.push({ id, date, type, title, file: relPath, notes: 'Repaired: auto-registered' });
+    const fileUrl = `/cases/${slug}/filings/${file}`;
+    if (!entries.find(e => e.file === fileUrl || e.file === file)) {
+      entries.push({ id, date, type, title, file: fileUrl, notes: 'Repaired: auto-registered' });
       changed = true;
     }
   }
@@ -60,7 +60,7 @@ const repairDocket = slug => {
 };
 
 const main = () => {
-  const slugs = fs.readdirSync(CASES_DIR).filter(f => fs.existsSync(path.join(CASES_DIR, f, 'docket')));
+  const slugs = fs.readdirSync(CASES_DIR).filter(f => fs.existsSync(path.join(CASES_DIR, f, 'filings')));
   for (const slug of slugs) {
     repairDocket(slug);
   }

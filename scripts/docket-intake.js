@@ -2,11 +2,15 @@
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
+import { spawnSync } from 'node:child_process';
 
 const INBOX = ['_inbox', 'assets/uploads'];
-const CASES_DIR = 'assets/cases';
+// Canonical public filing home: /cases/<slug>/filings/<file>.pdf
+const CASES_DIR = 'cases';
 const DOCKET_DIR = '_data/docket';
 const MAP_FILE = '_data/cases-map.yml';
+
+const MIN_PDF_BYTES = 4096;
 
 const readYml = p => fs.existsSync(p) ? yaml.load(fs.readFileSync(p, 'utf8')) : undefined;
 const writeYml = (p, obj) => fs.writeFileSync(p, yaml.dump(obj, { lineWidth: 1000 }));
@@ -174,6 +178,41 @@ const loadDocket = slug => {
   return { p, list: readYml(p) || [] };
 };
 
+const fileUrlToRepoPath = (fileUrl) => {
+  if (typeof fileUrl !== 'string' || fileUrl.length === 0) return null;
+  const normalized = fileUrl.startsWith('/') ? fileUrl.slice(1) : fileUrl;
+  return path.normalize(normalized);
+};
+
+const ensurePdfHomesForDocket = (slug) => {
+  const { list } = loadDocket(slug);
+  const missing = [];
+
+  for (const entry of list) {
+    if (!entry || typeof entry.file !== 'string') continue;
+    const repoPath = fileUrlToRepoPath(entry.file);
+    if (!repoPath) continue;
+    if (!fs.existsSync(repoPath)) {
+      missing.push(repoPath);
+      continue;
+    }
+    try {
+      const st = fs.statSync(repoPath);
+      if (st.size === 0) missing.push(repoPath);
+    } catch {
+      missing.push(repoPath);
+    }
+  }
+
+  if (missing.length === 0) return;
+
+  const args = ['scripts/generate-placeholder-pdfs.js', '--min-bytes', String(MIN_PDF_BYTES), ...missing];
+  const res = spawnSync('node', args, { stdio: 'inherit' });
+  if (res.status !== 0) {
+    console.warn(`Warning: placeholder generation exited with status ${res.status}`);
+  }
+};
+
 const main = () => {
   const items = discoverPdfs();
   if (!items.length) { 
@@ -203,8 +242,8 @@ const main = () => {
     }
     let slug = token ? slugFromDocket(token) : null;
 
-    // If path already under assets/cases/<slug>/..., respect it
-    const mUnder = p.match(/assets\/cases\/([a-z0-9-]+)\//i);
+    // If path already under cases/<slug>/..., respect it
+    const mUnder = p.match(/cases\/([a-z0-9-]+)\//i);
     if (mUnder) slug = mUnder[1];
 
     // If still unknown, park under 'unassigned'
@@ -216,7 +255,7 @@ const main = () => {
     const stub = slugifyFile(base);
     let newName = `${date}_${type}_${stub}.pdf`;
 
-    const destDir = path.join(CASES_DIR, slug, 'docket');
+    const destDir = path.join(CASES_DIR, slug, 'filings');
     ensureDir(destDir);
     let destPath = path.join(destDir, newName);
 
@@ -246,6 +285,10 @@ const main = () => {
       ensureDir(DOCKET_DIR);
       writeYml(docketFile, list.sort((a,b)=> (a.date<b.date?1:-1)));
     }
+
+    // Make sure every docket entry has a real file behind it.
+    // This only creates placeholders for missing/0-byte PDFs (it does not overwrite real PDFs).
+    ensurePdfHomesForDocket(slug);
 
     changes.push({ from: p, to: destPath, docketFile });
   }

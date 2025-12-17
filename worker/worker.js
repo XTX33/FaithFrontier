@@ -74,7 +74,7 @@ async function handleRequest(request) {
 
     // Prepare file path
     const sanitizedFilename = filename.replace(/[^a-zA-Z0-9._-]/g, '-')
-    const pdfPath = `assets/cases/${slug}/docket/${date}_${type}_${sanitizedFilename}`
+    const pdfPath = `cases/${slug}/filings/${date}_${type}_${sanitizedFilename}`
 
     // Upload PDF file
     await fetch(

@@ -36,7 +36,7 @@ jobs:
         run: |
           if [ -z "${{ secrets.OPENAI_API_KEY }}" ]; then
             echo "::error::OPENAI_API_KEY secret is not set. Please add it in repository Settings > Secrets and variables > Actions"
-            echo "See ANALYSIS-SYSTEM.md for setup instructions"
+            echo "See _docs/ANALYSIS-SYSTEM.md for setup instructions"
             exit 1
           fi
           echo "✓ OpenAI API Key is configured"

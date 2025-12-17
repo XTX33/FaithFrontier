@@ -29,7 +29,7 @@ Public filings remain public domain. However, FaithFrontier's:
 - Metadata
 - Narrative frameworks
 
-are protected intellectual property subject to [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md) and [`TRADEMARK_NOTICE.md`](./TRADEMARK_NOTICE.md).
+are protected intellectual property subject to [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md) and [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md).
 
 ## 6. Limitation of Liability
 

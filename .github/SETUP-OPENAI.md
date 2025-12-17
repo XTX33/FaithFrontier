@@ -110,10 +110,10 @@ Monitor your usage at: https://platform.openai.com/usage
 
 ## Support
 
-For detailed information, see [ANALYSIS-SYSTEM.md](../../ANALYSIS-SYSTEM.md)
+For detailed information, see [_docs/ANALYSIS-SYSTEM.md](../../_docs/ANALYSIS-SYSTEM.md)
 
 For issues:
 1. Check this checklist
 2. Review workflow logs in the Actions tab
-3. Consult the troubleshooting section in ANALYSIS-SYSTEM.md
+3. Consult the troubleshooting section in _docs/ANALYSIS-SYSTEM.md
 4. Open an issue if problems persist

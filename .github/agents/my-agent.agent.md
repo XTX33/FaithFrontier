@@ -16,16 +16,16 @@ description: >
 1) Discover new PDFs in:
    - `_inbox/**.pdf`
    - `assets/uploads/**.pdf`
-   - `assets/cases/**` files not indexed in docket data
+  - `cases/**` files not indexed in docket data
 2) Determine case `slug`:
-   - If file path already under `assets/cases/<slug>/`, use that slug
+  - If file path already under `cases/<slug>/`, use that slug
    - Else try to match by `primary_docket` or any `dockets[]` in `_cases/*.md`
      using a canonical map `_data/cases-map.yml` (create/maintain it)
    - Else infer from filename tokens (e.g., A-000313-25, ATL-L-002794-25)
 3) Rename using canonical pattern:
    - `{DATE}_{TYPE}_{SHORT}.pdf`  e.g., `2025-11-12_Filing_Written-Appearance-ADA-MTD.pdf`
    - DATE pulled from filename or PDF metadata; fallback to commit date
-4) Move to: `assets/cases/<slug>/docket/`
+4) Move to: `cases/<slug>/filings/`
 5) Update docket data:
    - `_data/docket/<slug>.yml` append:
      - `id:` `<DATE>-<kebab(short)>`
@@ -41,13 +41,13 @@ description: >
 
 ## Commands
 - "Intake PDFs" → run full pipeline (discover→rename→move→update docket→PR)
-- "Reindex docket for <slug>" → rescan assets/cases/<slug>/ and reconcile with docket file
+- "Reindex docket for <slug>" → rescan cases/<slug>/ and reconcile with docket file
 - "List orphans" → report PDFs not referenced in any docket
 - "Map docket A-000313-25 to slug street-crossing-pcr-appeal" → update `_data/cases-map.yml`
 
 ## Guardrails
 - Never delete; only move/copy and open PRs
-- Touch only: `_data/docket/*.yml`, `_data/cases-map.yml`, `assets/cases/**/docket/*.pdf`, `reports/**`
+- Touch only: `_data/docket/*.yml`, `_data/cases-map.yml`, `cases/**/filings/*.pdf`, `reports/**`
 - No layout/CSS/branding changes
 - Keep commits small and reversible
 
@@ -118,7 +118,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 const INBOX = ['_inbox', 'assets/uploads'];
-const CASES_DIR = 'assets/cases';
+const CASES_DIR = 'cases';
 const DOCKET_DIR = '_data/docket';
 const MAP_FILE = '_data/cases-map.yml';
 
@@ -194,11 +194,11 @@ const main = () => {
     const token = (base.match(/([A-Z]{1,3}-[A-Z]-\d{6,}-\d{2})/) || base.match(/A-\d{6}-\d{2}/) || [])[0];
     let slug = token ? slugFromDocket(token) : null;
 
-    // If path already under assets/cases/<slug>/..., respect it
-    const mUnder = p.match(/assets\/cases\/([a-z0-9-]+)\//i);
+    // If path already under cases/<slug>/..., respect it
+    const mUnder = p.match(/cases\/([a-z0-9-]+)\//i);
     if (mUnder) slug = mUnder[1];
 
-    // Fallback: try a simple kebab of the parent dir name if it's inside assets/cases/*
+    // Fallback: try a simple kebab of the parent dir name if it's inside cases/*
     if (!slug && mUnder) slug = mUnder[1];
 
     // If still unknown, park under 'unassigned'
@@ -209,7 +209,7 @@ const main = () => {
     const short = base.replace(/\.pdf$/i,'').replace(/[_\.]+/g,'-');
     const newName = `${date}_${type}_${short}.pdf`.replace(/-+/g,'-');
 
-    const destDir = path.join(CASES_DIR, slug, 'docket');
+    const destDir = path.join(CASES_DIR, slug, 'filings');
     ensureDir(destDir);
     const destPath = path.join(destDir, newName);
 

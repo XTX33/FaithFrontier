@@ -24,7 +24,7 @@ overview: >
   responses to the Authority's pleadings.
 documents:
   - label: "Answer & First Appearance"
-    path: "2025-09-03_Answer-FirstAppearance.pdf"
+    path: "20250903-answer-firstappearance.pdf"
   - label: "Complaint"
     path: "2025-08-19_Complaint.pdf"
   - label: "Amended Answer & Counterclaim"

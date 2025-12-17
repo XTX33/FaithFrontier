@@ -84,7 +84,7 @@ layout: default
 			  {% if first_char == '/' %}
 			    <a href="{{ docket_file }}" target="_blank" rel="noopener">{{ d.title }}</a>
 			  {% else %}
-			    <a href="/assets/cases/{{ slug }}/docket/{{ docket_file | uri_escape }}" target="_blank" rel="noopener">{{ d.title }}</a>
+          <a href="/cases/{{ slug }}/filings/{{ docket_file | uri_escape }}" target="_blank" rel="noopener">{{ d.title }}</a>
 			  {% endif %}
 			{% else %}
 			  <span>{{ d.title }}</span>

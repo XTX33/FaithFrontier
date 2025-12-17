@@ -15,7 +15,7 @@ dotenv.config();
 if (!process.env.OPENAI_API_KEY) {
   console.error('Error: OPENAI_API_KEY environment variable is not set.');
   console.error('Please set it in a .env file or as an environment variable.');
-  console.error('See ANALYSIS-SYSTEM.md for setup instructions.');
+  console.error('See _docs/ANALYSIS-SYSTEM.md for setup instructions.');
   process.exit(1);
 }
 

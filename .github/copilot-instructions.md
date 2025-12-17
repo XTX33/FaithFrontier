@@ -68,7 +68,7 @@ The built site will be in the `_site/` directory.
 - `_data/cases-map.yml` - Mapping of docket numbers to case slugs
 
 ### Assets
-- `assets/cases/<slug>/docket/` - PDFs and documents for specific cases
+- `cases/<slug>/filings/` - PDFs and documents for specific cases
 - `assets/css/` - Stylesheets
 - `assets/js/` - JavaScript files
 - `assets/images/` - Image assets
@@ -114,7 +114,7 @@ The docket system manages court filings and documents. See **DOCKET-SYSTEM.md** 
 
 **Key features:**
 - Automated PDF intake from `_inbox/` or uploaded files
-- Normalization and organization into `assets/cases/<slug>/docket/`
+- Normalization and organization into `cases/<slug>/filings/`
 - Data-driven docket entries in `_data/docket/<slug>.yml`
 - Searchable case index at `/cases/`
 
@@ -124,7 +124,7 @@ node scripts/docket-intake.js
 ```
 
 ### AI-Powered Case Analysis
-The analysis system uses OpenAI GPT models to generate judicial and journalistic perspectives. See **ANALYSIS-SYSTEM.md** for complete documentation.
+The analysis system uses OpenAI GPT models to generate judicial and journalistic perspectives. See **_docs/ANALYSIS-SYSTEM.md** for complete documentation.
 
 **Setup requirements:**
 - `OPENAI_API_KEY` environment variable or repository secret
@@ -184,7 +184,7 @@ Check for broken links after making changes (if validation tools are available).
 - **Never delete case data** - Only add or update
 - Keep case front matter consistent with existing schema
 - Ensure docket numbers match entries in `_data/cases-map.yml`
-- PDFs should be in `assets/cases/<slug>/docket/` directory
+- PDFs should be in `cases/<slug>/filings/` directory
 
 ### Working with Docket Data
 - YAML files in `_data/docket/` must be valid YAML
@@ -214,9 +214,9 @@ When working on docket-related tasks, consider using or referencing the docket a
 
 - **README.md** - Project overview and quick start
 - **DOCKET-SYSTEM.md** - Complete docket management documentation
-- **ANALYSIS-SYSTEM.md** - Complete AI analysis system documentation
-- **QUICKSTART-ANALYSIS.md** - Quick reference for analysis features
-- **IMPLEMENTATION-SUMMARY.md** - Technical implementation details
+- **_docs/ANALYSIS-SYSTEM.md** - Complete AI analysis system documentation
+- **_docs/QUICKSTART-ANALYSIS.md** - Quick reference for analysis features
+- **_docs/IMPLEMENTATION-SUMMARY.md** - Technical implementation details
 - **.github/SETUP-OPENAI.md** - OpenAI API setup guide
 
 ## Contact and Support

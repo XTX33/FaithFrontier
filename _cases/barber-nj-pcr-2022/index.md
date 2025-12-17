@@ -18,13 +18,13 @@ judge:
 tags:
   - pcr
   - faith-frontier
-assets_dir: "/cases/atl-22-002292/pcr/"
+assets_dir: "/cases/barber-nj-pcr-2022/filings/"
 documents:
   - label: "PCR Petition"
-    path: "2025-10-26-njsc-atl-22-002292-barber-petition-for-postconvictionrelief-with-certification-and-memorandum.pdf"
+    path: "10-26-2025-Barber Post Conviction Relief Petition October 2025.pdf"
     note: "Filed with supporting certification."
   - label: "Certification of Supplemental Record"
-    path: "2025-10-27-njsc-atl-22-002292-barber-certification-of-supplementalrecord-and-request-for-transmittal-to-appdiv.pdf"
+    path: "10-26-2025-SUPPLEMENTAL RECORD REQUEST FOR TRANSMITTAL.pdf"
     note: "Requesting transmittal to Appellate Division."
 redirect_from:
   - /cases/atl-22-002292/

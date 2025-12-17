@@ -22,4 +22,4 @@ Faith Frontier’s property selection process is transparent, ethical, and missi
 - **Compliance:** We never use data or methods that violate terms of service or law.
 - **Stewardship:** Our approach prioritizes land health, human dignity, and ethical construction.
 
-For more, see our [Stewardship Criteria](stewardship-criteria.md) and [Transparency & Governance](transparency-governance.md) pages.
+For more, see the Scout documentation in the repository.

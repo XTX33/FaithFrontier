@@ -22,11 +22,11 @@ overview: >
   and supporting exhibits are live.
 documents:
   - label: "Complaint"
-    path: "2025-09-09-complaint.pdf"
+    path: "20250909-complaint.pdf"
   - label: "Demurrer and Abatement"
-    path: "2025-09-09-demurrer-and-abatement.pdf"
+    path: "20250909-demurrer-and-abatement.pdf"
   - label: "Envelope"
-    path: "2025-09-09-envelope.pdf"
+    path: "20250909-envelope.pdf"
 ---
 
 Federal filing capturing the complaint and initial motions challenging jurisdiction and procedure. Entries below track the filings submitted to initiate the action.

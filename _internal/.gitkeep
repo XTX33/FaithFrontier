@@ -1,0 +1,5 @@
+This file keeps the `_internal/` folder tracked by git.
+
+Purpose: store internal-only notes, drafts, and working documents that should not be published to the built site.
+
+Note: If the repository is public, files here are still visible on GitHub.

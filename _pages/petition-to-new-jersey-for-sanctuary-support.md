@@ -1,7 +1,6 @@
 ---
 title: "Petition to the State of New Jersey for Tillerstead Sanctuary Partnership"
 layout: page
-category: policy
 summary: "A respectful request for redevelopment support, grants, and partnership to restore the former Atlantic Club as a sanctuary center."
 permalink: /petition-to-new-jersey-for-sanctuary-support/
 ---

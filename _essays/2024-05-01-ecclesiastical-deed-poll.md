@@ -51,8 +51,8 @@ tags:
       Older posts and long-form records will appear soon for open reading and study.
     </p>
     <p>
-      <a class="btn-primary" href="/archives/ecclesiastical-deed-poll/">
-        View the Ecclesiastical Deed Poll Archive →
+      <a class="btn-primary" href="{{ '/essays/ecclesiastical-deed-poll/' | relative_url }}">
+        View the Ecclesiastical Deed Poll →
       </a>
     </p>
   </div>

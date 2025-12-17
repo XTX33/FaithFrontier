@@ -13,14 +13,14 @@ logo_main_light: "/_includes/logo-faithfrontier-header.svg"
 logo_main: "/_includes/logo-faithfrontier-header.svg" # legacy key retained for plugins/includes
 logo_mark: "/assets/img/faithfrontier-mark.svg"
 brand_png: true
-logo_png_full_4000: "/assets/img/faithfrontier-logo-full-4000.png"
-logo_png_full_2000: "/assets/img/faithfrontier-logo-full-2000.png"
-logo_png_full_1500: "/assets/img/faithfrontier-logo-full-1500.png"
-logo_png_mark_1024: "/assets/img/faithfrontier-logo-mark-1024.png"
-logo_png_mark_512: "/assets/img/faithfrontier-logo-mark-512.png"
-logo_png_mark_256: "/assets/img/faithfrontier-logo-mark-256.png"
-logo_png_mark_128: "/assets/img/faithfrontier-logo-mark-128.png"
-logo_png_mark_64: "/assets/img/faithfrontier-logo-mark-64.png"
+logo_png_full_4000: "/assets/img/logo.png"
+logo_png_full_2000: "/assets/img/logo.png"
+logo_png_full_1500: "/assets/img/logo.png"
+logo_png_mark_1024: "/assets/img/favicon.png"
+logo_png_mark_512: "/assets/img/favicon.png"
+logo_png_mark_256: "/assets/img/favicon.png"
+logo_png_mark_128: "/assets/img/favicon.png"
+logo_png_mark_64: "/assets/img/favicon.png"
 
 # Build settings
 markdown: kramdown
@@ -92,6 +92,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
 
 # GitHub repository metadata
 repository: XTX33/FaithFrontier
@@ -101,8 +102,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - assets/img/README.md
   - node_modules
   - vendor
   - scripts
   - reports
   - _inbox
+  - _internal

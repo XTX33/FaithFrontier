@@ -12,6 +12,13 @@
     "verify:frontend": "node scripts/verify-frontend-js.js",
     "test:nav": "npx playwright test tests/nav.spec.js",
 
+    "check:pdfs": "node scripts/check-pdf-links.js --site _site",
+    "check:pdf-health": "node scripts/check-pdf-health.js",
+    "check:site-links": "node scripts/check-site-links.js --site _site",
+
+    "fix:pdf-homes": "node scripts/generate-placeholder-pdfs.js",
+    "fix:pdf-homes:force-tiny": "node scripts/generate-placeholder-pdfs.js --force-tiny",
+
     "analyze": "node scripts/analyze-cases.js",
     "docket:intake": "node scripts/docket-intake.js",
     "checksums": "node scripts/generate-checksums.js",

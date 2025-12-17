@@ -1,7 +1,6 @@
 ---
 title: "Mission Addendum: Biblical Alignment & Prophetic Purpose"
-layout: article
-category: mission
+layout: default
 summary: "How the Faith Frontier mission and Tillerstead Sanctuary reflect Christ’s teachings and prophetic patterns."
 permalink: /faith-frontier-mission-addendum/
 ---

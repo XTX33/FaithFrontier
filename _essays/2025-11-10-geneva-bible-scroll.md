@@ -1,10 +1,9 @@
 ---
-layout: essay
+layout: default
 title: "1599 Geneva Bible Scroll"
 description: "Prophecy, Gospel, and Christ’s Kingship — 26 landmark verses from the 1599 Geneva Bible presented in scroll format."
 date: 2025-11-10
 permalink: /essays/geneva-bible-scroll/
-categories: [archives, scripture]
 tags: [Geneva Bible, prophecy, gospel, faith history]
 image: /assets/images/geneva-scroll-cover.jpg
 author: Faith Frontier Ecclesiastical Trust
@@ -466,7 +465,7 @@ author: Faith Frontier Ecclesiastical Trust
   <!-- Cross-link -->
   <p style="text-align: center; margin: 50px 0 10px;">
     👉 Continue exploring:
-    <a href="/field-notes">Field Notes from the Frontier</a>
+    <a href="{{ '/essays/' | relative_url }}">Essays</a>
   </p>
 </main>
 

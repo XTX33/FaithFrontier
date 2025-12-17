@@ -1,7 +1,6 @@
 ---
 title: "Sanctuary Recovery Pipeline: From Street to Work and Home"
 layout: article
-category: justice
 summary: "A biblically informed, practical model for detox, rehab, training, and dignified work within Tillerstead Sanctuary."
 permalink: /recovery-to-work-sanctuary-model/
 ---

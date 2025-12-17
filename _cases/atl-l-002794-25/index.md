@@ -24,11 +24,11 @@ overview: >
   memoranda, and the granted order are all uploaded for review.
 documents:
   - label: "Verified Complaint and CIS"
-    path: "2025-10-03-verified-complaint-and-cis.pdf"
+    path: "20251003-verified-complaint-and-cis.pdf"
   - label: "Track Assignment"
-    path: "2025-10-07-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf"
+    path: "20251007-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf"
   - label: "Order Changing Track"
-    path: "2025-11-07-order-to-change-track-assignment.pdf"
+    path: "20251107-order-to-change-track-assignment.pdf"
 ---
 
 This filing covers the Law Division civil action focused on rebalancing the track assignment and securing timely relief. All pleadings, orders, and correspondence are cataloged in the docket list for clarity.

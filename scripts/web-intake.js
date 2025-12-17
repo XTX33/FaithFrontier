@@ -1,18 +1,19 @@
-// FaithFrontier Express Web Interface for PDF Upload & Admin Review
-// Requires: npm install express multer pdf-parse js-yaml
+// FaithFrontier Express Web Interface for PDF Upload & Admin Review (legacy)
 
-const express = require('express');
-const multer = require('multer');
-const fs = require('fs');
-const path = require('path');
-const pdf = require('pdf-parse');
-const yaml = require('js-yaml');
+import fs from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import express from 'express';
+import multer from 'multer';
+import pdf from 'pdf-parse';
+import yaml from 'js-yaml';
 
 const app = express();
 const PORT = 4001;
-const UPLOAD_DIR = path.join(__dirname, '../_inbox');
-const DOCKET_DATA_DIR = path.join(__dirname, '../_data/docket');
-const CASES_DIR = path.join(__dirname, '../assets/cases');
+const repoRoot = process.cwd();
+const UPLOAD_DIR = path.join(repoRoot, '_inbox');
+const DOCKET_DATA_DIR = path.join(repoRoot, '_data', 'docket');
+const CASES_DIR = path.join(repoRoot, 'cases');
 
 if (!fs.existsSync(UPLOAD_DIR)) fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 

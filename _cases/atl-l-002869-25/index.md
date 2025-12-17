@@ -10,6 +10,7 @@ case_type: "Declaratory Judgment"
 role: "Plaintiff"
 dockets:
   - ATL-L-002869-25
+  - ATL-L-002908-25
 primary_docket: ATL-L-002869-25
 status: active
 filed_date: 2025-10-14
@@ -23,13 +24,15 @@ overview: >
   registration disputes. Track assignment and amended pleadings are active as of October 2025.
 documents:
   - label: "Verified Complaint"
-    path: "2025-10-14-verified-complaint-declaration-of-ownership.pdf"
+    path: "20251014-verified-complaint-declaration-of-ownership.pdf"
   - label: "Affidavit of Indigency"
-    path: "2025-10-14-affidavit-of-indigency.pdf"
+    path: "20251014-affidavit-of-indigency.pdf"
   - label: "Track Assignment"
-    path: "2025-10-17-track-assignment.pdf"
+    path: "20251017-track-assignment.pdf"
   - label: "Amended Complaint"
-    path: "2025-10-29-amended-complaint.pdf"
+    path: "20251029-amended-complaint.pdf"
+redirect_from:
+  - /cases/atl-l-002908-25/
 ---
 
 Action seeking declaratory relief related to vehicle ownership. The record below traces the verified complaint, indigency affidavit, track assignment, and amended pleading.

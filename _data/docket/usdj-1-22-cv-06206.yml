@@ -2,58 +2,49 @@
   date: 2022-10-09
   type: Filing
   title: Original Complaint
-  file: /cases/usdj-1-22-cv-06206/2022-10-09_original-complaint.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20221009-original-complaint.pdf
 - id: 2022-10-09-police-report
   date: 2022-10-09
   type: Exhibit
   title: Police Report
-  file: /cases/usdj-1-22-cv-06206/2022-10-09_police-report.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20221009-police-report.pdf
 - id: 2022-10-09-envelope
   date: 2022-10-09
   type: Other
   title: Envelope (Original Filing)
-  file: /cases/usdj-1-22-cv-06206/2022-10-09_envelope.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20221009-envelope.pdf
 - id: 2025-08-27-amended-complaint
   date: 2025-08-27
   type: Filing
   title: Amended Complaint
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_amended-complaint.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-amended-complaint.pdf
 - id: 2025-08-27-motion-to-reopen
   date: 2025-08-27
   type: Motion
   title: Motion to Reopen
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_motion-to-reopen.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-motion-to-reopen.pdf
 - id: 2025-08-27-memorandum
   date: 2025-08-27
   type: Brief
   title: Memorandum in Support of Motion
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_memorandum-in-support-of-motion.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-memorandum-in-support-of-motion.pdf
 - id: 2025-08-27-declaration
   date: 2025-08-27
   type: Filing
   title: Declaration
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_declaration.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-declaration.pdf
 - id: 2025-08-27-proposed-order
   date: 2025-08-27
   type: Motion
   title: Proposed Order for Motion to Reopen
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_proposed-order-for-motion-to-reopen.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-proposed-order-for-motion-to-reopen.pdf
 - id: 2025-08-27-certificate-of-service
   date: 2025-08-27
   type: Other
   title: Certificate of Service
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_certificate-of-service.pdf
-
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-certificate-of-service.pdf
 - id: 2025-08-27-envelope
   date: 2025-08-27
   type: Other
   title: Envelope (Motion to Reopen)
-  file: /cases/usdj-1-22-cv-06206/2025-08-27_envelope.pdf
+  file: /cases/usdj-1-22-cv-06206/filings/20250827-envelope.pdf
