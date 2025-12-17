@@ -53,4 +53,11 @@ The project will move through Atlantic City planning and zoning processes, honor
 
 The plan requires significant capital, complex engineering, and sustained operating discipline. Faith Frontier will seek professional underwriting, code review, and legal counsel at each stage. Transparent governance through the Faith Frontier Ecclesiastical Trust will keep the site dedicated to sanctuary, agrarian, and justice purposes.
 
+## Transparency, records, and oversight
+
+- Publish key permits, approvals, and environmental reviews so neighbors and agencies can track compliance without guesswork.
+- Maintain clear separations between ecclesiastical work, charitable use, and any revenue-generating entities to avoid alter-ego risk.
+- Keep summaries subordinate to official dockets, and invite corrections from regulators, residents, and industry partners.
+- Use plain-language updates that explain decisions without hype, conspiracy framing, or adversarial posturing.
+
 For partnership inquiries and public support requests, see the **[petition to New Jersey]({{ '/petition-to-new-jersey-for-sanctuary-support/' | relative_url }})** and the **[Trust & governance overview]({{ '/faith-frontier-trust-and-governance/' | relative_url }})**.

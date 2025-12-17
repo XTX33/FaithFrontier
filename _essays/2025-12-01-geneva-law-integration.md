@@ -14,7 +14,7 @@ author: Faith Frontier Ecclesiastical Trust
 ---
 
 ## Thesis
-Faith Frontier’s mission to harmonize spiritual conviction with practical governance requires an authoritative scriptural backbone. The 1599 Geneva Bible (GNV), preserved on BibleGateway.com, offers the Reformation-era precision, marginal helps, and covenantal frame that align with our emphasis on Biblical law as the charter for righteous society. Our thesis: by privileging GNV citations, we can unify doctrine, product design, and community formation around a consistent legal-theological vocabulary.
+Faith Frontier’s mission to harmonize spiritual conviction with practical governance requires an authoritative scriptural backbone that respects constitutional boundaries. The 1599 Geneva Bible (GNV), preserved on BibleGateway.com, offers the Reformation-era precision, marginal helps, and covenantal frame that align with our emphasis on Biblical law as a moral compass. Our thesis: by privileging GNV citations, we can unify doctrine, product design, and community formation around a consistent legal-theological vocabulary **without** implying that Scripture replaces civil authority or professional legal counsel.
 
 ## Scriptural Foundations (1599 Geneva Bible)
 > “Behold, I have taught you ordinances and laws, as the Lord my God commanded me, that ye should do even so within the land whither ye go to possess it. Keep them therefore, and do them: for that is your wisdom and your understanding in the sight of the people, which shall hear all these statutes, and shall say, Only this people is wise and of understanding, and a great nation. For what nation is so great unto whom the gods are so near unto them, as the Lord our God is near unto us, in all that we call unto him? And what nation is so great, that hath ordinances and laws so righteous, as all this Law, which I set before you this day?” ([Deuteronomy 4:5–8, GNV](https://www.biblegateway.com/passage/?search=Deuteronomy+4%3A5-8&version=GNV))
@@ -30,11 +30,17 @@ Faith Frontier’s mission to harmonize spiritual conviction with practical gove
 These passages frame Biblical law as (1) a national wisdom system, (2) the instrument that converts and illumines, (3) fulfilled yet enduring in Christ, (4) a liberating mirror for discipleship, and (5) the standard upheld by faith. Together they supply both constitution and charter for Faith Frontier.
 
 ## Mission Alignment
-1. **Law as covenant charter:** Deuteronomy’s emphasis on public wisdom invites us to present Faith Frontier’s charters, bylaws, and product policies in covenantal language that echoes GNV phrasing—making our documentation a witness to righteous ordering.
+1. **Law as covenant charter:** Deuteronomy’s emphasis on public wisdom invites us to present Faith Frontier’s charters, bylaws, and product policies in covenantal language that echoes GNV phrasing—making our documentation a witness to righteous ordering while honoring civil-law requirements.
 2. **Formation through delight:** Psalm 19 frames the Law as joy and illumination. In product copy and onboarding, we should describe legal compliance not as constraint but as rejoicing alignment with God’s purity, using GNV’s diction to shape tone.
 3. **Christ-centered continuity:** Matthew 5 guards against antinomian drift. Editorial guidelines, newsletters, and legal analyses should explicitly trace how Christ fulfills the Law, preventing policy proposals from severing grace from obedience.
 4. **Liberty in practice:** James 1 calls readers to action. Our educational tracks, case digests, and advocacy kits should pair every principle with a “doer” step—inviting measurable obedience rather than abstract assent.
 5. **Faith that establishes:** Romans 3 insists that faith stabilizes the Law. Fundraising narratives and community governance should highlight how faith communities can *establish* rather than evade Biblical legal order.
+
+## Governance guardrails
+- **Not legal advice:** Scriptural reflections guide conscience; state and federal law govern conduct. Encourage readers to seek licensed counsel for tax, zoning, employment, or litigation questions.
+- **Respect constitutional structures:** Anchor advocacy in due process, transparent notice, and open records rather than speculation or adversarial rhetoric.
+- **Cite verifiable sources:** Pair every doctrinal claim with public documents, reporter links, or official transcripts so readers can test accuracy.
+- **Avoid conspiratorial framing:** Resist language about hidden cabals or secret law; focus on documented facts, statutes, and court rulings.
 
 ## Implementation Outline for Faith Frontier
 - **Canonical citation standard:** Default to GNV citations with BibleGateway links (see above format). Include chapter–verse ranges to avoid ambiguity. Whenever alternate translations are compared, GNV remains primary.
@@ -44,4 +50,4 @@ These passages frame Biblical law as (1) a national wisdom system, (2) the instr
 - **Open-data posture:** Where APIs permit, expose structured references (book, chapter, verse, translation = GNV) in JSON alongside published essays so tooling can render citations, generate study plans, and surface cross-references across the site.
 
 ## Conclusion
-The 1599 Geneva Bible provides more than historical color; it anchors Faith Frontier’s mission in a tested legal grammar that marries covenant, conscience, and community. By standardizing on GNV citations, building reusable components, and linking every initiative to Scripture, we turn theology into operative law that equips believers to steward households, churches, and civic life under Christ’s fulfilled-yet-abiding Law.
+The 1599 Geneva Bible provides more than historical color; it anchors Faith Frontier’s mission in a tested legal grammar that marries covenant, conscience, and community. By standardizing on GNV citations, building reusable components, and linking every initiative to Scripture, we keep theology and ethics coherent while remaining accountable to U.S. and New Jersey law. That coherence helps believers steward households, churches, and civic life with humility and transparency under Christ’s fulfilled-yet-abiding Law.

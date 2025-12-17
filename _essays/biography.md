@@ -12,6 +12,12 @@ tags: [biography, faithfrontier]
 
 This article is built to serve as a public-trust biography for FaithFrontier.org. It honors a tradesman’s record while insisting on jurisdictional accuracy. Every statute, rule, and case name referenced here is treated as a prompt for rigorous verification against authoritative sources (judiciary sites, official reporters, and government archives). Where this narrative invokes doctrines—such as community caretaking, due process notice standards, or post-conviction relief procedures—the text flags the need for confirmation so that no unverified assertion passes as fact. The intent is fidelity: fidelity to the lived experience of Devon Tyler Barber, fidelity to the constitutions of New Jersey and the United States, and fidelity to the ethical duty of transparent citation.
 
+### Oversight and verification commitments
+
+- Publish docket numbers, dates, and agencies whenever available so readers can pull the underlying record themselves.
+- Invite regulators, court staff, and community members to correct any misstatements; humility is part of the stewardship described here.
+- Keep reflections distinct from legal conclusions, and encourage anyone relying on this narrative to consult licensed counsel before acting on it.
+
 ## Grounded in Atlantic County Soil
 
 Devon Tyler Barber grew up in South Jersey, seeing both the Garden State’s coastal light and the shadows cast by municipal power. The Atlantic County landscape was his first classroom: cranberry bogs, pine woods, and ocean air offset by code enforcement visits, fines, and the friction of tightly policed towns. In neighborhoods where budgets and bodies were both stretched thin, Devon learned to read the difference between official slogans and daily practice. The state promised abundance; bureaucracy often delivered suspicion. That tension—beauty set against hostility—would become the backdrop of his adult life.
