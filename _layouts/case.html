@@ -78,7 +78,17 @@ layout: default
         {% for d in docket %}
           <li>
             <time>{{ d.date }}</time> — <strong>{{ d.type }}</strong>:
-            <a href="/cases/{{ slug }}/docket/{{ d.id }}">{{ d.title }}</a>
+			{% if d.file %}
+			  {% assign docket_file = d.file %}
+			  {% assign first_char = docket_file | slice: 0, 1 %}
+			  {% if first_char == '/' %}
+			    <a href="{{ docket_file }}" target="_blank" rel="noopener">{{ d.title }}</a>
+			  {% else %}
+			    <a href="/assets/cases/{{ slug }}/docket/{{ docket_file | uri_escape }}" target="_blank" rel="noopener">{{ d.title }}</a>
+			  {% endif %}
+			{% else %}
+			  <span>{{ d.title }}</span>
+			{% endif %}
             {% if d.notes %}<div class="notes">{{ d.notes }}</div>{% endif %}
           </li>
         {% endfor %}

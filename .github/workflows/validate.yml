@@ -33,4 +33,9 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --no-progress "_site/**/*.html"
+          args: >-
+            --no-progress
+            --exclude "https://fonts.googleapis.com/*"
+            --exclude "https://fonts.gstatic.com/*"
+            --accept 429
+            "_site/**/*.html"

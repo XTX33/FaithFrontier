@@ -26,11 +26,11 @@ documents:
   - label: "Answer & First Appearance"
     path: "2025-09-03_Answer-FirstAppearance.pdf"
   - label: "Complaint"
-    path: "2025-08-19-complaint.pdf"
+    path: "2025-08-19_Complaint.pdf"
   - label: "Amended Answer & Counterclaim"
-    path: "2025-10-08-counterclaim.pdf"
+    path: "2025-10-08_Counterclaim.pdf"
   - label: "Court Order on Default and Discovery"
-    path: "2025-10-27-court-order.pdf"
+    path: "2025-10-27_Court-Order.pdf"
 ---
 
 This matter documents toll-enforcement claims alongside counterclaims challenging process and accessibility barriers. The record below includes filings, discovery requests, and accommodation correspondence.
