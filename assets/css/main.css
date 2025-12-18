@@ -22,11 +22,6 @@
   --space-section: var(--space-2xl, 3rem);
 
   /* backward-compatible aliases for legacy tokens used throughout the stylesheet */
-  --ff-cream: var(--color-highlight);
-  --ff-ink: var(--color-text);
-  --ff-muted: var(--color-muted);
-  --ff-vintage-gold: var(--accent-brass);
-  --ff-primary: var(--accent-emerald);
 }
 
 .hero-actions--centered {

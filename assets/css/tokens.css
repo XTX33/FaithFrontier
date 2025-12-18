@@ -17,6 +17,12 @@
   --ff-surface: #0b1222;
   --ff-cream: #fef3c7;
 
+  /* Legacy tokens used by some pages */
+  --ff-secondary: var(--ts-brass);
+  --ff-sage: #5a7a6f;
+  --ff-vintage-gold: var(--ts-brass);
+  --ff-primary: var(--ts-emerald);
+
   /* Spacing scale */
   --space-3xs: 0.25rem;
   --space-2xs: 0.35rem;

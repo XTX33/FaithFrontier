@@ -11,27 +11,29 @@ author: Faith Frontier Ecclesiastical Trust
 
 <style>
   /* Base */
-  body {
+  .ff-geneva-scroll {
     font-family: "Georgia", serif;
     background: #f9f6ef url("https://www.transparenttextures.com/patterns/paper-fibers.png");
     color: #2c1d0e;
-    margin: 0;
     line-height: 1.9;
+    margin: 2rem auto;
+    border-radius: 16px;
+    overflow: hidden;
   }
 
-  header,
-  main,
-  footer {
+  .ff-geneva-scroll header,
+  .ff-geneva-scroll main,
+  .ff-geneva-scroll footer {
     padding: 20px;
   }
 
-  nav.breadcrumb {
+  .ff-geneva-scroll nav.breadcrumb {
     font-size: 0.9rem;
     text-align: center;
   }
 
   /* Wrapper */
-  .scroll {
+  .ff-geneva-scroll .scroll {
     max-width: 820px;
     margin: auto;
     background: rgba(255, 248, 230, 0.95);
@@ -43,8 +45,8 @@ author: Faith Frontier Ecclesiastical Trust
   }
 
   /* Scroll edges */
-  .scroll::before,
-  .scroll::after {
+  .ff-geneva-scroll .scroll::before,
+  .ff-geneva-scroll .scroll::after {
     content: "";
     position: absolute;
     left: 3%;
@@ -55,23 +57,23 @@ author: Faith Frontier Ecclesiastical Trust
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08) inset;
   }
 
-  .scroll::before {
+  .ff-geneva-scroll .scroll::before {
     top: -18px;
   }
 
-  .scroll::after {
+  .ff-geneva-scroll .scroll::after {
     bottom: -18px;
   }
 
   /* Typography */
-  h1 {
+  .ff-geneva-scroll h1 {
     font-size: 2.5rem;
     font-variant: small-caps;
     text-align: center;
     margin: 0 0 12px;
   }
 
-  h2 {
+  .ff-geneva-scroll h2 {
     font-size: 1.65rem;
     font-variant: small-caps;
     text-align: center;
@@ -79,7 +81,7 @@ author: Faith Frontier Ecclesiastical Trust
     color: #3e2f1c;
   }
 
-  h3 {
+  .ff-geneva-scroll h3 {
     font-size: 1.15rem;
     text-align: center;
     font-style: italic;
@@ -87,38 +89,38 @@ author: Faith Frontier Ecclesiastical Trust
     color: #3e2f1c;
   }
 
-  p {
+  .ff-geneva-scroll p {
     font-size: 1.05rem;
     text-align: justify;
     margin: 0 0 20px;
   }
 
   /* Links */
-  a {
+  .ff-geneva-scroll a {
     color: #523b1c;
     font-weight: 700;
     text-decoration: underline;
     transition: color 0.3s;
   }
 
-  a:hover {
+  .ff-geneva-scroll a:hover {
     color: #7b5c3f;
   }
 
   /* Table of contents */
-  #toc {
+  .ff-geneva-scroll #toc {
     text-align: center;
     margin: 25px 0;
     font-size: 0.95rem;
   }
 
-  #toc a:not(:last-child)::after {
+  .ff-geneva-scroll #toc a:not(:last-child)::after {
     content: " • ";
     color: #523b1c;
   }
 
   /* Verse block */
-  .verse {
+  .ff-geneva-scroll .verse {
     background: #f4efe3;
     border-left: 5px solid #aa845a;
     padding: 20px;
@@ -127,7 +129,7 @@ author: Faith Frontier Ecclesiastical Trust
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
 
-  .verse-ref {
+  .ff-geneva-scroll .verse-ref {
     text-align: right;
     font-style: italic;
     font-size: 0.9rem;
@@ -135,7 +137,7 @@ author: Faith Frontier Ecclesiastical Trust
     color: #5b4630;
   }
 
-  .divider {
+  .ff-geneva-scroll .divider {
     margin: 36px auto;
     border-bottom: 1px solid #c9b89a;
     max-width: 85%;
@@ -143,20 +145,21 @@ author: Faith Frontier Ecclesiastical Trust
 
   /* Responsive */
   @media (max-width: 768px) {
-    header,
-    main,
-    footer {
+    .ff-geneva-scroll header,
+    .ff-geneva-scroll main,
+    .ff-geneva-scroll footer {
       padding: 15px;
     }
-    .scroll {
+    .ff-geneva-scroll .scroll {
       padding: 20px;
     }
-    h1 {
+    .ff-geneva-scroll h1 {
       font-size: 2rem;
     }
   }
 </style>
 
+<div class="ff-geneva-scroll">
 <header>
   <nav aria-label="Breadcrumb" class="breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a> ›
@@ -475,3 +478,5 @@ author: Faith Frontier Ecclesiastical Trust
     <a href="/about">About</a> • <a href="/contact">Contact</a>
   </p>
 </footer>
+
+</div>
