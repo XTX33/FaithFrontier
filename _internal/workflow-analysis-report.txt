@@ -1,0 +1,28 @@
+╔═══════════════════════════════════════════════════════════════╗
+║         GitHub Workflows Analysis & Diagnostics               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📊 Recent Workflow Runs:
+
+   ❌ Deploy Jekyll site to Pages: completed/failure
+   ❌ Validate: completed/failure
+   ❌ Case Analysis with OpenAI: completed/failure
+   ❌ Auto Slugify Filenames: completed/failure
+
+✅ No workflow configuration issues found
+
+🔨 Local Build Test:
+
+   ✅ done in 12.382 seconds.
+
+🔧 System Checks:
+
+   ✅ Gemfile.lock exists
+   ⚠️  Large file: logo.png (1,870,177 bytes)
+
+💡 Recommendations:
+
+   2. Review workflow logs in GitHub Actions
+   3. Ensure all YAML files are valid
+   4. Check for large files before committing
+   5. Test builds locally before pushing

@@ -12,19 +12,12 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
 {% assign ff_logo_mark_svg = site.logo_mark | default: '/assets/img/faithfrontier-mark.svg' %}
-{% assign ff_logo_mark_64 = site.logo_png_mark_64 | default: '/assets/img/faithfrontier-logo-mark-64.png' %}
-{% assign ff_logo_mark_128 = site.logo_png_mark_128 | default: '/assets/img/faithfrontier-logo-mark-128.png' %}
-{% assign ff_logo_mark_256 = site.logo_png_mark_256 | default: '/assets/img/faithfrontier-logo-mark-256.png' %}
-{% assign ff_logo_mark_512 = site.logo_png_mark_512 | default: '/assets/img/faithfrontier-logo-mark-512.png' %}
-{% assign ff_logo_mark_1024 = site.logo_png_mark_1024 | default: '/assets/img/faithfrontier-logo-mark-1024.png' %}
+{% assign ff_favicon_png = '/assets/img/favicon.png' %}
 
 <!-- Favicon / Icons -->
 <link rel="icon" type="image/svg+xml" href="{{ ff_logo_mark_svg | relative_url }}">
-<link rel="icon" type="image/png" sizes="64x64" href="{{ ff_logo_mark_64 | relative_url }}">
-<link rel="icon" type="image/png" sizes="128x128" href="{{ ff_logo_mark_128 | relative_url }}">
-<link rel="icon" type="image/png" sizes="256x256" href="{{ ff_logo_mark_256 | relative_url }}">
-<link rel="icon" type="image/png" sizes="512x512" href="{{ ff_logo_mark_512 | relative_url }}">
-<link rel="apple-touch-icon" href="{{ ff_logo_mark_512 | relative_url }}">
+<link rel="icon" type="image/png" href="{{ ff_favicon_png | relative_url }}">
+<link rel="apple-touch-icon" href="{{ ff_favicon_png | relative_url }}">
 <link rel="mask-icon" href="{{ ff_logo_mark_svg | relative_url }}" color="#d4a574">
 <meta name="theme-color" content="#020617">
 
