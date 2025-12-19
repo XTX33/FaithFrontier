@@ -1704,3 +1704,11 @@
 }
 
 /* case-analysis.css is linked conditionally from the head */
+
+.record-list { list-style: none; padding: 0; margin: 0; }
+.record-item { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.12); }
+.record-meta { margin-top: 6px; display: flex; gap: 10px; flex-wrap: wrap; opacity: .9; }
+.meta { font-size: .92em; opacity: .8; }
+.badge { font-size: .85em; padding: 2px 10px; border-radius: 999px; border: 1px solid rgba(0,0,0,.14); }
+.badge-status { background: rgba(0,0,0,.03); }
+
