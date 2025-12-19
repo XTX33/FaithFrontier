@@ -348,6 +348,12 @@ description: "Complete archive of Faith Frontier's legal proceedings—documenti
   <!-- Case List -->
   <div class="case-list" id="case-list">
     {% assign cases = site.cases | sort: "filed_date" | reverse %}
+    {% if cases.size == 0 %}
+    <div class="no-results" style="display: block;">
+      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No cases found in collection.</p>
+      <p>Ensure Jekyll has properly loaded the _cases collection.</p>
+    </div>
+    {% endif %}
     {% for case in cases %}
       <article 
         class="case-card" 
