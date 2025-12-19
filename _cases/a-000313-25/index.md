@@ -1,25 +1,27 @@
 ---
 layout: case
-title: "A-000313-25"
-short_title: "A-000313-25"
+title: A-000313-25
+short_title: A-000313-25
 slug: a-000313-25
-court: "Superior Court of New Jersey, Appellate Division"
-docket: "A-000313-25"
-primary_docket: "A-000313-25"
-venue: "Atlantic County (originating matter)"
-case_type: "Appeal (Appellate Division)"
-role: "Appellant"
+court: Superior Court of New Jersey, Appellate Division
+docket: A-000313-25
+primary_docket: A-000313-25
+venue: Atlantic County (originating matter)
+case_type: Appeal (Appellate Division)
+role: Appellant
 status: active
 filed_date: 2024-10-29
 last_updated: 2025-12-17
 permalink: /cases/a-000313-25/
-summary: |
-  Appellate Division matter arising from a street-crossing conviction originating in Atlantic County.
-  This page serves as a clean, verifiable public record for docket A-000313-25, linking to the
-  operative orders and filings and preserving a chronological procedural history consistent with
-  Faith Frontier’s integrity-first archival standards.
----
+summary: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County.
 
+  This page serves as a clean, verifiable public record for docket A-000313-25, linking to the
+
+  operative orders and filings and preserving a chronological procedural history consistent with
+
+  Faith Frontier’s integrity-first archival standards.'
+case_slug: a-000313-25
+---
 ## Case Overview
 
 This case record maintains a factual, chronological archive for **A-000313-25**, an Appellate Division matter arising from a street-crossing conviction in Atlantic County.

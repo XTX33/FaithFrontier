@@ -1,36 +1,37 @@
 ---
 layout: case
-title: "ATL-L-002794-25 – Law Division"
-short_title: "ATL-L-002794-25"
+title: ATL-L-002794-25 – Law Division
+short_title: ATL-L-002794-25
 slug: atl-l-002794-25
 permalink: /cases/atl-l-002794-25/
-court: "Superior Court of New Jersey, Law Division"
-venue: "Atlantic County"
-case_type: "Civil"
-role: "Plaintiff"
+court: Superior Court of New Jersey, Law Division
+venue: Atlantic County
+case_type: Civil
+role: Plaintiff
 dockets:
-  - ATL-L-002794-25
+- ATL-L-002794-25
 primary_docket: ATL-L-002794-25
 status: active
 filed_date: 2025-10-03
-judge:
+judge: null
 tags:
-  - civil
-  - track-change
-assets_dir: "/cases/atl-l-002794-25/filings/"
-overview: >
-  Track-change litigation pressing the Law Division to treat Barber's civil claims as complex
-  equitable matters instead of a fast-track landlord docket. Verified pleadings, supplemental
-  memoranda, and the granted order are all uploaded for review.
-documents:
-  - label: "Verified Complaint and CIS"
-    path: "20251003-verified-complaint-and-cis.pdf"
-  - label: "Track Assignment"
-    path: "20251007-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf"
-  - label: "Order Changing Track"
-    path: "20251107-order-to-change-track-assignment.pdf"
----
+- civil
+- track-change
+assets_dir: /cases/atl-l-002794-25/filings/
+overview: 'Track-change litigation pressing the Law Division to treat Barber''s civil claims as complex equitable matters
+  instead of a fast-track landlord docket. Verified pleadings, supplemental memoranda, and the granted order are all uploaded
+  for review.
 
+  '
+documents:
+- label: Verified Complaint and CIS
+  path: 20251003-verified-complaint-and-cis.pdf
+- label: Track Assignment
+  path: 20251007-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf
+- label: Order Changing Track
+  path: 20251107-order-to-change-track-assignment.pdf
+case_slug: atl-l-002794-25
+---
 This filing covers the Law Division civil action focused on rebalancing the track assignment and securing timely relief. All pleadings, orders, and correspondence are cataloged in the docket list for clarity.
 
 ## Status Overview

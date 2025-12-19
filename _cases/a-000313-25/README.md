@@ -1,3 +1,7 @@
+---
+case_slug: readme
+slug: readme
+---
 # A-000313-25
 
 - **Docket:** A-000313-25

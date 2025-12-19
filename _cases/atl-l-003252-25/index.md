@@ -7,11 +7,12 @@ county: Atlantic County
 type: civil
 status: active
 last_updated: 2025-12-11
-summary: |
-  [ADD CASE SUMMARY HERE]
-permalink: /cases/atl-l-003252-25/
----
+summary: '[ADD CASE SUMMARY HERE]
 
+  '
+permalink: /cases/atl-l-003252-25/
+case_slug: atl-l-003252-25
+---
 ## Case Overview
 
 [ADD DETAILED CASE OVERVIEW HERE]

@@ -3,7 +3,7 @@
   type: Filing
   title: Original Complaint
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20221009-original-complaint.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-original-complaint.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-original-complaint.pdf
 
@@ -13,7 +13,7 @@
   type: Exhibit
   title: Police Report
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20221009-police-report.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-police-report.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-police-report.pdf
 
@@ -23,7 +23,7 @@
   type: Other
   title: Envelope (Original Filing)
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20221009-envelope.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-envelope.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20221009-envelope.pdf
 
@@ -33,7 +33,7 @@
   type: Filing
   title: Amended Complaint
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-amended-complaint.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-amended-complaint.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-amended-complaint.pdf
 
@@ -43,7 +43,7 @@
   type: Motion
   title: Motion to Reopen
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-motion-to-reopen.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-motion-to-reopen.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-motion-to-reopen.pdf
 
@@ -53,7 +53,7 @@
   type: Brief
   title: Memorandum in Support of Motion
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-memorandum-in-support-of-motion.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-memorandum-in-support-of-motion.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-memorandum-in-support-of-motion.pdf
 
@@ -63,7 +63,7 @@
   type: Filing
   title: Declaration
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-declaration.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-declaration.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-declaration.pdf
 
@@ -73,7 +73,7 @@
   type: Motion
   title: Proposed Order for Motion to Reopen
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-proposed-order-for-motion-to-reopen.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-proposed-order-for-motion-to-reopen.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-motion-to-reopen.pdf
 
@@ -83,7 +83,7 @@
   type: Other
   title: Certificate of Service
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-certificate-of-service.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-certificate-of-service.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-certificate-of-service.pdf
 
@@ -93,7 +93,7 @@
   type: Other
   title: Envelope (Motion to Reopen)
 <<<<<<< HEAD
-  file: /cases/usdj-1-22-cv-06206/filings/20250827-envelope.pdf
+  file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-envelope.pdf
 =======
   file: /assets/cases/usdj-1-22-cv-06206/docket/20250827-envelope.pdf
 >>>>>>> 84ee6cc (feat: reorganize docket files and update YAML paths)

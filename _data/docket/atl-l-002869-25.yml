@@ -3,7 +3,7 @@
   type: Filing
   title: Verified Complaint for Declaration of Ownership of Motor Vehicle
 <<<<<<< HEAD
-  file: /cases/atl-l-002869-25/filings/20251014-verified-complaint-declaration-of-ownership.pdf
+  file: /assets/cases/atl-l-002869-25/docket/20251014-verified-complaint-declaration-of-ownership.pdf
 =======
   file: /assets/cases/atl-l-002869-25/docket/20251014-verified-complaint-declaration-of-ownership.pdf
 
@@ -13,7 +13,7 @@
   type: Filing
   title: Affidavit of Indigency
 <<<<<<< HEAD
-  file: /cases/atl-l-002869-25/filings/20251014-affidavit-of-indigency.pdf
+  file: /assets/cases/atl-l-002869-25/docket/20251014-affidavit-of-indigency.pdf
 =======
   file: /assets/cases/atl-l-002869-25/docket/20251014-affidavit-of-indigency.pdf
 
@@ -23,7 +23,7 @@
   type: Notice
   title: Track Assignment
 <<<<<<< HEAD
-  file: /cases/atl-l-002869-25/filings/20251017-track-assignment.pdf
+  file: /assets/cases/atl-l-002869-25/docket/20251017-track-assignment.pdf
 =======
   file: /assets/cases/atl-l-002869-25/docket/20251017-track-assignment.pdf
 
@@ -33,7 +33,7 @@
   type: Filing
   title: Amended Complaint
 <<<<<<< HEAD
-  file: /cases/atl-l-002869-25/filings/20251029-amended-complaint.pdf
+  file: /assets/cases/atl-l-002869-25/docket/20251029-amended-complaint.pdf
 =======
   file: /assets/cases/atl-l-002869-25/docket/20251029-amended-complaint.pdf
 >>>>>>> 84ee6cc (feat: reorganize docket files and update YAML paths)
