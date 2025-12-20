@@ -30,7 +30,13 @@ This civil action seeks equitable relief and declaratory judgment following docu
 - **7 Dec 2025:** Verified Complaint with Order to Show Cause filed, accompanied by Exhibits A, B, and C documenting prosecutorial email evidence.
 - **10 Dec 2025:** Amended Complaint filed with supplemental exhibits, proofs of service, and proposed form of order.
 - **10 Dec 2025:** Track Assignment Notice issued; request for additional relief submitted to ensure proper calendar assignment.
-- **Ongoing:** Matter remains active pending court response to emergency relief request and track reassignment similar to ATL-L-002794-25.
+- **11 Dec 2025:** Additional Amended Complaint filed with updated certifications, cover letter, and proposed order.
+- **12 Dec 2025:** Motion Packet submitted.
+- **13 Dec 2025:** Certification Packet with Exhibits S1, S2, and S3 filed.
+- **15 Dec 2025:** Letter correspondence regarding OPRA extension request submitted.
+- **16 Dec 2025:** Notice of Amendment naming defendants filed; **Order to Show Cause with Temporary Restraints GRANTED** by the court.
+- **17 Dec 2025:** Deficiency correction filed.
+- **Ongoing:** Emergency relief granted via temporary restraints; matter remains active pending further court proceedings.
 
 ## Docket
 

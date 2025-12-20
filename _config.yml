@@ -47,6 +47,9 @@ collections:
   trust:
     output: true
     permalink: /sanctuary/trust/:name/
+  opra:
+    output: true
+    permalink: /opra/:path/
 
 # Defaults
 defaults:
@@ -86,6 +89,11 @@ defaults:
     values:
       layout: "trust_document"
       sitemap: false
+  - scope:
+      path: "_opra"
+      type: "opra"
+    values:
+      layout: "default"
 
 # Plugins
 plugins:
