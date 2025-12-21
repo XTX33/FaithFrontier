@@ -58,12 +58,6 @@ Publishing cases in this way aims to educate citizens about lawful civic engagem
 
 ## Platform & Automation Direction
 
-<<<<<<< HEAD
-Faith Frontier is evolving from a static site into a governed, automation-assisted platform that supports:
-
-- opportunity and case sourcing;
-- structured analysis and scoring;
-- due-diligence workflows;
 Faith Frontier is evolving from a static site into a governed, automation-assisted platform that supports:
 
 - opportunity and case sourcing;
@@ -72,23 +66,10 @@ Faith Frontier is evolving from a static site into a governed, automation-assist
 - documentation and audit trails; and
 - public transparency with protected internal operations.
 
-Automation is **assistive, not autonomous**: systems propose, humans decide, and every output is logged. All tooling is expected to honor privacy, licensing boundaries, and the separation between belief statements and legal records
-<<<<<<< HEAD
-_cases/              # Case summaries and metadata (Markdown)
-  _TEMPLATE.md       # Template for creating new cases
-cases/               # Normalized public-facing case folders with filings
-_essays/             # Protected essays and narratives
-_articles/, articles/ # Long-form content and features
-_layouts/            # Jekyll templates (MIT-licensed code)
-  case.html          # Standard case layout
-  case-enhanced.html # Enhanced structured case layout
-_includes/           # Reusable content snippets
-assets/css/          # Stylesheets (MIT-licensed code)
-  case-enhanced.css  # Enhanced case layout styling
-assets/js/           # Scripts (MIT-licensed code)
-assets/images/       # Logos, seals, diagrams (trademark governed)
-scripts/             # Automation utilities (MIT-licensed code)
-=======
+Automation is **assistive, not autonomous**: systems propose, humans decide, and every output is logged. All tooling is expected to honor privacy, licensing boundaries, and the separation between belief statements and legal records.
+
+## Repository Structure
+
 _cases/                     # Case summaries and metadata (Markdown)
   <case-slug>/             # Individual case directories
     index.md               # Case front matter and overview
@@ -119,7 +100,6 @@ scripts/                   # Automation and intake utilities
   docket-intake.js         # PDF intake and normalization
   analyze-cases.js         # AI-assisted case analysis
 worker/                    # Optional Cloudflare Worker for uploads
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 ```
 
 Navigation cues:
@@ -156,33 +136,20 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 ## Governance, Licensing & Trust Boundaries
 
-<<<<<<< HEAD
-Faith Frontier operates under strict governance rules. These are not optional and apply to all contributors and automation.
-=======
 **Faith Frontier operates under strict legal and ecclesiastical governance.**
 
 This repository contains **trust property** held under fiduciary duty and protected by law. All contributors, users, and automated systems must comply with these governing documents. Non-compliance may result in legal action to protect trust assets and beneficiaries.
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 ### Legal & Trust Framework
 
 ### Trust Property Declaration
 
-<<<<<<< HEAD
-1. **Source Code – Open use under the MIT License**
-=======
 All intellectual property, content, metadata, case records, analyses, and creative works in this repository are **trust property** held by:
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 **Faith Frontier Ecclesiastical Trust**  
 Trustee: Devon Tyler Barber  
 Established under ecclesiastical law and New Jersey trust principles
 
-<<<<<<< HEAD
-2. **Creative, legal, and theological content – Restricted use**
-
-  Essays, metadata, branding, and case narratives are protected under [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md), [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md), and [`DISCLAIMER.md`](./DISCLAIMER.md).
-=======
 This property is held in trust for the benefit of:
 - The advancement of faith-based justice and ethical stewardship
 - Public education on due process and institutional accountability
@@ -190,22 +157,14 @@ This property is held in trust for the benefit of:
 - Future beneficiaries of Faith Frontier's mission
 
 ### Dual Licensing Structure
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 **Category 1: Technical Infrastructure - Limited MIT License**
 
-<<<<<<< HEAD
-- [`LICENSE`](./LICENSE): MIT license for code only.
-- [`CONTENT_LICENSE.md`](./CONTENT_LICENSE.md): Ecclesiastical license for all non-code works.
-- [`_docs/TRADEMARK_NOTICE.md`](./_docs/TRADEMARK_NOTICE.md): Protection for FaithFrontier marks, logos, seals, and visual theology.
-- [`DISCLAIMER.md`](./DISCLAIMER.md): Reliance, liability, and public-trust usage boundaries.
-=======
 Only the following technical components are MIT-licensed per [`LICENSE`](./LICENSE) to enable infrastructure reuse:
 - Jekyll layout templates (`_layouts/`, `_includes/`)
 - Stylesheets and visual presentation code (`assets/css/`)
 - Client-side JavaScript functionality (`assets/js/`)
 - Automation and build scripts (`scripts/`, workflows)
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 This license applies **solely to the code structure**, not to any content, documentation, metadata, or intellectual work contained therein.
 
@@ -302,18 +261,11 @@ When adding, modifying, or using material from this repository:
 
 ### Directory-Level Enforcement
 
-<<<<<<< HEAD
-- `_cases/`, `_articles/`, `_essays/`, `_manifesto/`, `_pages/`, `_posts/`, `_trust/`: Markdown narratives governed by `CONTENT_LICENSE.md`.
-- `cases/`: Filings and exhibits. Public-record PDFs remain public domain, but FaithFrontier's summaries and organization remain protected.
-- `assets/images/`: Logos and artwork subject to `_docs/TRADEMARK_NOTICE.md`.
-- `_layouts/`, `_includes/`, `assets/css/`, `assets/js/`, `scripts/`, workflows: MIT-licensed code covered by `LICENSE`.
-=======
 **Faith Frontier Trust Property (Proprietary):**
 - `_cases/`, `_articles/`, `_essays/`, `_manifesto/`, `_pages/`, `_posts/`, `_trust/` - All narratives, metadata, and case documentation
 - `cases/`, `assets/cases/`, `_data/docket/` - Case organization, summaries, and docket data (public-record PDFs remain public domain, but FaithFrontier's curation, metadata, and analysis are protected)
 - `assets/images/`, `assets/img/` - All logos, seals, and branding subject to `TRADEMARK_NOTICE.md`
 - Documentation files (`*.md`) - All documentation is Faith Frontier Trust property
->>>>>>> 8ac3f27 (refactor: update README for clarity and structure, enhancing mission and governance sections)
 
 **MIT-Licensed Code (Technical Infrastructure Only):**
 - `_layouts/`, `_includes/` - Jekyll templates
