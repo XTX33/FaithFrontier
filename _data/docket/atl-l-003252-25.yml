@@ -137,3 +137,53 @@
   type: Filing
   title: Deficiency Correction by Devon Tyler Barber
   file: /assets/cases/atl-l-003252-25/filings/12-17-2025-deficiency-correction-by-Devon-Tyler-Barber.pdf
+- id: 20251219-amended-proposed-order
+  date: 2025-12-19
+  type: Proposed Order
+  title: Amended Proposed Order by DTB
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-amended-proposed-order-by-dtb.pdf
+- id: 20251219-certification-of-service-reply-brief
+  date: 2025-12-19
+  type: Certification
+  title: Certification of Service for Plaintiff's Reply Brief
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-certification-of-service-for-plaintiffs-reply-brief.pdf
+- id: 20251219-defendants-response-opposition
+  date: 2025-12-19
+  type: Response
+  title: Defendants Response in Opposition of OTSC
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-defendants-repsonse-in-opposition-of-otsc.pdf
+- id: 20251219-motion-packet-with-service
+  date: 2025-12-19
+  type: Motion
+  title: Motion Packet with Proof of Service
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-motion-packet-with-proof-of-service.pdf
+- id: 20251219-plaintiffs-certification-oral-argument
+  date: 2025-12-19
+  type: Certification
+  title: Plaintiff's Certification with Written Oral Argument
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-plaintiffs-certification-with-written-oral-argument.pdf
+- id: 20251219-plaintiffs-reply-brief
+  date: 2025-12-19
+  type: Brief
+  title: Plaintiff's Limited Reply Brief
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-plaintiffs-limited-reply-brief.pdf
+- id: 20251219-plaintiffs-proposed-order
+  date: 2025-12-19
+  type: Proposed Order
+  title: Plaintiff's Proposed Order
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-plaintiffs-proposed-order.pdf
+- id: 20251219-supplemental-certifications
+  date: 2025-12-19
+  type: Certification
+  title: Supplemental Certifications with Proof of Service
+  file: /assets/cases/atl-l-003252-25/filings/12-19-2025-supplemental-certifications-with-proof-of-service.pdf
+- id: 20251220-plaintiff-procedural-supplemental-certs
+  date: 2025-12-20
+  type: Certification
+  title: Plaintiff Procedural and Supplemental Certifications
+  file: /assets/cases/atl-l-003252-25/filings/12-20-2025-Plaintiff-Procedural-and-Supplemental-Certifications.pdf
+- id: 20251220-service-on-counsel
+  date: 2025-12-20
+  type: Proof of Service
+  title: Service on Counsel
+  file: /assets/cases/atl-l-003252-25/filings/12-20-2025-Service-on-Counsel.pdf
