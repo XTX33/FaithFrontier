@@ -256,9 +256,12 @@
 
 .premium-hero__highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   animation: premium-hero-fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
   opacity: 0;
 }
@@ -416,6 +419,19 @@
 
   .premium-hero__scroll {
     display: none;
+  }
+}
+
+/* Tablet breakpoint for 2-column grid */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .premium-hero__highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .premium-hero__card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
   }
 }
 
