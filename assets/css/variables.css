@@ -29,11 +29,34 @@
   --brass-400: rgba(160, 122, 50, 1);
   
   /* Brass opacity variants */
+  --brass-alpha-35: rgba(184, 138, 57, 0.35);
   --brass-alpha-30: rgba(212, 165, 116, 0.30);
   --brass-alpha-20: rgba(212, 165, 116, 0.20);
+  --brass-alpha-18: rgba(184, 138, 57, 0.18);
   --brass-alpha-10: rgba(212, 165, 116, 0.10);
   --brass-alpha-05: rgba(212, 165, 116, 0.05);
   --brass-alpha-02: rgba(212, 165, 116, 0.02);
+  
+  /* Navy opacity variants */
+  --navy-alpha-60: rgba(15, 23, 42, 0.6);
+  
+  /* Success colors */
+  --success-green: #4CAF50;
+  --success-alpha-20: rgba(76, 175, 80, 0.2);
+  
+  /* Warning colors */
+  --warning-yellow: #FFC107;
+  --warning-alpha-20: rgba(255, 193, 7, 0.2);
+  
+  /* Muted colors */
+  --muted-gray: #9E9E9E;
+  --muted-alpha-20: rgba(158, 158, 158, 0.2);
+  
+  /* Shadow variants */
+  --shadow-alpha-20: rgba(0, 0, 0, 0.2);
+  
+  /* Emerald variants */
+  --emerald-700: rgba(16, 92, 74, 1);
   
   /* Cream/Highlight */
   --cream-100: rgba(254, 243, 199, 1);
