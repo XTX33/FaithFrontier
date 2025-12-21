@@ -1,0 +1,3 @@
+# Trading & Auto-Trading Governance
+This folder is for development work on trading guides and MQL5 auto-trading scripts.
+Not included in live site builds (underscore prefix excludes from Jekyll).
