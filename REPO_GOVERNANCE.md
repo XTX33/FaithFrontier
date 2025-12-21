@@ -6,11 +6,12 @@
 
 ## Repository Structure
 
-### Production Repository
-- **Name**: `faithfrontier` (stone)
-- **Remote**: `https://github.com/xtx33/faithfrontier.git`
+### Production Repository (Stone)
+- **Name**: `faithfrontier-stone`
+- **Remote**: `https://github.com/xtx33/faithfrontier-stone.git`
 - **Purpose**: Production-ready code only
 - **Location**: `C:\Users\Devon Tyler\faithfrontier-stone`
+- **Also tracks**: `faithfrontier-main` remote (https://github.com/xtx33/faithfrontier.git) for cross-sync
 
 ### Sandbox Repository
 - **Name**: `faithfrontier-sandbox`
