@@ -32,7 +32,7 @@ hero_highlights:
   <section class="section" style="background: var(--emerald-600); color: white;">
     <div class="container" style="max-width: 900px; text-align: center; padding: 3rem 1.5rem;">
       <h2 style="font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; color: white;">From Witness to Steward</h2>
-      <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; opacity: 0.95;">
+      <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; color: white;">
         Faith Frontier invites you on a journey: <strong>Observer → Learner → Participant → Steward</strong>. 
         Whether you're seeking housing, offering skills, or wanting to serve—there's a place for you.
       </p>
