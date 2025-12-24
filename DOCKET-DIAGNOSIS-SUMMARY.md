@@ -55,13 +55,13 @@ file: /assets/cases/<slug>/docket/<filename>.pdf
 1. **Created Directory Structure**
    - Created `assets/cases/` directory
    - Created subdirectories for all active cases:
-     - `assets/cases/a-000313-25/docket/`
+     - `assets/cases/pcr-appeal-2024-union/docket/`
      - `assets/cases/atl-l-002794-25/docket/`
      - `assets/cases/atl-l-002869-25/docket/`
      - `assets/cases/atl-l-003252-25/docket/`
      - `assets/cases/atl-dc-007956-25/docket/`
-     - `assets/cases/usdj-1-22-cv-06206/docket/`
-     - `assets/cases/usdj-1-25-cv-15641/docket/`
+     - `assets/cases/barber-nj-pcr-2022/docket/`
+     - `assets/cases/pcr-appeal-2024-union/docket/`
 
 2. **Updated Cases-Map**
    - Fixed A-000313-25 mapping (was pointing to wrong slug)

@@ -198,7 +198,7 @@ If `_data/cases-map.yml` is missing or empty, the intake script will automatical
 
 ```yaml
 # _cases/a-000313-25/index.md
-permalink: /cases/a-000313-25/
+permalink: /cases/pcr-appeal-2024-union/
 docket: A-000313-25
 
 # _cases/barber-nj-pcr-2022/index.md
