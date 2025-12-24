@@ -4,7 +4,7 @@
 - **County:** Atlantic County
 - **Type:** civil
 - **Filings:** [View folder](./filings/)
-- **Last Updated:** 2025-12-20T15:14:13.890Z
+- **Last Updated:** 2025-12-24T20:13:49.712Z
 
 ## Summary
 
@@ -17,13 +17,27 @@ Track-change litigation pressing the Law Division to treat Barber's civil claims
 - [20251003-exhibit-pg-1-to-50-compressed.pdf](./filings/20251003-exhibit-pg-1-to-50-compressed.pdf)
 - [20251003-exhibit-pg-51-to-87.pdf](./filings/20251003-exhibit-pg-51-to-87.pdf)
 - [20251003-order-for-indigency.pdf](./filings/20251003-order-for-indigency.pdf)
+- [20251003-verified-complaint-and-cis.pdf](./filings/20251003-verified-complaint-and-cis.pdf)
+- [20251007-njsc-atl-l-002794-25-barber-subpoenasducestecum-with-exhibita-statementofrelevance-pdf.pdf](./filings/20251007-njsc-atl-l-002794-25-barber-subpoenasducestecum-with-exhibita-statementofrelevance-pdf.pdf)
+- [20251007-njsc-atl-l-002794-25-proposedorder-trackreassignment-pdf.pdf](./filings/20251007-njsc-atl-l-002794-25-proposedorder-trackreassignment-pdf.pdf)
+- [20251007-njsc-atl-l-002794-25-trackassignment-notice-team102-pdf.pdf](./filings/20251007-njsc-atl-l-002794-25-trackassignment-notice-team102-pdf.pdf)
 - [20251007-proposed-form-of-order-submitted-by-devon-barber.pdf](./filings/20251007-proposed-form-of-order-submitted-by-devon-barber.pdf)
 - [20251007-subpoena-submitted-by-devon-barber.pdf](./filings/20251007-subpoena-submitted-by-devon-barber.pdf)
 - [20251007-track-assignment-compressed.pdf](./filings/20251007-track-assignment-compressed.pdf)
 - [20251007-track-assignment.pdf](./filings/20251007-track-assignment.pdf)
+- [20251014-notice-consumer-fraud-act.pdf](./filings/20251014-notice-consumer-fraud-act.pdf)
+- [20251014-order-fee-waiver.pdf](./filings/20251014-order-fee-waiver.pdf)
+- [20251016-motion-track-change.pdf](./filings/20251016-motion-track-change.pdf)
+- [20251016-njsc-atl-l-002794-25-barber-coverletter-supplementalmemo-pdf.pdf](./filings/20251016-njsc-atl-l-002794-25-barber-coverletter-supplementalmemo-pdf.pdf)
+- [20251016-njsc-atl-l-002794-25-barber-supplementalmemo-track3-request-pdf.pdf](./filings/20251016-njsc-atl-l-002794-25-barber-supplementalmemo-track3-request-pdf.pdf)
+- [20251016-njsc-atl-l-002794-25-exhibit-offenderwatch-record-josephhardemon-pdf.pdf](./filings/20251016-njsc-atl-l-002794-25-exhibit-offenderwatch-record-josephhardemon-pdf.pdf)
 - [20251016-supplemental-memorandum-compressed.pdf](./filings/20251016-supplemental-memorandum-compressed.pdf)
 - [20251016-supplemental-memorandum.pdf](./filings/20251016-supplemental-memorandum.pdf)
+- [20251022-njsc-atl-l-002794-25-barber-correspondence-clarification-factualbackground-pdf.pdf](./filings/20251022-njsc-atl-l-002794-25-barber-correspondence-clarification-factualbackground-pdf.pdf)
+- [20251028-njsc-atl-l-002794-25-barber-firstamendedcomplaint-with-exhibits-pdf.pdf](./filings/20251028-njsc-atl-l-002794-25-barber-firstamendedcomplaint-with-exhibits-pdf.pdf)
+- [20251028-njsc-atl-l-002794-25-barber-pcr-insupport-of-motiontochangetrack-pdf.pdf](./filings/20251028-njsc-atl-l-002794-25-barber-pcr-insupport-of-motiontochangetrack-pdf.pdf)
 - [20251107-order-to-change-track-assignment.pdf](./filings/20251107-order-to-change-track-assignment.pdf)
+- [20251107-order-track-change-granted.pdf](./filings/20251107-order-track-change-granted.pdf)
 - [20251107-order.pdf](./filings/20251107-order.pdf)
 - [20251124-motion-to-dismiss.pdf](./filings/20251124-motion-to-dismiss.pdf)
 - [20251125-brief-in-opposition-to-defendants-motion-to-dismiss.pdf](./filings/20251125-brief-in-opposition-to-defendants-motion-to-dismiss.pdf)

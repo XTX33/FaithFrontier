@@ -4,7 +4,7 @@
 - **County:** Atlantic County
 - **Type:** criminal
 - **Filings:** [View folder](./filings/)
-- **Last Updated:** 2025-12-20T15:14:13.924Z
+- **Last Updated:** 2025-12-24T20:13:49.734Z
 
 ## Summary
 

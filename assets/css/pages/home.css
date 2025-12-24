@@ -315,7 +315,7 @@
 }
 
 .ff-home .section--emerald .section-eyebrow {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--ink-900, 0.92);
 }
 
 .ff-home .container--narrow {

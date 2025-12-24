@@ -4,7 +4,7 @@
 - **County:** Atlantic County
 - **Type:** civil
 - **Filings:** [View folder](./filings/)
-- **Last Updated:** 2025-12-20T15:14:13.897Z
+- **Last Updated:** 2025-12-24T20:13:49.718Z
 
 ## Summary
 
@@ -24,7 +24,6 @@ Declaratory-judgment action establishing ownership and indemnity rights tied to 
 - [20251121-order-denial.pdf](./filings/20251121-order-denial.pdf)
 - [20251126-order-denial.pdf](./filings/20251126-order-denial.pdf)
 - [20251210-certificate-of-service-by-dtb.pdf](./filings/20251210-certificate-of-service-by-dtb.pdf)
-- [atl-l-002908-25](./filings/atl-l-002908-25)
 
 ## Notes & Evidence
 
