@@ -122,7 +122,6 @@ export class ContrastUtils {
    */
   static getAccessibleLinkColors(bgColor, brandTokens = {}) {
     const {
-      emerald500 = 'rgba(1, 138, 106, 1)',
       emerald400 = 'rgba(36, 181, 138, 1)',
       emerald600 = 'rgba(16, 92, 74, 1)',
       brass500 = 'rgba(212, 165, 116, 1)',

@@ -27,86 +27,85 @@ hero_highlights:
 <!-- markdownlint-disable MD033 -->
 
 {% include premium-hero.html %}
-<!-- Center-aligned brand -->
-<a
-  class="premium-brand site-logo js-site-logo"
-  href="{{ '/' | relative_url }}"
-  aria-label="Faith Frontier Ecclesiastical Trust home"
->
-  <div class="premium-brand__logo">
-    <img
-      src="{{ '/assets/img/faithfrontier-mark.svg' | relative_url }}"
-      alt=""
-      width="48"
-      height="48"
-      class="premium-brand__mark"
-      aria-hidden="true"
-    />
-    <span class="premium-brand__wordmark">
-      {% include logo-faithfrontier-header.svg %}
-    </span>
-  </div>
-</a>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/stewardship/">Explore the pathway</a>
-        <a class="btn btn-ghost" href="/programs/emergency-housing/">Emergency housing</a>
-        <a class="btn btn-ghost" href="/manifesto/">Read the manifesto</a>
-      </div>
-
-      <div class="home-cards">
-        <article class="home-card">
-          <h3 class="h5">Start with public records</h3>
-          <p class="small">
-            Browse OPRA administrative records and timelines, including links to public tracking where available.
-          </p>
-          <a class="btn btn-ghost btn--sm" href="/opra/">Open OPRA index →</a>
-        </article>
-
-        <article class="home-card">
-          <h3 class="h5">Navigate cases and filings</h3>
-          <p class="small">
-            A structured case library for record navigation. Items are indexed for clarity and do not substitute for filed
-            pleadings.
-          </p>
-          <a class="btn btn-ghost btn--sm" href="/cases/">Browse cases →</a>
-        </article>
-
-        <article class="home-card">
-          <h3 class="h5">Learn the process</h3>
-          <p class="small">
-            Civic literacy resources: terminology, timelines, and practical checklists designed for real-world use.
-          </p>
-          <a class="btn btn-ghost btn--sm" href="/stewardship-resources/">Stewardship resources →</a>
-        </article>
-      </div>
-
-      <hr />
-
-      <div class="home-boundaries">
-        <p class="section-eyebrow">Boundaries</p>
-        <h3 class="section-heading h4">What this site is—and is not</h3>
-        <ul class="bullets">
-          <li>
-            <strong>Yes:</strong> transparent documentation, public records indexing, and practical education.
-          </li>
-          <li>
-            <strong>Yes:</strong> lawful stewardship initiatives pursued with permits, inspections, and compliance.
-          </li>
-          <li>
-            <strong>No:</strong> legal representation, legal advice, or instructions to evade oversight.
-          </li>
-          <li>
-            <strong>No:</strong> unverified claims presented as fact; corrections are logged when needed.
-          </li>
-        </ul>
-      </div>
-
-      <div class="cta-row cta-row--split">
-        <a class="btn btn-primary" href="/contact/">Contact / record access</a>
-        <a class="btn btn-ghost" href="/about/">About Faith Frontier</a>
-      </div>
+<section class="home-overview">
+  <!-- Center-aligned brand -->
+  <a
+    class="premium-brand site-logo js-site-logo"
+    href="{{ '/' | relative_url }}"
+    aria-label="Faith Frontier Ecclesiastical Trust home"
+  >
+    <div class="premium-brand__logo">
+      <img
+        src="{{ '/assets/img/faithfrontier-mark.svg' | relative_url }}"
+        alt=""
+        width="48"
+        height="48"
+        class="premium-brand__mark"
+        aria-hidden="true"
+      />
+      <span class="premium-brand__wordmark">
+        {% include logo-faithfrontier-header.svg %}
+      </span>
     </div>
-  </section>
+  </a>
 
-</div>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="/stewardship/">Explore the pathway</a>
+    <a class="btn btn-ghost" href="/programs/emergency-housing/">Emergency housing</a>
+    <a class="btn btn-ghost" href="/manifesto/">Read the manifesto</a>
+  </div>
+
+  <div class="home-cards">
+    <article class="home-card">
+      <h3 class="h5">Start with public records</h3>
+      <p class="small">
+        Browse OPRA administrative records and timelines, including links to public tracking where available.
+      </p>
+      <a class="btn btn-ghost btn--sm" href="/opra/">Open OPRA index →</a>
+    </article>
+
+    <article class="home-card">
+      <h3 class="h5">Navigate cases and filings</h3>
+      <p class="small">
+        A structured case library for record navigation. Items are indexed for clarity and do not substitute for filed
+        pleadings.
+      </p>
+      <a class="btn btn-ghost btn--sm" href="/cases/">Browse cases →</a>
+    </article>
+
+    <article class="home-card">
+      <h3 class="h5">Learn the process</h3>
+      <p class="small">
+        Civic literacy resources: terminology, timelines, and practical checklists designed for real-world use.
+      </p>
+      <a class="btn btn-ghost btn--sm" href="/stewardship-resources/">Stewardship resources →</a>
+    </article>
+  </div>
+
+  <hr />
+
+  <div class="home-boundaries">
+    <p class="section-eyebrow">Boundaries</p>
+    <h3 class="section-heading h4">What this site is—and is not</h3>
+    <ul class="bullets">
+      <li>
+        <strong>Yes:</strong> transparent documentation, public records indexing, and practical education.
+      </li>
+      <li>
+        <strong>Yes:</strong> lawful stewardship initiatives pursued with permits, inspections, and compliance.
+      </li>
+      <li>
+        <strong>No:</strong> legal representation, legal advice, or instructions to evade oversight.
+      </li>
+      <li>
+        <strong>No:</strong> unverified claims presented as fact; corrections are logged when needed.
+      </li>
+    </ul>
+  </div>
+
+  <div class="cta-row cta-row--split">
+    <a class="btn btn-primary" href="/contact/">Contact / record access</a>
+    <a class="btn btn-ghost" href="/about/">About Faith Frontier</a>
+  </div>
+</section>

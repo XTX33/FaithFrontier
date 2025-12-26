@@ -234,7 +234,6 @@
     
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
       
       if (window.pageYOffset >= sectionTop - 200) {
         currentSection = section.getAttribute('id');
