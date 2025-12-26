@@ -4,7 +4,7 @@
    ============================================================================ */
 
 /* Import the global theme first */
-@import url('theme.css');
+@import url('../base/theme.css');
 
 /* ===== HOME PAGE LIGHT MODE OVERRIDES ===== */
 
