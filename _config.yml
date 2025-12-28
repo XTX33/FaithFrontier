@@ -109,6 +109,11 @@ plugins:
 # GitHub repository metadata
 repository: XTX33/FaithFrontier
 
+# Include static files
+include:
+  - cases
+  - "**/*.pdf"
+
 # Exclude from processing
 exclude:
   - Gemfile
