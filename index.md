@@ -114,7 +114,11 @@ hero_highlights:
 
   <hr />
 
-  
+  <!-- Enhanced Daily Verse & Biblical Resources Sanctuary -->
+  <link rel="stylesheet" href="{{ '/assets/css/components/daily-verse-sanctuary.css' | relative_url }}">
+  {% include daily-verse-enhanced.html %}
+
+  <hr />
 
   <div class="cta-row cta-row--split">
     <a class="btn btn-primary" href="/contact/">Contact / record access</a>

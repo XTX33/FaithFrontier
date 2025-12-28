@@ -70,6 +70,14 @@
       container.style.opacity = "0";
       var ref = (v && v.reference) || "";
       var text = (v && v.text) || "";
+      
+      // Decode HTML entities from Bible Gateway API
+      if (text) {
+        var temp = document.createElement("textarea");
+        temp.innerHTML = text;
+        text = temp.value;
+      }
+      
       if (textEl) textEl.textContent = text || "Daily verse unavailable.";
       if (refEl) {
         var q = encodeURIComponent(ref);
@@ -78,10 +86,12 @@
         if (ref) {
           refEl.appendChild(document.createTextNode("— " + ref + " · "));
           var versions = [
-            { label: "GNV", version: "GNV" },
-            { label: "NIV", version: "NIV" },
+            { label: "GNV (Geneva)", version: "GNV" },
+            { label: "KJV", version: "KJV" },
             { label: "AKJV", version: "AKJV" },
+            { label: "NIV", version: "NIV" },
             { label: "ESV", version: "ESV" },
+            { label: "NRSV", version: "NRSV" },
           ];
           versions.forEach(function (vItem, idx) {
             var a = document.createElement("a");
@@ -93,6 +103,7 @@
             a.target = "_blank";
             a.rel = "noopener";
             a.textContent = vItem.label;
+            a.className = "verse-version-link";
             refEl.appendChild(a);
             if (idx !== versions.length - 1) {
               refEl.appendChild(document.createTextNode(" · "));
@@ -232,33 +243,72 @@
       }, 4500);
     } catch (_err) {}
 
-    fetch(
-      "https://beta.ourmanna.com/api/v1/get/?format=json",
-      controller ? { signal: controller.signal } : undefined,
-    )
-      .then(function (r) {
-        return r.json();
-      })
-      .then(function (data) {
-        if (timeoutId) clearTimeout(timeoutId);
-        var item =
-          data && data.verse && data.verse.details ? data.verse.details : null;
-        var v = item
-          ? { text: item.text || "", reference: item.reference || "" }
-          : pickFallbackByDate();
-        render(v);
-        try {
-          localStorage.setItem(key, JSON.stringify(v));
-        } catch (_err) {}
-      })
-      .catch(function () {
+    // Try multiple daily verse APIs for redundancy
+    var apis = [
+      {
+        name: "BibleGateway",
+        url: "https://www.biblegateway.com/votd/get/?format=json&version=NIV",
+        parse: function (data) {
+          return data && data.votd
+            ? {
+                text: data.votd.text || "",
+                reference: data.votd.reference || "",
+              }
+            : null;
+        },
+      },
+      {
+        name: "OurManna",
+        url: "https://beta.ourmanna.com/api/v1/get/?format=json",
+        parse: function (data) {
+          var item =
+            data && data.verse && data.verse.details
+              ? data.verse.details
+              : null;
+          return item
+            ? { text: item.text || "", reference: item.reference || "" }
+            : null;
+        },
+      },
+    ];
+
+    function tryAPI(apiIndex) {
+      if (apiIndex >= apis.length) {
+        // All APIs failed, use fallback
         if (timeoutId) clearTimeout(timeoutId);
         var v = pickFallbackByDate();
         render(v);
         try {
           localStorage.setItem(key, JSON.stringify(v));
         } catch (_err) {}
-      });
+        return;
+      }
+
+      var api = apis[apiIndex];
+      fetch(api.url, controller ? { signal: controller.signal } : undefined)
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (data) {
+          var v = api.parse(data);
+          if (v && v.text && v.reference) {
+            if (timeoutId) clearTimeout(timeoutId);
+            render(v);
+            try {
+              localStorage.setItem(key, JSON.stringify(v));
+            } catch (_err) {}
+          } else {
+            // Try next API
+            tryAPI(apiIndex + 1);
+          }
+        })
+        .catch(function () {
+          // Try next API
+          tryAPI(apiIndex + 1);
+        });
+    }
+
+    tryAPI(0);
   }
 
   function boot() {
