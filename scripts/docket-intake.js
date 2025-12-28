@@ -253,6 +253,19 @@ const main = () => {
     const mUnder = p.match(/cases\/([a-z0-9-]+)\//i);
     if (mUnder) slug = mUnder[1];
 
+    // NEW: Check if file is in _inbox/<case-slug>/ subdirectory
+    if (!slug) {
+      const mInbox = p.match(/_inbox[\\\/]([a-z0-9-]+)[\\\/]/i);
+      if (mInbox) {
+        const inboxSlug = mInbox[1];
+        // Verify this slug exists in cases map
+        if (Object.values(casesMap).includes(inboxSlug)) {
+          slug = inboxSlug;
+          console.log(`   ✓ Matched from inbox folder: _inbox/${inboxSlug}/ → ${slug}`);
+        }
+      }
+    }
+
     // If still unknown, park under 'unassigned'
     if (!slug) {
       console.log(`   ⚠️  No case match found - filing to "unassigned"`);
