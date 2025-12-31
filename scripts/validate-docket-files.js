@@ -101,13 +101,9 @@ const validateYaml = (filePath) => {
           if (isNaN(entry.date.getTime())) {
             log.error(`Entry ${entryNum} has invalid date: ${entry.date}`);
             entryValid = false;
-            // dateStr remains undefined, so regex validation below will be skipped
           } else {
-            // Convert Date object to YYYY-MM-DD string for validation
-            const year = entry.date.getFullYear();
-            const month = String(entry.date.getMonth() + 1).padStart(2, '0');
-            const day = String(entry.date.getDate()).padStart(2, '0');
-            dateStr = `${year}-${month}-${day}`;
+            // Convert Date object to YYYY-MM-DD string using ISO format
+            dateStr = entry.date.toISOString().split('T')[0];
           }
         } else {
           dateStr = entry.date;
