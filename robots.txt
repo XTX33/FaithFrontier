@@ -4,7 +4,8 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://xtx33.github.io/FaithFrontier/sitemap.xml
+Sitemap: https://faithfrontier.org/sitemap.xml
+Sitemap: https://faithfrontier.org/sitemap-doctrine.xml
 
 # Crawl delay (be nice to servers)
 Crawl-delay: 1
