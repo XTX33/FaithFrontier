@@ -16,6 +16,7 @@ hero_scripture: >
   "The heavens declare the glory of God; the skies proclaim the work of his hands.
   Day after day they pour forth speech; night after night they reveal knowledge."
   — Psalm 19:1–2
+tags: [doctrine]
 ---
 
 <section class="section section-purpose" aria-label="Purpose">
