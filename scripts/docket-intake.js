@@ -12,8 +12,8 @@ const MAP_FILE = '_data/cases-map.yml';
 
 const MIN_PDF_BYTES = 4096;
 
-const readYml = p => fs.existsSync(p) ? yaml.load(fs.readFileSync(p, 'utf8')) : undefined;
-const writeYml = (p, obj) => fs.writeFileSync(p, yaml.dump(obj, { lineWidth: 1000 }));
+const readYml = p => fs.existsSync(p) ? yaml.load(fs.readFileSync(p, 'utf8'), { schema: yaml.JSON_SCHEMA }) : undefined;
+const writeYml = (p, obj) => fs.writeFileSync(p, yaml.dump(obj, { lineWidth: 1000, schema: yaml.JSON_SCHEMA }));
 
 const kebab = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 const ensureDir = p => fs.mkdirSync(p, { recursive: true });
