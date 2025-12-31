@@ -6,7 +6,7 @@ title: "Hamilton Township Police Department — Bond & Insurance Records"
 record_type: "OPRA Administrative Record"
 jurisdiction: "Hamilton Township, Atlantic County, NJ"
 authority_primary: "Hamilton Township Police Department"
-status: "Delivery Error / Pending"
+status: "Delivery Error / Refused"
 opened: 2025-12-18
 last_updated: 2025-12-19
 permalink: /opra/hamilton-police-bond-insurance-2025/

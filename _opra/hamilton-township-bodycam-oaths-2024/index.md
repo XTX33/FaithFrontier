@@ -6,7 +6,7 @@ title: "Hamilton Township — Body Camera Footage & Oaths of Office (May 7, 2024
 record_type: "OPRA Administrative Record / Internal Review"
 jurisdiction: "Hamilton Township, Atlantic County, NJ"
 authority_primary: "Hamilton Township"
-status: "Internal Review Pending"
+status: "Refused"
 opened: 2024-05-28
 last_updated: 2024-05-28
 permalink: /opra/hamilton-bodycam-oaths-2024/

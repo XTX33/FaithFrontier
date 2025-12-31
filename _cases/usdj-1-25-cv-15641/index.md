@@ -8,27 +8,26 @@ court: United States District Court, District of New Jersey
 case_type: Civil
 role: Plaintiff
 dockets:
-- 1:25-cv-15641-RMB-MJS
+  - 1:25-cv-15641-RMB-MJS
 primary_docket: 1:25-cv-15641-RMB-MJS
 status: active
 filed_date: 2025-09-09
 judge: null
 tags:
-- federal
+  - federal
+  - district-court
+  - civil
 assets_dir: /cases/usdj-1-25-cv-15641/filings/
-overview: 'Federal civil action filed in September 2025 raising constitutional tort claims and emergency equitable relief
-  after state-level retaliation. Complaint, demurrer/abatement, and supporting exhibits are live.
-
-  '
-documents:
-- label: Complaint
-  path: 20250909-complaint.pdf
-- label: Demurrer and Abatement
-  path: 20250909-demurrer-and-abatement.pdf
-- label: Envelope
-  path: 20250909-envelope.pdf
+overview: >
+  Active federal civil action filed in September 2025 in the
+  United States District Court for the District of New Jersey.
+  The complaint seeks civil and equitable relief arising from
+  alleged constitutional tort claims. Related motions and
+  supporting exhibits are part of the record. The matter
+  remains pending.
 case_slug: usdj-1-25-cv-15641
 ---
+
 Federal filing capturing the complaint and initial motions challenging jurisdiction and procedure. Entries below track the filings submitted to initiate the action.
 
 ## Status Overview

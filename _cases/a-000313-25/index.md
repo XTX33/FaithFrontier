@@ -13,14 +13,8 @@ status: active
 filed_date: 2024-10-29
 last_updated: 2025-12-17
 permalink: /cases/a-000313-25/
-overview: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County. This page serves as a clean, verifiable public record for docket A-000313-25, linking to operative orders and filings while preserving a chronological procedural history consistent with Faith Frontier integrity-first archival standards.'
-summary: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County.
-
-  This page serves as a clean, verifiable public record for docket A-000313-25, linking to the
-
-  operative orders and filings and preserving a chronological procedural history consistent with
-
-  Faith Frontier’s integrity-first archival standards.'
+overview: 'This is an Appellate Division matter stemming from a municipal street-crossing enforcement encounter in Atlantic County, New Jersey, and the resulting conviction. The appeal concerns the legality and procedural handling of the stop, subsequent enforcement actions, and post-conviction consequences. <br /> According to the appellant’s asserted record, the initiating officer activated emergency lights and demanded identification while stating that no citation would be issued. The matter later resulted in a street-crossing conviction and multiple subsequent arrests attributed to a summons that was allegedly never properly served. These issues are raised and addressed through the appellate process and associated filings. <br /> This page serves as a clean, verifiable public record for Appellate Division Docket No. A-000313-25, providing direct access to operative orders and filings while preserving a chronological procedural history. The record is maintained in accordance with Faith Frontier’s integrity-first archival standards, prioritizing accuracy, transparency, and source verification over commentary.'
+summary: 'Appellate Division matter arising from a street-crossing conviction originating in Atlantic County, New Jersey.'
 case_slug: a-000313-25
 ---
 ## Case Overview

@@ -9,33 +9,27 @@ venue: Atlantic County
 case_type: Declaratory Judgment
 role: Plaintiff
 dockets:
-- ATL-L-002869-25
-- ATL-L-002908-25
+  - ATL-L-002869-25
+  - ATL-L-002908-25
 primary_docket: ATL-L-002869-25
 status: active
 filed_date: 2025-10-14
 judge: null
 tags:
-- civil
-- declaratory
+  - civil
+  - declaratory-relief
+  - vehicle-registration
 assets_dir: /cases/atl-l-002869-25/filings/
-overview: 'Declaratory-judgment action establishing ownership and indemnity rights tied to vehicle registration disputes.
-  Track assignment and amended pleadings are active as of October 2025.
-
-  '
-documents:
-- label: Verified Complaint
-  path: 20251014-verified-complaint-declaration-of-ownership.pdf
-- label: Affidavit of Indigency
-  path: 20251014-affidavit-of-indigency.pdf
-- label: Track Assignment
-  path: 20251017-track-assignment.pdf
-- label: Amended Complaint
-  path: 20251029-amended-complaint.pdf
+overview: >
+  Active Law Division declaratory-judgment action seeking judicial determination
+  of ownership and indemnity rights arising from disputed vehicle registration
+  and enforcement records. Related pleadings and track assignment activity
+  remain pending as of October 2025.
 redirect_from:
-- /cases/atl-l-002908-25/
+  - /cases/atl-l-002908-25/
 case_slug: atl-l-002869-25
 ---
+
 Action seeking declaratory relief related to vehicle ownership. The record below traces the verified complaint, indigency affidavit, track assignment, and amended pleading.
 
 ## Status Overview

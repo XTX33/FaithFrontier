@@ -9,18 +9,23 @@ venue: Atlantic County
 case_type: Civil
 role: Plaintiff
 dockets:
-- ATL-L-003252-25
+  - ATL-L-003252-25
 primary_docket: ATL-L-003252-25
 status: active
 filed_date: 2025-12-07
 judge: null
 tags:
-- civil
-- equitable-relief
+  - civil
+  - equitable-relief
+  - declaratory-relief
 assets_dir: /cases/atl-l-003252-25/filings/
-overview: 'Civil action seeking equitable relief and declaratory judgment. Verified complaint filed December 2025 with exhibits documenting prosecutorial misconduct and seeking emergency relief.'
+overview: >
+  Active Law Division civil action seeking equitable and declaratory relief.
+  A verified complaint was filed in December 2025 with supporting exhibits.
+  The matter remains pending.
 case_slug: atl-l-003252-25
 ---
+
 ## Case Overview
 
 This civil action seeks equitable relief and declaratory judgment following documented prosecutorial misconduct. Filed December 2025 with comprehensive exhibits including prosecutorial correspondence demonstrating lack of probable cause, along with verified complaints and supporting documentation requesting emergency relief from the court.

@@ -72,44 +72,6 @@
       .crest-star {
         fill: var(--logo-gold);
       }
-    
-      /* --- Subtle animation (brand-safe) --- */
-      @keyframes ffDash {
-        to { stroke-dashoffset: -44; }
-      }
-
-      @keyframes ffOrbitDrift {
-        0%   { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-      @keyframes ffGlowBreath {
-        0%, 100% { filter: drop-shadow(0 0 0 rgba(216,176,97,0.0)); }
-        50%      { filter: drop-shadow(0 0 6px rgba(216,176,97,0.28)); }
-      }
-
-      /* Animate the inner dashed ring gently */
-      .mark-ring--inner {
-        stroke-dashoffset: 0;
-        animation: ffDash 10s linear infinite;
-      }
-
-      /* Animate the small orbit markers around the center */
-      .mark-rays {
-        transform-origin: 48px 48px;
-        animation: ffOrbitDrift 22s linear infinite;
-      }
-
-      /* Gentle breathing glow on the primary cross */
-      .cross-core {
-        animation: ffGlowBreath 6.5s ease-in-out infinite;
-      }
-
-      /* Respect reduced-motion preferences */
-      @media (prefers-reduced-motion: reduce) {
-        .mark-ring--inner, .mark-rays, .cross-core { animation: none !important; }
-      }
-
     </style>
   </defs>
 

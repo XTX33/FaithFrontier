@@ -18,24 +18,18 @@ tags:
   - civil
   - law-division
   - track-3
-  - motion-to-dismiss
+  - dispositive-motions
 assets_dir: /cases/atl-l-002794-25/filings/
 overview: >
-  Law Division civil action asserting claims for breach of contract, breach of fiduciary duty,
-  fraud, consumer fraud, negligence, unjust enrichment, and limited conviction-dependent
-  malpractice arising from alleged attorney misconduct and abandonment during pretrial
-  detention proceedings. The matter was reassigned to Track 3 by court order based on
-  complexity and scope. Verified pleadings, certifications, and the track-change order are
-  maintained in the case assets directory.
-documents:
-  - label: Verified Complaint and CIS
-    path: 20251003-verified-complaint-and-cis.pdf
-  - label: Track Assignment Notice (Team 102)
-    path: 20251007-njsc-atl-l-002794-25-trackassignment-notice-team102.pdf
-  - label: Order Granting Track Change
-    path: 20251107-order-to-change-track-assignment.pdf
+  Active Law Division civil action asserting claims arising from alleged attorney misconduct
+  during pretrial detention proceedings. Claims include breach of contract, breach of
+  fiduciary duty, fraud, consumer fraud, negligence, unjust enrichment, and limited
+  conviction-dependent malpractice. The matter was reassigned to Track 3 by court order
+  based on complexity and scope. Verified pleadings and operative orders are maintained
+  in the case assets directory.
 case_slug: atl-l-002794-25
 ---
+
 
 This case concerns a Law Division civil action brought by Plaintiff Devon Tyler Barber against
 Defendants John W. Tumelty, Esq. and the Law Office of John W. Tumelty. The action arises from

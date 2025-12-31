@@ -9,28 +9,19 @@ venue: Atlantic County
 case_type: Civil Collection
 role: Defendant / Counterclaimant
 dockets:
-- ATL-DC-007956-25
+  - ATL-DC-007956-25
 primary_docket: ATL-DC-007956-25
 status: active
 filed_date: 2025-03-28
 judge: null
 tags:
-- tolls
-- discovery
+  - toll-enforcement
+  - discovery
+  - accessibility
 assets_dir: /cases/atl-dc-007956-25/filings/
-overview: 'Contesting toll-enforcement claims while prosecuting counterclaims regarding accessibility and record integrity.
-  Case remains active with ADA correspondence, discovery demands, and responses to the Authority''s pleadings.
-
-  '
-documents:
-- label: Answer & First Appearance
-  path: 20250903-answer-firstappearance.pdf
-- label: Complaint
-  path: 2025-08-19_Complaint.pdf
-- label: Amended Answer & Counterclaim
-  path: 2025-10-08_Counterclaim.pdf
-- label: Court Order on Default and Discovery
-  path: 2025-10-27_Court-Order.pdf
+overview: >
+  Active Special Civil Part matter involving toll-enforcement claims and
+  counterclaims addressing process integrity and accessibility.
 case_slug: atl-dc-007956-25
 ---
 This matter documents toll-enforcement claims alongside counterclaims challenging process and accessibility barriers. The record below includes filings, discovery requests, and accommodation correspondence.
