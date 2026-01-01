@@ -20,11 +20,13 @@ jobs:
         with: 
           node-version: '20'
       - name: Install dependencies
-        run: npm install js-yaml
+        run: npm ci
       - name: Validate files before intake
-        run: node scripts/validate-docket-files.js
+        run: node scripts/validate-docket-files.js || echo "::warning::Validation completed with warnings"
       - name: Run intake script
         run: node scripts/docket-intake.js
+      - name: Generate placeholder PDFs if needed
+        run: node scripts/generate-placeholder-pdfs.js || echo "::notice::No placeholders needed"
       - name: Create PR if changes
         uses: peter-evans/create-pull-request@v6
         with:

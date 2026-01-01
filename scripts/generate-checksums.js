@@ -18,7 +18,7 @@ function parseFrontMatter(md) {
   const match = md.match(/^---([\s\S]*?)---/);
   if (!match) return {};
   try {
-    return yaml.load(match[1]) || {};
+    return yaml.load(match[1], { schema: yaml.JSON_SCHEMA }) || {};
   } catch {
     return {};
   }

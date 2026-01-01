@@ -58,7 +58,7 @@ const validatePdf = (filePath) => {
 const validateYaml = (filePath) => {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const data = yaml.load(content);
+    const data = yaml.load(content, { schema: yaml.JSON_SCHEMA });
     
     // Check if it's an array
     if (!Array.isArray(data)) {
@@ -130,7 +130,7 @@ const validateYaml = (filePath) => {
 const validateCasesMap = (filePath) => {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const data = yaml.load(content);
+    const data = yaml.load(content, { schema: yaml.JSON_SCHEMA });
     
     if (!data || typeof data !== 'object') {
       log.error(`Cases map must be an object: ${filePath}`);

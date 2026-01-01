@@ -45,7 +45,7 @@ const ensureDir = (dir) => {
 const readYaml = (filePath) => {
   if (!fs.existsSync(filePath)) return null;
   try {
-    return yaml.load(fs.readFileSync(filePath, 'utf8'));
+    return yaml.load(fs.readFileSync(filePath, 'utf8'), { schema: yaml.JSON_SCHEMA });
   } catch (e) {
     console.error(`Error reading YAML file ${filePath}:`, e.message);
     return null;
@@ -54,7 +54,7 @@ const readYaml = (filePath) => {
 
 const writeYaml = (filePath, data) => {
   try {
-    fs.writeFileSync(filePath, yaml.dump(data, { lineWidth: 1000, noRefs: true }));
+    fs.writeFileSync(filePath, yaml.dump(data, { lineWidth: 1000, noRefs: true, schema: yaml.JSON_SCHEMA }));
   } catch (e) {
     console.error(`Error writing YAML file ${filePath}:`, e.message);
   }
@@ -65,7 +65,7 @@ const extractFrontMatter = (content) => {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return null;
   try {
-    return yaml.load(match[1]);
+    return yaml.load(match[1], { schema: yaml.JSON_SCHEMA });
   } catch (e) {
     console.error('Error parsing front matter:', e.message);
     return null;
