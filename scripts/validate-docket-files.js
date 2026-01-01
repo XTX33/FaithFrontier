@@ -93,10 +93,23 @@ const validateYaml = (filePath) => {
         entryValid = false;
       }
       
-      // Validate date format
-      if (entry.date && !/^\d{4}-\d{2}-\d{2}$/.test(entry.date)) {
-        log.error(`Entry ${entryNum} has invalid date format: ${entry.date} (should be YYYY-MM-DD)`);
-        entryValid = false;
+      // Validate date format - YAML parser may convert dates to Date objects
+      if (entry.date) {
+        let dateStr = entry.date;
+        
+        // If it's a Date object, convert to YYYY-MM-DD format
+        if (entry.date instanceof Date) {
+          const year = entry.date.getFullYear();
+          const month = String(entry.date.getMonth() + 1).padStart(2, '0');
+          const day = String(entry.date.getDate()).padStart(2, '0');
+          dateStr = `${year}-${month}-${day}`;
+        }
+        
+        // Now check the format
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+          log.error(`Entry ${entryNum} has invalid date format: ${dateStr} (should be YYYY-MM-DD)`);
+          entryValid = false;
+        }
       }
       
       // Validate type
